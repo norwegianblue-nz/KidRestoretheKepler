@@ -1,0 +1,13 @@
+/**
+ * @file
+ * Visual styles for Norblu0's page-title component.
+ */
+
+.page-title {
+  font-size: 3em;
+  line-height: 1em;
+  color: rgb(0,116,125);
+  padding: 10px 0 0;
+  text-transform:uppercase;
+  font-family:"exo_2light_condensed", sans-serif;
+}

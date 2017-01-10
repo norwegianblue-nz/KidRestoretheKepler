@@ -1,0 +1,57 @@
+/**
+ * @file
+ * Visual styles for the site branding block in Norblu0.
+ */
+
+.site-branding__logo {
+  display: inline-block;
+  margin-right: 1em; /* LTR */
+  margin-bottom: 0.286em;
+  margin-top:5px;
+  margin-left: 5px;
+}
+[dir="rtl"] .site-branding__logo {
+  margin-right: 0;
+  margin-left: 1em;
+}
+.site-branding__text {
+  display: inline-block;
+  vertical-align: top;
+}
+@media all and (min-width: 461px) {
+  .site-branding__text {
+/*    margin-bottom: 1.857em;*/
+  }
+}
+@media all and (min-width: 901px) {
+  .site-branding__text {
+    padding: 1em 0 0;
+  }
+}
+.site-branding__name {
+  font-family:  OpenSansRegular, sans-serif;
+  font-size: 1.8em;
+  color: #686868;
+  line-height: 1;
+}
+@media all and (min-width: 901px) {
+  .site-branding__name {
+    font-size: 1.99em;
+  }
+}
+.site-branding__slogan {
+  font-family: comfortaaregular,OpenSansRegular, sans-serif;
+  font-size: 0.929em;
+  margin-top: 7px;
+  word-spacing: 0.1em;
+  font-style: italic;
+}
+@media all and (max-width: 739px) {
+  .site-branding__slogan {
+    margin-top: .1em;
+  }
+}
+.region-header,.region-header a,.region-header li a.is-active,
+.site-branding__text,.site-branding,.site-branding__text a,.site-branding a {
+	color : #162a74 !important;
+}

@@ -1,0 +1,19 @@
+
+/* 
+    Created on : 8/08/2016, 12:35:04 PM
+    Author     : roo
+*/
+
+.book-navigation .book-pager {
+  margin: 30px 0 0 0 !important;
+}
+.book-navigation a, .book-navigation .link{
+    color: #16479E !important;
+}
+#book-navigation-13>.menu {
+    border: 0;
+}
+#book-navigation-13 .book-pager {
+      margin: 100px 0 0 0 !important;
+}
+    

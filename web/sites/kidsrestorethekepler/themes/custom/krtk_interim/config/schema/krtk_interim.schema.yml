@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Norblu0 theme.
+
+krtk_interim.settings:
+  type: theme_settings
+  label: 'Norblu0 settings'

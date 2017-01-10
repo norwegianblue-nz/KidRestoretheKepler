@@ -1,0 +1,406 @@
+@import "krtk0_mixins", "krtk0-style-vars", "krtk0-default-style-vars", "krtk0gs";
+////////////////////////////////////////////////////////////////////////////////
+//
+// SANDBOX 
+//
+////////////////////////////////////////////////////////////////////////////////
+
+.views-field.views-field-field-front-page-logo {
+    float: left;
+    margin: 0 5px 0 0;
+}
+
+      
+// RESET for _html-elements.scss - this is ours (I think!) and maybe just needs removing?
+p a {border:none !important;color:$krtk0_Teal;}
+
+// Home Logo ///////////////////////////////////////////////////////////////////
+
+#page div#logo-home {width: 250px;
+	position: absolute;
+	margin:0 auto;
+	@include krtk0Transition;
+	left: 50%;
+	margin-left: -90px;
+	top: 6em;
+}
+#page.scrolled div#logo-home {width:70px;position:fixed;top:3px;left:0;margin-left:0;@include krtk0Transition;float:left;}
+
+// Pages Logo //////////////////////////////////////////////////////////////////
+#block-logogeneralpages {
+    float: left;
+    margin-top: 5px;}
+/** OR instead of float **/
+#block-logogeneralpages {
+    position: relative;
+    left: 0;
+    display: inline-block;
+}
+#page #block-logogeneralpages img {
+    width: 100%;@include krtk0Transition;}
+#page.scrolled #block-logogeneralpages img {
+    width: 60%;@include krtk0Transition;}
+
+// Menu bar /////////////////////////////////////////////////////////////
+
+#menu-outer-wrapper {background-color: $krtk0_TransTeal;position: fixed; z-index:20; width: 100%; padding-top:10px;}
+
+// ### NB statictopmenu NEEDS RE_TARGETING FOR LOGGED IN STATE - CONTEXTURAL BLOCKS
+
+div#block-statictopmenu {text-align:center;}
+#block-statictopmenu ul {display:inline-block;list-style:none;margin:0.5em;padding:0;}
+#block-statictopmenu li {
+	display:inline-block;
+	list-style:none;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-transform:uppercase;
+	font-size:25px;
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/menu-marker.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	height:45px;
+	padding:0px 20px;
+}
+#block-statictopmenu li a {color:#fff;padding: 2px 2px 20px;}
+
+// ### NB statictopmenu NEEDS RE_TARGETING FOR LOGGED IN STATE - CONTEXTURAL BLOCKS
+
+// # Search Bar # //
+// icons
+#block-krtktoolbar {
+	float: right;
+	background-color: $krtk0_DarkTeal;
+	width: 220px;
+	padding:2px 5px 2px 115px;
+	clear: right;
+}
+.tool-bar-icon {
+	display: inline-block;
+	margin: 3px 1px;
+	background-color: transparent;
+	border-radius: 12px;
+	padding: 2px;
+}
+
+#block-krtktoolbar a {line-height:0;} //Reduce default height of a tag to zero
+.tool-bar-icon.clicked {background-color:#fff;}
+.tool-bar-icon-info {display:none;} // INFO REMOVED TILL LATER
+// expandend divs
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo {
+	@include parrotCols(6, 12, normal, '1200');
+	margin-right:0;
+	float: right;
+	clear: right;
+	background-color: $krtk0_DarkTeal;
+	padding: 15px;
+	position:absolute;
+	top:100%;
+	right:0;
+	z-index:30;
+	display:none;
+}
+div#block-krtk0-search.expand, div#block-userlogin.expand {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
+
+#block-krtk0-search #edit-keys, #block-userlogin input#edit-name, #block-userlogin input#edit-pass { // text input box
+	width: 75%;
+	padding: 13px;
+	font-size: 18px;
+	color: #888;
+	border:none;
+}
+#block-userlogin label.js-form-required {
+	width: 100px;
+	color: #fff;
+	text-transform: uppercase;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-size:14px;
+}
+#block-krtk0-search input#edit-submit, #block-userlogin input#edit-submit--2 {
+	padding: 16px;
+	background-color: $krtk0_Teal;
+	border: none;
+	color: #fff;
+	margin: 0;
+	text-transform: uppercase;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-size:14px;
+}
+#block-userlogin input#edit-submit--2 {float:right;}
+
+
+
+
+// Header Area /////////////////////////////////////////////////////////////////
+#krtk0-letterbox {
+	height: 20vw;
+	background: transparent;
+}
+
+// Header
+#header-outer-wrapper {background-color: $krtk0_TransTeal;}
+
+#block-krtk0-branding {display: none;}
+#block-logostrapfrontpage h2 {text-align:center;color:#fff;font-family:$ktrk0_Exo2-LightCondensed;font-size:21px;}
+
+// Zone buttons !! NOW GENERALLY USED FOR ZONE TITLES !! /////////////////////////////////////////////////////////////
+
+// !! #btns wrapper needs targeting for each zone !! ///
+/*body.path-frontpage*/ #btns-outer-wrapper { /* re-instate frontpage once zones defined */
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-button-bar-bg.svg');
+	background-repeat:repeat-x;
+	background-position:top center;
+	padding-top:2em;
+}
+div#block-krtk0-mainbuttons {
+    width: 99.9%;
+    text-align: center;
+    margin: 5px auto;
+}
+div.zone-button {width:100px;display:inline-block;vertical-align:top;text-align:center;}
+div.zone-button p {line-height:1em;margin:0;}
+div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px;}
+
+div#block-mainbuttons-2 {margin: 7px auto;}
+#block-mainbuttons-2 {width: 60%;margin: 10px auto 0;text-align: center;}
+.node--type-page div.zone-button img {width:70%;@include krtk0Transition;} /* narrower icon for general pages */
+.node--type-page #page.scrolled div.zone-button img {width:60%;@include krtk0Transition;} /* smaller icon on scroll */
+.node--type-page #page.scrolled div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
+
+// Page titles
+#block-placeholdertitle h2 {
+	color: #fff;
+	font-size: 30px;
+	font-family: $ktrk0_Exo2-RegularCondensed;
+	text-transform: lowercase;
+	margin: 0.3em 0;
+}#block-placeholdertitle img {vertical-align:middle;}
+
+
+// Team pager //////////////////////////////////////////////////////////////////
+body.path-frontpage #teaser-outer-wrapper {
+	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg");
+	background-repeat: repeat-x;
+	background-position: top center;
+	background-color: $krtk0_Teal;
+}
+// team pic temp DELETE WHEN PIC SIZE SET IN VIEW:
+.image-style-thumbnail {width:140px;margin-right:16px;}
+
+#block-meettheteamtitle h2 {@include krtk0BlockTitle($krtk0_Buff);}
+// .view-front-page-team {margin:4em 0;}
+
+@media all and (max-width: 959px) {
+	#block-views-block-front-page-team  {@include parrotCols(4, 4, normal, '100');}
+	#block-meettheteamintro				{@include parrotCols(4, 4, normal, '100');}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+	#block-views-block-front-page-team  {@include parrotCols(6, 12, normal, '960');}
+	#block-meettheteamintro				{@include parrotCols(6, 12, normal, '960');}
+	#block-views-block-front-page-team  {margin-left:0 !important;}
+}
+@media all and (min-width: 1280px) {
+	#block-views-block-front-page-team  {@include parrotCols(6, 12, normal, '1200');}
+	#block-meettheteamintro 			{@include parrotCols(6, 12, normal, '1200');}
+	#block-views-block-front-page-team  {margin-left:0 !important;}
+}
+#block-views-block-front-page-team {float:left;}
+#block-meettheteamintro {float:right;}
+
+#block-views-block-front-page-team .view-front-page-team div.views-row {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 140px;
+	margin-right:20px;
+}
+#block-views-block-front-page-team .view-front-page-team div.views-row:last-of-type {margin-right:0;}
+
+#block-meettheteamintro p {font-family:$krtk0_WorkSans-Hairline;font-size:30px;color:#fff;margin-top:-0.2em;}
+
+div.view-front-page-team h2 {
+	font-size: 20px !important;
+	font-family: "exo_2medium_condensed", sans-serif;
+	margin: 0;
+	line-height: 1.2em;
+}
+div.view-front-page-team h2 a {
+	color: #fff;
+}
+div.view-front-page-team .pager__items {text-align:left;}
+div.view-front-page-team nav.pager ul {margin:0;}
+
+// Content stripe //////////////////////////////////////////////////////////////
+#content-outer-wrapper {background-color: #fff;}
+#main-layout {padding-bottom:5em;}
+.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 0); }
+
+
+// Front page Partners stripe //////////////////////////////////////////////////////////////
+.field--name-field-partners-intro {
+	font-family:$krtk0_WorkSans-Hairline;
+	font-size:51px;
+	color:$krtk0_DarkGrey;
+	text-align:center;
+}
+.field--name-field-partners-intro::before {content:open-quote;}
+.field--name-field-partners-intro::after {content:close-quote;}
+
+// Social stripe ///////////////////////////////////////////////////////////////
+#social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:2em;margin-bottom:2em;}
+#socialBlock-icons, #socialBlock-facebook {
+    width: 49.7%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#socialBlock-title {@include krtk0BlockTitle(#fff);} //TARGET MAY CHANGE
+
+// Footer //////////////////////////////////////////////////////////////////////
+
+#footer-header-outer-wrapper {
+    background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/footer-title-bg.png');
+    background-position: top;
+    background-repeat: repeat-x;
+    background-color:#fff;
+}
+// #block-charityfooternumber {@include column(8, 12, zero);float:left;padding-top: 40px;}
+// #block-footertitlekrtklogo {@include column(4, 12, zero);float:right;padding-top:28px;}
+@media all and (max-width: 959px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '100');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '100');float:right;padding-top:20px;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '960');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '960');float:right;padding-top:20px;}
+}
+@media all and (min-width: 1280px) {
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '1200');float:left;padding-top: 40px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '1200');float:right;padding-top:20px;}
+}
+#block-charityfooternumber h2 {
+    font-size: 20px;
+    font-family: $ktrk0_Exo2-MediumCondensed;
+    color: $krtk0_DarkTeal;
+}
+#block-charityfooternumber p {
+    font-size: 15px;
+    color: #575757;
+}
+
+#footer-outer-wrapper {background-color:$krtk0_DarkTeal;padding-bottom:3em;}
+div.region-footer > div, div.region-footer > nav {
+//	width:24.6%;
+//	@include parrotCols(3, 12, normal, '100');
+	display:inline-block;
+	vertical-align:top;
+}
+
+@media all and (max-width: 959px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(2, 4, normal, '100');float:left;padding-top: 40px;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(3, 12, normal, '960');float:left;padding-top: 40px;}
+}
+@media all and (min-width: 1280px) {
+    div.region-footer > div, div.region-footer > nav {@include parrotCols(3, 12, normal, '1200');float:left;padding-top: 40px;}
+}
+
+
+div.region-footer > div#block-footersocialicons,
+div.region-footer > div#block-footercontactsblock {width:100%;clear:both;}
+div.region-footer > div#block-footersocialicons {margin:1.5em 0 1em 0;}
+.region-footer h2 {
+	font-size: 1.5em;
+    font-family: $ktrk0_Exo2-LightCondensed;
+    color:$krtk0_Buff;
+    margin:2em 0;
+}
+
+.region-footer p, .region-footer li a, .region-footer li a.is-active {
+	color:#fff;
+	font-family:$krtk0_WorkSans-Light;
+	font-size:16px;
+	line-height:1.5em;
+}
+.region-footer ul {list-style-type:none;padding:0;margin:0;}
+
+// Copyright ///////////////////////////////////////////////////////////////////
+
+#copyright-outer-wrapper {background-color:#003530;padding:1em 0;}
+#block-copyright p, #block-copyright li a {font-family:$krtk0_WorkSans-Hairline;font-size:14.5px;color:#fff;letter-spacing:1px;}
+#block-copyright ul {margin:0;padding:0;}
+#block-copyright li {display:inline-block;list-style:none;margin:0;padding:0;}
+#copyright-left {width:50%;float:left;}
+#copyright-right {width:50%;float:right;}
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// End of SANDBOX
+//
+////////////////////////////////////////////////////////////////////////////////
+.nb_fixed-bg {
+    min-height: 85vh;
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color:#333;
+    position: fixed;
+    top :0;
+    width: 100vw;
+    z-index: -1;
+}
+#nb_slideshow_bg {min-height: 85vh;
+background-position: 50% 50%;
+background-repeat: no-repeat;
+background-size: cover;
+}
+@media all and (min-width: 0px) {.nb_fixed-bg{}}
+@media all and (min-width: 480px) and (max-width: 767px) {.nb_fixed-bg{}}       
+@media all and (min-width: 768px) /*and (max-width: 1023px)*/ {
+	.nb_fixed-bg, #nb_slideshow_bg{
+		height:85vh;
+		background-attachment: fixed;
+	}
+}
+@media all and (min-width: 1024px) and (max-width: 1219px) {.nb_fixed-bg{}}
+@media all and (min-width: 1220px) {.nb_fixed-bg{}}
+
+.path-fronpage #nb_fixed-bg1 {
+    display: none;
+}
+
+.nb_fixed-inner { /* HOME PAGE LOGO repositioned for slider */
+    position: relative;
+    top: -85vh;
+}
+
+// ## hamburger
+.responsive-menu-toggle {
+	display: inline-block;
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+	background: #fff;
+	width: 40px;
+	height: 5px;
+	left: 5px;
+	border-radius: 6px;
+	margin: 0px 0;
+}
+.responsive-menu-toggle-icon span.icon {
+	top: 32px;
+}
+.responsive-menu-toggle-icon::before, .responsive-menu-toggle-icon::after, .responsive-menu-toggle-icon span.icon {
+	background: #fff;
+}
+.responsive-menu-toggle-icon span.label {display:none;} // Hide "menu" on hamburger from all pages other than home
+.path-fronpage .responsive-menu-toggle-icon span.label {
+	display: block;
+	position: absolute;
+	font-size: 17px;
+	text-transform: uppercase;
+	top: 50px;
+	left: 0;
+	color: #fff;
+}

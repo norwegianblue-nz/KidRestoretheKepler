@@ -1,0 +1,40 @@
+uuid: responsive_image_styles_main_content
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.maincontent_mobile
+    - image.style.maincontent_narrow
+    - image.style.maincontent_wide
+  theme:
+    - krtk_interim
+id: main_content
+label: main_content
+image_style_mappings:
+  -
+    breakpoint_id: krtk_interim.standard.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maincontent_wide
+  -
+    breakpoint_id: krtk_interim.standard.normal
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maincontent_wide
+  -
+    breakpoint_id: krtk_interim.standard.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maincontent_narrow
+  -
+    breakpoint_id: krtk_interim.standard.mobile_landscape
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maincontent_mobile
+  -
+    breakpoint_id: krtk_interim.standard.mobile_portrait
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: maincontent_mobile
+breakpoint_group: krtk_interim.standard
+fallback_image_style: maincontent_wide
