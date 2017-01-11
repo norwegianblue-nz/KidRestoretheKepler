@@ -86,7 +86,7 @@ div#block-statictopmenu {text-align:center;}
 .tool-bar-icon.clicked {background-color:#fff;}
 .tool-bar-icon-info {display:none;} // INFO REMOVED TILL LATER
 // expandend divs
-#block-krtk0-search, #block-userlogin, #block-toolbarinfo {
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {
 	@include parrotCols(6, 12, normal, '1200');
 	margin-right:0;
 	float: right;
@@ -99,7 +99,8 @@ div#block-statictopmenu {text-align:center;}
 	z-index:30;
 	display:none;
 }
-div#block-krtk0-search.expand, div#block-userlogin.expand {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
+div#block-krtk0-search.expand, div#block-userlogin.expand  {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
+body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
 
 #block-krtk0-search #edit-keys, #block-userlogin input#edit-name, #block-userlogin input#edit-pass { // text input box
 	width: 75%;

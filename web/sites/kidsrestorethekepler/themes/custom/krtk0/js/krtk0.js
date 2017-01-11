@@ -33,6 +33,7 @@ $jq('.tool-bar-icon-login').click(function(){
         $jq('.tool-bar-icon-info').toggleClass("clicked");
     }
     $jq('#block-userlogin').toggleClass("expand");
+    $jq('#block-useraccountmenu').toggleClass("expand");
     $jq(this).toggleClass("clicked");
 });
 $jq('.tool-bar-icon-search').click(function(){

@@ -148,7 +148,7 @@ div#block-statictopmenu {
   display: none;
 }
 
-#block-krtk0-search, #block-userlogin, #block-toolbarinfo {
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {
   width: 580px;
   margin-right: 10px;
   margin-left: 10px;
@@ -163,14 +163,18 @@ div#block-statictopmenu {
   z-index: 30;
   display: none;
 }
-#block-krtk0-search:first-of-type, #block-userlogin:first-of-type, #block-toolbarinfo:first-of-type {
+#block-krtk0-search:first-of-type, #block-userlogin:first-of-type, #block-toolbarinfo:first-of-type, #block-useraccountmenu:first-of-type {
   margin-left: 0;
 }
-#block-krtk0-search:last-of-type, #block-userlogin:last-of-type, #block-toolbarinfo:last-of-type {
+#block-krtk0-search:last-of-type, #block-userlogin:last-of-type, #block-toolbarinfo:last-of-type, #block-useraccountmenu:last-of-type {
   margin-right: 0;
 }
 
 div#block-krtk0-search.expand, div#block-userlogin.expand {
+  display: block;
+}
+
+body.user-logged-in nav#block-useraccountmenu.expand {
   display: block;
 }
 
