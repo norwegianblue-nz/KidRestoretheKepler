@@ -41,6 +41,10 @@ $jq('.tool-bar-icon-search').click(function(){
         $jq('#block-userlogin').toggleClass("expand");
         $jq('.tool-bar-icon-login').toggleClass("clicked");
     }
+    if($jq('#block-useraccountmenu').hasClass("expand")){
+        $jq('#block-useraccountmenu').toggleClass("expand");
+        $jq('.tool-bar-icon-login').toggleClass("clicked");
+    }
     if($jq('#block-toolbarinfo').hasClass("expand")){
         $jq('#block-toolbarinfo').toggleClass("expand");
         $jq('.tool-bar-icon-info').toggleClass("clicked");
@@ -55,6 +59,10 @@ $jq('.tool-bar-icon-info').click(function(){
     }
     if($jq('#block-userlogin').hasClass("expand")){
         $jq('#block-userlogin').toggleClass("expand");
+        $jq('.tool-bar-icon-login').toggleClass("clicked");
+    }
+    if($jq('#block-useraccountmenu').hasClass("expand")){
+        $jq('#block-useraccountmenu').toggleClass("expand");
         $jq('.tool-bar-icon-login').toggleClass("clicked");
     }
     $jq('#block-toolbarinfo').toggleClass("expand");
