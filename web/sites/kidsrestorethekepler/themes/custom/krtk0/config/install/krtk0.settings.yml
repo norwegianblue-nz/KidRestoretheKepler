@@ -33,4 +33,5 @@ breakpoint_group_front: krtk0.standard
 edit_this_layout: front
 node_type_article_layout: primary
 node_type_page_layout: primary
+node_type_meetlocals_layout: locals
 taxonomy_tags_layout: primary

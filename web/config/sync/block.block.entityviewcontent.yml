@@ -1,0 +1,31 @@
+uuid: 775e4cd5-ab5a-47a9-981d-0c07b0b565c0
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+    - node
+  theme:
+    - krtk0
+id: entityviewcontent
+theme: krtk0
+region: '-1'
+weight: -31
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: 'Content 2'
+  provider: ctools
+  label_display: '0'
+  view_mode: content_2
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      front_page: front_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

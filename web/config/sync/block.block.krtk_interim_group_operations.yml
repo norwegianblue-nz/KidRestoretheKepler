@@ -1,0 +1,24 @@
+uuid: 54ba449f-69ab-44b5-9dd8-a71af65118b4
+langcode: en
+status: false
+dependencies:
+  module:
+    - group
+  theme:
+    - krtk_interim
+_core:
+  default_config_hash: MjMChFykEa-4UxdnGstVk1FcXqwUF3p_GBJLIFT3_XI
+id: krtk_interim_group_operations
+theme: krtk_interim
+region: '-1'
+weight: -4
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: visible
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

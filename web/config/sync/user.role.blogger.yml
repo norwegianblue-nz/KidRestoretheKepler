@@ -1,0 +1,14 @@
+uuid: 6dfe09f0-549b-44f7-8268-01efe0e9b582
+langcode: en
+status: true
+dependencies: {  }
+id: blogger
+label: Blogger
+weight: 4
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'view own unpublished content'
+  - 'access site in maintenance mode'
+  - 'view the administration theme'
+  - 'access toolbar'

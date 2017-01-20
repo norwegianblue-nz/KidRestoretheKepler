@@ -14,3 +14,4 @@ web/sites/*/files
 
 /sites/kidsrestorethekepler/themes/custom/krtk_interim/
 /sites/*/settings.local.php
+/sites/*/php_errors.log

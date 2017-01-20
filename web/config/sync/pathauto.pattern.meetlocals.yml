@@ -1,0 +1,22 @@
+uuid: 7dc5ffba-523b-4392-a435-23892cd70133
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: meetlocals
+label: MeetLocals
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  12c1753a-b0c7-4ac9-b33a-020c029d84b7:
+    id: node_type
+    bundles:
+      meet_the_locals: meet_the_locals
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 12c1753a-b0c7-4ac9-b33a-020c029d84b7
+selection_logic: and
+weight: -5
+relationships: {  }

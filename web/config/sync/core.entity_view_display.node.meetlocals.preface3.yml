@@ -1,0 +1,76 @@
+uuid: 0025bb13-6d26-41ff-91fb-65617395274a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.preface3
+    - field.field.node.meetlocals.body
+    - field.field.node.meetlocals.field_bg_image
+    - field.field.node.meetlocals.field_conservation_status
+    - field.field.node.meetlocals.field_habitat
+    - field.field.node.meetlocals.field_image
+    - field.field.node.meetlocals.field_latin_name
+    - field.field.node.meetlocals.field_life_strategy
+    - field.field.node.meetlocals.field_maori_name
+    - field.field.node.meetlocals.field_more_info
+    - field.field.node.meetlocals.field_nz_classification
+    - field.field.node.meetlocals.field_trophic_level
+    - node.type.meetlocals
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      path: modules/contrib/ds
+      library: layout_plugin/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_trophic_level
+      right:
+        - field_habitat
+id: node.meetlocals.preface3
+targetEntityType: node
+bundle: meetlocals
+mode: preface3
+content:
+  field_habitat:
+    weight: 5
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_trophic_level:
+    weight: 1
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+hidden:
+  body: true
+  field_bg_image: true
+  field_conservation_status: true
+  field_image: true
+  field_latin_name: true
+  field_life_strategy: true
+  field_maori_name: true
+  field_more_info: true
+  field_nz_classification: true
+  links: true

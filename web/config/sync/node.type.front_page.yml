@@ -1,0 +1,13 @@
+uuid: 54607b7b-aed4-4a3a-94f2-2c8dfd2630cf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zhtPXoRcC6REiepM0k16zw__FDW5YOXDR6U2WlldTrs
+name: 'Front Page'
+type: front_page
+description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
