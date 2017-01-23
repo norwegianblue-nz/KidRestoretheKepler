@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "be09c1e7584c98fcb6bd0b9105103c7b",
-    "content-hash": "3dd1b2bd1e802e37c020b32f1c5100b3",
+    "hash": "a7fa1fc0cb8deacb7f05076181886409",
+    "content-hash": "0e34ebab09cef9915de60aa413ffbea7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1378,7 +1378,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/admin_toolbar-8.x-1.18.zip",
-                "reference": null,
+                "reference": "8.x-1.18",
                 "shasum": "ea5b6b5eb20757fda12e7220819a750e2575359b"
             },
             "require": {
@@ -1499,12 +1499,12 @@
             "version": "1.0.0-rc10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/hechoendrupal/DrupalConsole.git",
+                "url": "https://github.com/hechoendrupal/drupal-console.git",
                 "reference": "9ec28866068f902220a2ee0aeb36526488a3b0e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/DrupalConsole/zipball/9ec28866068f902220a2ee0aeb36526488a3b0e1",
+                "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/9ec28866068f902220a2ee0aeb36526488a3b0e1",
                 "reference": "9ec28866068f902220a2ee0aeb36526488a3b0e1",
                 "shasum": ""
             },
@@ -1717,7 +1717,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/contact_block-8.x-1.3.zip",
-                "reference": null,
+                "reference": "8.x-1.3",
                 "shasum": "fceaaff984380a9164c6aae9aee2519e6d5dd4f1"
             },
             "require": {
@@ -2063,7 +2063,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "439d9cab6af0ddb5efbd31e16fbb5da1f510fe6f"
             },
             "require": {
@@ -2505,7 +2505,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/field_group-8.x-1.0-rc6.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc6",
                 "shasum": "1ce3c6387e745a04a1099956a5bf39bb50096d44"
             },
             "require": {
@@ -2770,7 +2770,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-1.0-alpha3.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha3",
                 "shasum": "8c130c6bb4b9a3a87ef8b92d169833230185f598"
             },
             "require": {
@@ -2824,7 +2824,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/imagemagick-8.x-1.0-alpha4.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha4",
                 "shasum": "778889ae765b67d1fb10ae89a9f481d1f7091325"
             },
             "require": {
@@ -3113,6 +3113,52 @@
             "time": "2016-11-13 12:04:32"
         },
         {
+            "name": "drupal/linkit",
+            "version": "4.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/linkit",
+                "reference": "8.x-4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-4.2.zip",
+                "reference": null,
+                "shasum": "6e6c7d33c5414887b992f891b67ac954cc3fee17"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.2",
+                    "datestamp": "1483883342"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Emil Stjerneman",
+                    "homepage": "https://stjerneman.com",
+                    "email": "emil@stjerneman.com",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Linkit - Enriched linking experience",
+            "homepage": "http://drupal.org/project/linkit",
+            "support": {
+                "source": "http://cgit.drupalcode.org/linkit",
+                "issues": "http://drupal.org/project/linkit"
+            }
+        },
+        {
             "name": "drupal/omega",
             "version": "5.0.0-alpha7",
             "source": {
@@ -3123,7 +3169,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/omega-8.x-5.0-alpha7.zip",
-                "reference": null,
+                "reference": "8.x-5.0-alpha7",
                 "shasum": "cf543fd25f2780320795fd2531e30a14cf298467"
             },
             "require": {
@@ -3390,7 +3436,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/responsive_menu-8.x-2.4.zip",
-                "reference": null,
+                "reference": "8.x-2.4",
                 "shasum": "a463506457f1f7053d55318574b13352b70c27c5"
             },
             "require": {
@@ -3557,7 +3603,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_field_formatter-8.x-1.4.zip",
-                "reference": null,
+                "reference": "8.x-1.4",
                 "shasum": "b6377e603020a99908d3f9457fefabaad2db592b"
             },
             "require": {
@@ -3600,7 +3646,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_slideshow-8.x-4.1.zip",
-                "reference": null,
+                "reference": "8.x-4.1",
                 "shasum": "287741ee59dff32e392bc15cae92a1a6a3e0c802"
             },
             "require": {
@@ -3649,6 +3695,11 @@
         {
             "name": "drupal/viewsreference",
             "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/viewsreference",
+                "reference": "8.x-1.0-alpha1"
+            },
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/viewsreferennce": "self.version"

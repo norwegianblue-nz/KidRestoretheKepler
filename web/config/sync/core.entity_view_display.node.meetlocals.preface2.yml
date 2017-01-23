@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.preface2
     - field.field.node.meetlocals.body
     - field.field.node.meetlocals.field_bg_image
+<<<<<<< HEAD
     - field.field.node.meetlocals.field_conservation_status
     - field.field.node.meetlocals.field_habitat
     - field.field.node.meetlocals.field_image
@@ -15,27 +16,45 @@ dependencies:
     - field.field.node.meetlocals.field_more_info
     - field.field.node.meetlocals.field_nz_classification
     - field.field.node.meetlocals.field_trophic_level
+=======
+    - field.field.node.meetlocals.field_header_area_info
+    - field.field.node.meetlocals.field_more_info
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
     - node.type.meetlocals
   module:
     - ds
     - entity_reference_revisions
+<<<<<<< HEAD
     - responsive_image
+=======
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
     - user
 third_party_settings:
   ds:
     layout:
+<<<<<<< HEAD
       id: ds_3col_stacked
       path: modules/contrib/ds
       library: layout_plugin/ds_3col_stacked
+=======
+      id: ds_2col
+      path: modules/contrib/ds
+      library: layout_plugin/ds_2col
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
       disable_css: false
       entity_classes: all_classes
       settings:
         wrappers:
+<<<<<<< HEAD
           header: div
           left: div
           middle: div
           right: div
           footer: div
+=======
+          left: div
+          right: div
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
         outer_wrapper: div
         attributes: ''
         link_attribute: ''
@@ -43,6 +62,7 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
+<<<<<<< HEAD
       header:
         - node_title
         - field_maori_name
@@ -55,6 +75,19 @@ third_party_settings:
       right:
         - field_life_strategy
     fields:
+=======
+      left:
+        - node_title
+        - field_header_area_info
+      right:
+        - 'dynamic_block_field:node-latest_news'
+    fields:
+      'dynamic_block_field:node-latest_news':
+        plugin_id: 'dynamic_block_field:node-latest_news'
+        weight: 2
+        label: above
+        formatter: default
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
       node_title:
         plugin_id: node_title
         weight: 0
@@ -65,6 +98,7 @@ targetEntityType: node
 bundle: meetlocals
 mode: preface2
 content:
+<<<<<<< HEAD
   field_conservation_status:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -117,4 +151,18 @@ hidden:
   field_habitat: true
   field_more_info: true
   field_trophic_level: true
+=======
+  field_header_area_info:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_bg_image: true
+  field_more_info: true
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
   links: true

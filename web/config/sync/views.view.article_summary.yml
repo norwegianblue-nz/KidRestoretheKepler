@@ -187,6 +187,10 @@ display:
           offset: 0
       defaults:
         pager: false
+<<<<<<< HEAD
+=======
+      block_description: 'Latest News'
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
     cache_metadata:
       max-age: -1
       contexts:

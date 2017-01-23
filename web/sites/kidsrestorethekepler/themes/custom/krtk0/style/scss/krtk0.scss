@@ -5,17 +5,13 @@
 //
 ////////////////////////////////////////////////////////////////////////////////
 
-.views-field.views-field-field-front-page-logo {
-    float: left;
-    margin: 0 5px 0 0;
-}
 
       
 // RESET for _html-elements.scss - this is ours (I think!) and maybe just needs removing?
 p a {border:none !important;color:$krtk0_Teal;}
 
 // Home Logo ///////////////////////////////////////////////////////////////////
-
+#block-logohomepage {z-index: -200;	position: relative;} /* To fix tool bar unclickable on logged in */
 #page div#logo-home {width: 250px;
 	position: absolute;
 	margin:0 auto;
@@ -24,18 +20,12 @@ p a {border:none !important;color:$krtk0_Teal;}
 	margin-left: -90px;
 	top: 6em;
 }
-#page.scrolled div#logo-home {width:70px;position:fixed;top:3px;left:0;margin-left:0;@include krtk0Transition;float:left;}
+#page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;}
 
 // Pages Logo //////////////////////////////////////////////////////////////////
 #block-logogeneralpages {
     float: left;
     margin-top: 5px;}
-/** OR instead of float **/
-#block-logogeneralpages {
-    position: relative;
-    left: 0;
-    display: inline-block;
-}
 #page #block-logogeneralpages img {
     width: 100%;@include krtk0Transition;}
 #page.scrolled #block-logogeneralpages img {
@@ -74,6 +64,7 @@ div#block-statictopmenu {text-align:center;}
 	padding:2px 5px 2px 115px;
 	clear: right;
 }
+#block-krtktoolbar a {line-height:0;} //Reduce default height of a tag to zero
 .tool-bar-icon {
 	display: inline-block;
 	margin: 3px 1px;
@@ -81,12 +72,11 @@ div#block-statictopmenu {text-align:center;}
 	border-radius: 12px;
 	padding: 2px;
 }
-
-#block-krtktoolbar a {line-height:0;} //Reduce default height of a tag to zero
 .tool-bar-icon.clicked {background-color:#fff;}
 .tool-bar-icon-info {display:none;} // INFO REMOVED TILL LATER
-// expandend divs
-#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {
+
+// expandend toolbar divs
+#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu  {
 	@include parrotCols(6, 12, normal, '1200');
 	margin-right:0;
 	float: right;
@@ -99,11 +89,12 @@ div#block-statictopmenu {text-align:center;}
 	z-index:30;
 	display:none;
 }
-div#block-krtk0-search.expand, div#block-userlogin.expand  {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
+
+div#block-krtk0-search.expand, div#block-userlogin.expand {display:block;} // #block-toolbarinfo // INFO REMOVED TILL LATER
 body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
 
-#block-krtk0-search #edit-keys, #block-userlogin input#edit-name, #block-userlogin input#edit-pass { // text input box
-	width: 75%;
+#block-krtk0-search #edit-keys, #block-userlogin input.form-text { // text input box
+	width: 80%;
 	padding: 13px;
 	font-size: 18px;
 	color: #888;
@@ -116,24 +107,42 @@ body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
 	font-family:$ktrk0_Exo2-RegularCondensed;
 	font-size:14px;
 }
-#block-krtk0-search input#edit-submit, #block-userlogin input#edit-submit--2 {
+
+//  Login and submit btns
+input.button,
+#block-useraccountmenu ul.menu li
+{
 	padding: 16px;
 	background-color: $krtk0_Teal;
 	border: none;
 	color: #fff;
-	margin: 0;
+	margin: 0 !important;
 	text-transform: uppercase;
 	font-family:$ktrk0_Exo2-RegularCondensed;
 	font-size:14px;
 }
-#block-userlogin input#edit-submit--2 {float:right;}
+#block-krtk0-search input.button, #block-userlogin input.button {float: right;}
+#block-useraccountmenu ul.menu li a {color: #fff;}
 
+#block-userlogin div.item-list ul {margin:0;}
+#block-userlogin div.item-list li {margin: 0 0 0 76px;
+	margin: 0 0 0 76px;
+	width: 160px;
+	border: 1px $krtk0_Teal solid;
+	display:block;
+}
+#block-userlogin div.item-list li a {color: #fff;display:block;padding:12px 6px 16px 10px;}
 
+//	Button/search bar/login responsive styles
+@media all and (max-width: 559px) {
+	#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {width:100% !important}
+	#block-userlogin input.form-text {width:65%;}
+}
 
 
 // Header Area /////////////////////////////////////////////////////////////////
 #krtk0-letterbox {
-	height: 20vw;
+	height: 20vh; min-height:19em;
 	background: transparent;
 }
 
@@ -141,13 +150,22 @@ body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
 #header-outer-wrapper {background-color: $krtk0_TransTeal;}
 
 #block-krtk0-branding {display: none;}
-#block-logostrapfrontpage h2 {text-align:center;color:#fff;font-family:$ktrk0_Exo2-LightCondensed;font-size:21px;}
+#block-logostrapfrontpage h2 {text-align:center;color:#fff;font-family:$ktrk0_Exo2-LightCondensed;font-size:21px;margin:2em 0;}
 
 // Zone buttons !! NOW GENERALLY USED FOR ZONE TITLES !! /////////////////////////////////////////////////////////////
 
-// !! #btns wrapper needs targeting for each zone !! ///
+// !! NB #btns wrapper and content needs targeting for each zone !! ///
+
 /*body.path-frontpage*/ #btns-outer-wrapper { /* re-instate frontpage once zones defined */
 	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-button-bar-bg.svg');
+	background-repeat:repeat-x;
+	background-position:top center;
+	padding-top:2em;
+}
+
+body.node--type-meet-the-locals #btns-outer-wrapper, /* DELETE after interim finished */
+body.node--type-meetlocals #btns-outer-wrapper { /* MAY CHANGE once zones targeting finalised */
+	background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/locals-zone-bar-bg-top.svg');
 	background-repeat:repeat-x;
 	background-position:top center;
 	padding-top:2em;
@@ -157,24 +175,45 @@ div#block-krtk0-mainbuttons {
     text-align: center;
     margin: 5px auto;
 }
+
+/// Buttons
 div.zone-button {width:100px;display:inline-block;vertical-align:top;text-align:center;}
 div.zone-button p {line-height:1em;margin:0;}
 div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px;}
 
 div#block-mainbuttons-2 {margin: 7px auto;}
-#block-mainbuttons-2 {width: 60%;margin: 10px auto 0;text-align: center;}
-.node--type-page div.zone-button img {width:70%;@include krtk0Transition;} /* narrower icon for general pages */
-.node--type-page #page.scrolled div.zone-button img {width:60%;@include krtk0Transition;} /* smaller icon on scroll */
-.node--type-page #page.scrolled div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
+#block-mainbuttons-2 {width: 60%; margin: 10px auto 0; text-align: center;}
+#block-mainbuttons-2 div.zone-button img {width:60px;@include krtk0Transition;} /* narrower icon for general pages */
+#page.scrolled #block-mainbuttons-2 div.zone-button img {width:50px;@include krtk0Transition;} /* smaller icon on scroll */
+#page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
 
-// Page titles
-#block-placeholdertitle h2 {
-	color: #fff;
+//
+// Page titles - may change once zone targeting defined /!/!/!/!/!/!
+//
+h2.zone-title, h2.zone-title a,
+{	color: #fff;
 	font-size: 30px;
 	font-family: $ktrk0_Exo2-RegularCondensed;
 	text-transform: lowercase;
 	margin: 0.3em 0;
-}#block-placeholdertitle img {vertical-align:middle;}
+	font-weight:normal;
+}
+h2.zone-title img /*#block-placeholdertitle img, #block-zonetitlemeetthelocals img*/ {vertical-align:middle;margin-right:15px;}
+
+#block-zonetitleabout-front h2 a {
+	width: 100%;
+	display: block;
+	padding: 10px 10px 4px;
+}
+
+#block-zonetitleabout-front { // ADD EXTRA ZONE BLOCK TARGETS HERE !?!?!?!?!?
+	margin-top: -88px !important;
+	margin: 0 0 4em;
+	background-color: $krtk0_Teal;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
 
 
 // Team pager //////////////////////////////////////////////////////////////////
@@ -183,6 +222,7 @@ body.path-frontpage #teaser-outer-wrapper {
 	background-repeat: repeat-x;
 	background-position: top center;
 	background-color: $krtk0_Teal;
+	border-bottom:1.5em solid #fff;
 }
 // team pic temp DELETE WHEN PIC SIZE SET IN VIEW:
 .image-style-thumbnail {width:140px;margin-right:16px;}
@@ -229,13 +269,78 @@ div.view-front-page-team h2 a {
 div.view-front-page-team .pager__items {text-align:left;}
 div.view-front-page-team nav.pager ul {margin:0;}
 
-// Content stripe //////////////////////////////////////////////////////////////
+// Content stripe ///////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
 #content-outer-wrapper {background-color: #fff;}
+.path-frontpage #content-outer-wrapper { /* background and title background for home page only */
+	background-color: #fff;
+	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-about-bg-texture.jpg');
+	border-top: 200px solid;
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 100;
+}
 #main-layout {padding-bottom:5em;}
-.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 0); }
+.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 1px	); }
 
+//	Articles ///////////////////
 
-// Front page Partners stripe //////////////////////////////////////////////////////////////
+//  Tags  //
+body.node--type-article .field--taxonomy-terms {
+	background-color: $krtk0_Orange;
+}
+
+body.node--type-article .field--taxonomy-terms div.field__label {
+	@include krtk0AreaTitle($krtk0_Buff)
+}
+body.node--type-article .field--taxonomy-terms div.field__label::after {
+	content:"Check out these related article topics:";
+	display:block;
+	font-size:18px;
+	font-family:$krtk0_WorkSans-Light;
+}
+
+body.node--type-article .field-item--taxonomy-term {
+	background-color: $krtk0_DarkOrange;
+	padding: 10px 10px;
+	margin: 10px;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+@media all and (max-width: 959px) {
+    body.node--type-article .field-item--taxonomy-term {@include parrotCols(12, 12, normal, '100');}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    body.node--type-article .field-item--taxonomy-term {@include parrotCols(4, 12, normal, '960');}
+}
+@media all and (min-width: 1280px) {
+    body.node--type-article .field-item--taxonomy-term {@include parrotCols(3, 12, normal, '1200');}
+}
+
+body.node--type-article .field-item--taxonomy-term a {
+color:$krtk0_Buff;font-size:18px;font-family:$ktrk0_Exo2-RegularCondensed;display:inline-block;
+}
+
+//  Comments  //
+body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
+	background-color:$krtk0_Buff;
+}
+
+body.node--type-article .field--label-above.comment-wrapper h2.title {
+	@include krtk0AreaTitle($krtk0_DarkOrange)
+}
+
+// Social stripe ////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+#social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:4em;}
+#socialBlock-icons, #socialBlock-facebook {
+    width: 49.7%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#socialBlock-title {@include krtk0BlockTitle(#fff);} //TARGET MAY CHANGE
+
+// Front page Partners stripe (see below for pages' partner stripe) //////////////////////////////////////////////////////////////
 .field--name-field-partners-intro {
 	font-family:$krtk0_WorkSans-Hairline;
 	font-size:51px;
@@ -245,14 +350,28 @@ div.view-front-page-team nav.pager ul {margin:0;}
 .field--name-field-partners-intro::before {content:open-quote;}
 .field--name-field-partners-intro::after {content:close-quote;}
 
-// Social stripe ///////////////////////////////////////////////////////////////
-#social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:2em;margin-bottom:2em;}
-#socialBlock-icons, #socialBlock-facebook {
-    width: 49.7%;
-    display: inline-block;
-    vertical-align: middle;
+
+// Extras (partners strip on pages) //////////////////////////////////////////////////////////////////////
+#extras-outer-wrapper {
+	background-color: $krtk0_Blue;
+	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border.svg");
+	background-repeat: no-repeat;
+	background-position-x: 50%;
+	padding-bottom:2em;
+	border-bottom:solid 10px #fff;
+	/* background-size: 350%; - Change for breakpoints */
+	
 }
-#socialBlock-title {@include krtk0BlockTitle(#fff);} //TARGET MAY CHANGE
+body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$krtk0_Buff;	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border-front.svg");
+}
+#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;}
+
+.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos 
+	{background-color:#fff;padding:10px;}
+.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos .views-row {display:inline-block;}
+.view-display-id-partner_logos .views-row:last-of-type::after 
+	{content: ""; display: table; clear: both;}
+
 
 // Footer //////////////////////////////////////////////////////////////////////
 
@@ -261,6 +380,7 @@ div.view-front-page-team nav.pager ul {margin:0;}
     background-position: top;
     background-repeat: repeat-x;
     background-color:#fff;
+    border-top :5em solid #fff;
 }
 // #block-charityfooternumber {@include column(8, 12, zero);float:left;padding-top: 40px;}
 // #block-footertitlekrtklogo {@include column(4, 12, zero);float:right;padding-top:28px;}

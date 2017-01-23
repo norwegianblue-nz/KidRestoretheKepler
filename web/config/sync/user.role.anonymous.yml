@@ -16,3 +16,10 @@ permissions:
   - 'search content'
   - 'view paragraph content locals_more_info'
   - 'post comments'
+<<<<<<< HEAD
+=======
+  - 'view paragraph content conservation_status'
+  - 'view paragraph content localspref2'
+  - 'view paragraph content locals2panel'
+  - 'view paragraph content locals3panel'
+>>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
