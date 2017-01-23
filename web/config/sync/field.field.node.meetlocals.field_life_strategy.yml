@@ -1,0 +1,28 @@
+uuid: 5388e1a0-d863-48e0-b9fa-4ab4d5e134de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_life_strategy
+    - node.type.meetlocals
+    - taxonomy.vocabulary.life_strategy
+id: node.meetlocals.field_life_strategy
+field_name: field_life_strategy
+entity_type: node
+bundle: meetlocals
+label: 'Life Strategy'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      life_strategy: life_strategy
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,41 @@
+uuid: f4719d92-ca20-4838-80bd-823d7251d10e
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.inlinehalf_mobile
+    - image.style.inlinehalf_narrow
+    - image.style.inlinehalf_normal
+    - image.style.inlinehalf_wide
+  theme:
+    - krtk_interim
+id: inlinehalf
+label: HalfWidth
+image_style_mappings:
+  -
+    breakpoint_id: krtk_interim.standard.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inlinehalf_wide
+  -
+    breakpoint_id: krtk_interim.standard.normal
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inlinehalf_normal
+  -
+    breakpoint_id: krtk_interim.standard.narrow
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inlinehalf_normal
+  -
+    breakpoint_id: krtk_interim.standard.mobile_landscape
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inlinehalf_narrow
+  -
+    breakpoint_id: krtk_interim.standard.mobile_portrait
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inlinehalf_mobile
+breakpoint_group: krtk_interim.standard
+fallback_image_style: inlinehalf_wide

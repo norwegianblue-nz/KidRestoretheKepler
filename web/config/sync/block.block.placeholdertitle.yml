@@ -1,0 +1,44 @@
+uuid: 31c23038-1814-46bd-9623-f222a78ba937
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2913a5f6-850d-4213-9ab6-21f1b9021fe0'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - krtk0
+id: placeholdertitle
+theme: krtk0
+region: btns
+weight: 0
+provider: null
+plugin: 'block_content:2913a5f6-850d-4213-9ab6-21f1b9021fe0'
+settings:
+  id: 'block_content:2913a5f6-850d-4213-9ab6-21f1b9021fe0'
+  label: 'Zone - PLACEHOLDER - Title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      article: article
+      blog: blog
+      book: book
+      easychart: easychart
+      page: page
+      partners: partners
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

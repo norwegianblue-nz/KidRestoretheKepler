@@ -1,0 +1,33 @@
+uuid: 2e371008-7514-4db3-a7d5-da32ae3d1158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conservation_status
+    - node.type.meetlocals
+    - paragraphs.paragraphs_type.conservation_status
+  module:
+    - entity_reference_revisions
+id: node.meetlocals.field_conservation_status
+field_name: field_conservation_status
+entity_type: node
+bundle: meetlocals
+label: 'Conservation Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      conservation_status: conservation_status
+    target_bundles_drag_drop:
+      conservation_status:
+        enabled: true
+        weight: 3
+      locals_more_info:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

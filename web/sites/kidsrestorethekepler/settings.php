@@ -695,7 +695,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $settings['install_profile'] = 'standard';
-$config_directories['sync'] = 'sites/kidsrestorethekepler.co.nz/files/config/sync';
+$config_directories['sync'] = 'config/sync';
 
 /**
  * Load local development override configuration, if available.

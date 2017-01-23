@@ -1,0 +1,14 @@
+uuid: 4e1f7e28-9b39-4957-b753-c5ff91a1d82b
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.admins
+id: admins-outsider
+label: Outsider
+weight: -101
+internal: true
+audience: outsider
+group_type: admins
+permissions_ui: true
+permissions: {  }

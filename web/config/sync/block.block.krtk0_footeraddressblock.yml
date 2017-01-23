@@ -1,0 +1,25 @@
+uuid: f78a3c97-4515-4b53-97b4-d7cc48e80b0f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e4271283-d9a7-47dc-accb-2048811d1329'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: krtk0_footeraddressblock
+theme: krtk0
+region: footer
+weight: -26
+provider: null
+plugin: 'block_content:e4271283-d9a7-47dc-accb-2048811d1329'
+settings:
+  id: 'block_content:e4271283-d9a7-47dc-accb-2048811d1329'
+  label: Address
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

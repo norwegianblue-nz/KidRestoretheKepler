@@ -1,0 +1,28 @@
+uuid: f0e699b7-3754-4f3a-ab5a-7ea4c7aca171
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_habitat
+    - node.type.meetlocals
+    - taxonomy.vocabulary.habitat
+id: node.meetlocals.field_habitat
+field_name: field_habitat
+entity_type: node
+bundle: meetlocals
+label: Habitat
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      habitat: habitat
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

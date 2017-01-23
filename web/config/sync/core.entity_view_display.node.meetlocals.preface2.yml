@@ -1,0 +1,120 @@
+uuid: 8a322ca7-0b50-41ce-a998-e49d4808adaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.preface2
+    - field.field.node.meetlocals.body
+    - field.field.node.meetlocals.field_bg_image
+    - field.field.node.meetlocals.field_conservation_status
+    - field.field.node.meetlocals.field_habitat
+    - field.field.node.meetlocals.field_image
+    - field.field.node.meetlocals.field_latin_name
+    - field.field.node.meetlocals.field_life_strategy
+    - field.field.node.meetlocals.field_maori_name
+    - field.field.node.meetlocals.field_more_info
+    - field.field.node.meetlocals.field_nz_classification
+    - field.field.node.meetlocals.field_trophic_level
+    - node.type.meetlocals
+  module:
+    - ds
+    - entity_reference_revisions
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_stacked
+      path: modules/contrib/ds
+      library: layout_plugin/ds_3col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - node_title
+        - field_maori_name
+        - field_latin_name
+        - field_image
+      middle:
+        - field_conservation_status
+      left:
+        - field_nz_classification
+      right:
+        - field_life_strategy
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.meetlocals.preface2
+targetEntityType: node
+bundle: meetlocals
+mode: preface2
+content:
+  field_conservation_status:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_image:
+    type: responsive_image
+    weight: 3
+    label: above
+    settings:
+      responsive_image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_latin_name:
+    type: string
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_life_strategy:
+    weight: 7
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_maori_name:
+    type: string
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_nz_classification:
+    weight: 5
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+hidden:
+  body: true
+  field_bg_image: true
+  field_habitat: true
+  field_more_info: true
+  field_trophic_level: true
+  links: true
