@@ -1,13 +1,13 @@
-uuid: 90645c26-1823-45bf-a138-dd7cddae27e5
+uuid: 07eaadfb-8bfc-4c49-8dcf-8c3e00107bdb
 langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - paragraphs
     - taxonomy
-id: node.field_life_strategy
-field_name: field_life_strategy
-entity_type: node
+id: paragraph.field_nz_classification
+field_name: field_nz_classification
+entity_type: paragraph
 type: entity_reference
 settings:
   target_type: taxonomy_term

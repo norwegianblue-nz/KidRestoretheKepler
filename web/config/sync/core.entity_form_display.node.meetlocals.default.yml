@@ -5,15 +5,8 @@ dependencies:
   config:
     - field.field.node.meetlocals.body
     - field.field.node.meetlocals.field_bg_image
-    - field.field.node.meetlocals.field_conservation_status
-    - field.field.node.meetlocals.field_habitat
-    - field.field.node.meetlocals.field_image
-    - field.field.node.meetlocals.field_latin_name
-    - field.field.node.meetlocals.field_life_strategy
-    - field.field.node.meetlocals.field_maori_name
+    - field.field.node.meetlocals.field_header_area_info
     - field.field.node.meetlocals.field_more_info
-    - field.field.node.meetlocals.field_nz_classification
-    - field.field.node.meetlocals.field_trophic_level
     - image.style.thumbnail
     - node.type.meetlocals
   module:
@@ -28,7 +21,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 10
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -36,60 +29,19 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 13
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   field_bg_image:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-  field_conservation_status:
-    type: entity_reference_paragraphs
-    weight: 6
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-    third_party_settings: {  }
-  field_habitat:
-    weight: 8
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_image:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
-  field_latin_name:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_life_strategy:
-    weight: 7
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-  field_maori_name:
     weight: 1
     settings:
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: string_textfield
-  field_more_info:
+    type: image_image
+  field_header_area_info:
     type: entity_reference_paragraphs
-    weight: 11
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -97,19 +49,19 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_nz_classification:
-    weight: 5
-    settings: {  }
+  field_more_info:
+    type: entity_reference_paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
-    type: options_select
-  field_trophic_level:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
   path:
     type: path
-    weight: 14
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   title:
@@ -121,7 +73,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 12
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60

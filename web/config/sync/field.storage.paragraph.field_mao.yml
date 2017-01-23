@@ -1,15 +1,15 @@
-uuid: e65f3ff9-1ac2-40e2-80d1-f7e0e8e19a95
+uuid: 311bb63c-67cf-4ba5-9dcb-052e4d9b10be
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_maori_name
-field_name: field_maori_name
-entity_type: node
+    - paragraphs
+id: paragraph.field_mao
+field_name: field_mao
+entity_type: paragraph
 type: string
 settings:
-  max_length: 128
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core

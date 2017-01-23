@@ -16,3 +16,7 @@ permissions:
   - 'search content'
   - 'view paragraph content locals_more_info'
   - 'post comments'
+  - 'view paragraph content conservation_status'
+  - 'view paragraph content localspref2'
+  - 'view paragraph content locals2panel'
+  - 'view paragraph content locals3panel'

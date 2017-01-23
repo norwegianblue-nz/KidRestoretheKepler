@@ -1,20 +1,20 @@
-uuid: 2077015f-61ce-4cea-a358-3b9b9c44e48b
+uuid: 92f557e8-4e14-4673-a3a5-22300e21d037
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_image
-    - node.type.meetlocals
+    - field.storage.paragraph.field_mainimage
+    - paragraphs.paragraphs_type.localspref2
   module:
     - image
-id: node.meetlocals.field_image
-field_name: field_image
-entity_type: node
-bundle: meetlocals
+id: paragraph.localspref2.field_mainimage
+field_name: field_mainimage
+entity_type: paragraph
+bundle: localspref2
 label: 'Main Image'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

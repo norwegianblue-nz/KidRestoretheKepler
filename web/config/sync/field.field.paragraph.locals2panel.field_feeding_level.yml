@@ -1,18 +1,18 @@
-uuid: efa09ec8-d808-4279-b4e6-e65f16116232
+uuid: 6193f62d-f4ce-4ad3-9fdf-6985356f63a1
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_trophic_level
-    - node.type.meetlocals
+    - field.storage.paragraph.field_feeding_level
+    - paragraphs.paragraphs_type.locals2panel
     - taxonomy.vocabulary.trophic
-id: node.meetlocals.field_trophic_level
-field_name: field_trophic_level
-entity_type: node
-bundle: meetlocals
+id: paragraph.locals2panel.field_feeding_level
+field_name: field_feeding_level
+entity_type: paragraph
+bundle: locals2panel
 label: 'Feeding Level'
 description: ''
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''

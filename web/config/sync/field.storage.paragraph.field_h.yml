@@ -1,13 +1,13 @@
-uuid: 71c23b36-306c-4f5d-bf39-0a0a33dfaf67
+uuid: 1770113f-dafe-4b18-832d-09b40c04f072
 langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - paragraphs
     - taxonomy
-id: node.field_trophic_level
-field_name: field_trophic_level
-entity_type: node
+id: paragraph.field_h
+field_name: field_h
+entity_type: paragraph
 type: entity_reference
 settings:
   target_type: taxonomy_term

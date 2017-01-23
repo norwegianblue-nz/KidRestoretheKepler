@@ -1,13 +1,13 @@
-uuid: 42e871fd-0a19-469e-a8b7-c34ac61b4f12
+uuid: 658c2381-bb1a-4f09-87cf-8da3ee6451de
 langcode: en
 status: true
 dependencies:
   module:
-    - node
+    - paragraphs
     - taxonomy
-id: node.field_nz_classification
-field_name: field_nz_classification
-entity_type: node
+id: paragraph.field_life_s
+field_name: field_life_s
+entity_type: paragraph
 type: entity_reference
 settings:
   target_type: taxonomy_term

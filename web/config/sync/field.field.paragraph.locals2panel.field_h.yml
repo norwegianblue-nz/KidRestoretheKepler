@@ -1,15 +1,15 @@
-uuid: f0e699b7-3754-4f3a-ab5a-7ea4c7aca171
+uuid: c79eb11d-3ed0-4192-90fa-8d3fa28347da
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_habitat
-    - node.type.meetlocals
+    - field.storage.paragraph.field_h
+    - paragraphs.paragraphs_type.locals2panel
     - taxonomy.vocabulary.habitat
-id: node.meetlocals.field_habitat
-field_name: field_habitat
-entity_type: node
-bundle: meetlocals
+id: paragraph.locals2panel.field_h
+field_name: field_h
+entity_type: paragraph
+bundle: locals2panel
 label: Habitat
 description: ''
 required: false

@@ -1,15 +1,15 @@
-uuid: 5388e1a0-d863-48e0-b9fa-4ab4d5e134de
+uuid: f82c0b1f-3a98-4a17-ae35-ea4e520b5518
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_life_strategy
-    - node.type.meetlocals
+    - field.storage.paragraph.field_life_s
+    - paragraphs.paragraphs_type.locals3panel
     - taxonomy.vocabulary.life_strategy
-id: node.meetlocals.field_life_strategy
-field_name: field_life_strategy
-entity_type: node
-bundle: meetlocals
+id: paragraph.locals3panel.field_life_s
+field_name: field_life_s
+entity_type: paragraph
+bundle: locals3panel
 label: 'Life Strategy'
 description: ''
 required: false

@@ -187,6 +187,7 @@ display:
           offset: 0
       defaults:
         pager: false
+      block_description: 'Latest News'
     cache_metadata:
       max-age: -1
       contexts:

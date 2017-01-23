@@ -302,3 +302,69 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/general-settings.php on line 6
+[18-Jan-2017 23:25:44 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/omega-intro.php on line 5
+[18-Jan-2017 23:25:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/style-settings.php on line 6
+[18-Jan-2017 23:25:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/export-settings.php on line 16
+[18-Jan-2017 23:25:45 UTC] PHP Notice:  Undefined variable: theme in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/core-settings.php on line 20
+[18-Jan-2017 23:25:45 UTC] PHP Notice:  Undefined variable: force_theme_export in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/core-settings.php on line 20
+[18-Jan-2017 23:25:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-settings.php on line 7
+[18-Jan-2017 23:25:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/debug-settings.php on line 5
+[18-Jan-2017 23:25:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-config.php on line 7
+[18-Jan-2017 23:25:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/scss-settings.php on line 6
+[18-Jan-2017 23:25:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/general-settings.php on line 6
+[18-Jan-2017 23:28:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function theme_get_setting() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/omega-intro.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/omega-intro.php on line 5
+[18-Jan-2017 23:28:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/style-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/style-settings.php on line 6
+[18-Jan-2017 23:28:26 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/export-settings.php:16
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/export-settings.php on line 16
+[18-Jan-2017 23:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-settings.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-settings.php on line 7
+[18-Jan-2017 23:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/debug-settings.php:5
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/debug-settings.php on line 5
+[18-Jan-2017 23:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-config.php:7
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/layout-config.php on line 7
+[18-Jan-2017 23:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/scss-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/scss-settings.php on line 6
+[18-Jan-2017 23:28:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function t() in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/general-settings.php:6
+Stack trace:
+#0 {main}
+  thrown in /var/www/vhosts/kidsrestorethekepler.co.nz/drupal-8.x/web/sites/kidsrestorethekepler/themes/custom/krtk0/theme-settings/general-settings.php on line 6

@@ -1,15 +1,15 @@
-uuid: f73b07e5-4961-4d2f-a569-762b58992716
+uuid: af7c84b3-86d8-435e-a045-6c61c52884e1
 langcode: en
 status: true
 dependencies:
   module:
-    - node
-id: node.field_latin_name
-field_name: field_latin_name
-entity_type: node
+    - paragraphs
+id: paragraph.field_latinname
+field_name: field_latinname
+entity_type: paragraph
 type: string
 settings:
-  max_length: 128
+  max_length: 255
   is_ascii: false
   case_sensitive: false
 module: core
