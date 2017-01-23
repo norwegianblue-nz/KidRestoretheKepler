@@ -1,23 +1,23 @@
-uuid: image_style_inlinehalf_narrow
+uuid: image_style_inlinehalf
 langcode: en
 status: true
 dependencies:
   module:
     - image_effects
 _core:
-  default_config_hash: YzK5_z25dZ5zNbOw1peC-BrW90VxeIExvxiDJu-xmNo
-name: inlinehalf_narrow
-label: InlineHalf_narrow
+  default_config_hash: KdsZi1a7TO9JG8bAEb5BbXcWCmnNC31TZgYVm6VZR80
+name: inlinehalf_tn
+label: InlineHalf_tn
 effects:
   f99efc18-eb96-4d09-bf43-aa1bbc960e7e:
     uuid: f99efc18-eb96-4d09-bf43-aa1bbc960e7e
     id: image_effects_strip_metadata
     weight: 1
     data: {  }
-  21786491-f3a1-41ee-b8be-6065668b21a6:
-    uuid: 21786491-f3a1-41ee-b8be-6065668b21a6
+  9b3bc9b8-1d53-44f5-ae2c-3f54f53439d1:
+    uuid: 9b3bc9b8-1d53-44f5-ae2c-3f54f53439d1
     id: image_scale_and_crop
     weight: 2
     data:
-      width: 748
-      height: 493
+      width: 150
+      height: 100

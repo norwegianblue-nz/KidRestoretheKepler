@@ -9,10 +9,11 @@ dependencies:
     - field.field.paragraph.localspref2.field_species_data_1
     - field.field.paragraph.localspref2.field_species_data_2
     - paragraphs.paragraphs_type.localspref2
+    - responsive_image.styles.localsmain
   module:
     - ds
     - entity_reference_revisions
-    - image
+    - responsive_image
 third_party_settings:
   ds:
     layout:
@@ -53,10 +54,10 @@ content:
     weight: 3
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: localsmain
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
   field_mao:
     weight: 0
     label: inline
