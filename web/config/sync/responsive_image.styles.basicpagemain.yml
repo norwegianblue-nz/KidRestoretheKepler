@@ -1,34 +1,34 @@
-uuid: e14dae46-0f3a-40c2-a944-38b4000210c2
+uuid: 9db9566a-7f2b-4d47-9242-d15bce841115
 langcode: en
 status: true
 dependencies:
   config:
-    - image.style.inlinehalf_normal
-    - image.style.inlinehalf_wide
+    - image.style.maincontent_normal
+    - image.style.maincontent_wide
   theme:
     - krtk0
-id: inlinehalf
-label: InLineHalf
+id: basicpagemain
+label: BasicPageMain
 image_style_mappings:
   -
     breakpoint_id: krtk0.standard.extrawide
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: inlinehalf_wide
+    image_mapping: maincontent_wide
   -
     breakpoint_id: krtk0.standard.wide
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: inlinehalf_wide
+    image_mapping: maincontent_wide
   -
     breakpoint_id: krtk0.standard.normal
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: inlinehalf_normal
+    image_mapping: maincontent_normal
   -
     breakpoint_id: krtk0.standard.tablet
     multiplier: 1x
     image_mapping_type: image_style
-    image_mapping: ''
+    image_mapping: maincontent_normal
 breakpoint_group: krtk0.standard
-fallback_image_style: inlinehalf_normal
+fallback_image_style: maincontent_normal

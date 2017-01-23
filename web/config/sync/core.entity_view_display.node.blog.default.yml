@@ -8,7 +8,7 @@ dependencies:
     - field.field.node.blog.comment
     - field.field.node.blog.field_image
     - field.field.node.blog.field_tags
-    - image.style.large
+    - image.style.maincontent_normal
     - node.type.blog
   module:
     - comment
@@ -40,7 +40,7 @@ content:
     type: image
     weight: -1
     settings:
-      image_style: large
+      image_style: maincontent_normal
       image_link: ''
     third_party_settings: {  }
     label: hidden
@@ -54,5 +54,4 @@ content:
   links:
     weight: 100
 hidden:
-  field_image: true
   field_tags: true
