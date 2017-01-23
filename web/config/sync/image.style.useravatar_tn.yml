@@ -1,0 +1,30 @@
+uuid: e521c75c-e054-4d33-952a-2062087f116b
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: useravatar_tn
+label: UserAvatar_tn
+effects:
+  f12a79d7-c250-4dc0-a85f-aecd6612f4de:
+    uuid: f12a79d7-c250-4dc0-a85f-aecd6612f4de
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  1795d368-8488-4694-9c26-dcb6d85668d2:
+    uuid: 1795d368-8488-4694-9c26-dcb6d85668d2
+    id: image_scale
+    weight: 3
+    data:
+      width: 140
+      height: null
+      upscale: true
+  35c6002f-4c97-4c9d-84f1-4daf0b4c8d4a:
+    uuid: 35c6002f-4c97-4c9d-84f1-4daf0b4c8d4a
+    id: image_crop
+    weight: 3
+    data:
+      width: 140
+      height: 140
+      anchor: center-center

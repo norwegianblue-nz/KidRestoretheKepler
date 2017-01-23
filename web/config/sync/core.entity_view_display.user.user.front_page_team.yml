@@ -8,7 +8,7 @@ dependencies:
     - field.field.user.user.field_contact_phone
     - field.field.user.user.field_personal_data
     - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - image.style.useravatar_tn
   module:
     - ds
     - image
@@ -55,7 +55,7 @@ content:
     type: image
     weight: 0
     settings:
-      image_style: thumbnail
+      image_style: useravatar_tn
       image_link: content
     third_party_settings: {  }
     label: hidden
