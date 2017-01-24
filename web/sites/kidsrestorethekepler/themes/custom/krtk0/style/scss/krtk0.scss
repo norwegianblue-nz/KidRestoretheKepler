@@ -18,7 +18,7 @@ p a {border:none !important;color:$krtk0_Teal;}
 	@include krtk0Transition;
 	left: 50%;
 	margin-left: -90px;
-	top: 6em;
+	top: 7vh;
 }
 #page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;}
 
@@ -330,6 +330,21 @@ body.node--type-article .field--label-above.comment-wrapper h2.title {
 	@include krtk0AreaTitle($krtk0_DarkOrange)
 }
 
+
+
+//	Meet the locals ///////////////////
+
+
+.field--name-title h2 {
+	font-size: 3em;
+	line-height: 1em;
+	color: $krtk0_locals-col;
+	text-transform: uppercase;
+	font-family: $ktrk0_Exo2-LightCondensed;
+}
+
+
+
 // Social stripe ////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 #social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:4em;}
@@ -368,7 +383,7 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
 
 .view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos 
 	{background-color:#fff;padding:10px;}
-.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos .views-row {display:inline-block;}
+.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos .views-row {display:inline-block;vertical-align:middle;}
 .view-display-id-partner_logos .views-row:last-of-type::after 
 	{content: ""; display: table; clear: both;}
 
