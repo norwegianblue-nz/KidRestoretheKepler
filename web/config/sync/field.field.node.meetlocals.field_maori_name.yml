@@ -1,4 +1,4 @@
-uuid: eb6005aa-bba3-4cb6-b864-3c67e5454bcb
+uuid: 35d7e8d1-7b64-4dce-b6f2-af60cbd1164c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ id: node.meetlocals.field_maori_name
 field_name: field_maori_name
 entity_type: node
 bundle: meetlocals
-label: 'Maori Name'
+label: /
 description: ''
 required: false
 translatable: false

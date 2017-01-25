@@ -26,10 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-<<<<<<< HEAD
-    pages: "/node/13\r\n/node/28"
-=======
     pages: "/node/13\r\n"
->>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
     negate: false
     context_mapping: {  }

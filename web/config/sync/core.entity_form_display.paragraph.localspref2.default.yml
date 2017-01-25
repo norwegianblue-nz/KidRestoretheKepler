@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.localspref2.field_latinname
     - field.field.paragraph.localspref2.field_mainimage
-    - field.field.paragraph.localspref2.field_mao
     - field.field.paragraph.localspref2.field_species_data_1
     - field.field.paragraph.localspref2.field_species_data_2
     - image.style.thumbnail
@@ -32,13 +31,6 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_mao:
-    weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_species_data_1:
     type: entity_reference_paragraphs
     weight: 4

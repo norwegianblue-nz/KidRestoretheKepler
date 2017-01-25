@@ -6,19 +6,9 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.meetlocals.body
     - field.field.node.meetlocals.field_bg_image
-<<<<<<< HEAD
-    - field.field.node.meetlocals.field_conservation_status
-    - field.field.node.meetlocals.field_habitat
-    - field.field.node.meetlocals.field_image
-    - field.field.node.meetlocals.field_latin_name
-    - field.field.node.meetlocals.field_life_strategy
+    - field.field.node.meetlocals.field_header_area_info
     - field.field.node.meetlocals.field_maori_name
     - field.field.node.meetlocals.field_more_info
-    - field.field.node.meetlocals.field_nz_classification
-    - field.field.node.meetlocals.field_trophic_level
-=======
-    - field.field.node.meetlocals.field_more_info
->>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
     - node.type.meetlocals
   module:
     - ds
@@ -74,14 +64,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_bg_image: true
-<<<<<<< HEAD
-  field_conservation_status: true
-  field_habitat: true
-  field_image: true
-  field_latin_name: true
-  field_life_strategy: true
+  field_header_area_info: true
   field_maori_name: true
-  field_nz_classification: true
-  field_trophic_level: true
-=======
->>>>>>> f9bed188f2ef6f815b6dc7132b86c3d217f6ba12
