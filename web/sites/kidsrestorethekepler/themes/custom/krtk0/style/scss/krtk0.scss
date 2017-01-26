@@ -369,7 +369,9 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
     color: #555;     margin-bottom: 1em;
 }
 
-.paragraph--type-locals3panel > div {
+.paragraph--type-locals3panel > div.group-left,
+.paragraph--type-locals3panel > div.group-middle,
+.paragraph--type-locals3panel > div.group-right {
 	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');
 	background-color:$krtk0_locals-col;
 	padding:10px;
