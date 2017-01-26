@@ -1,0 +1,21 @@
+uuid: a7a9ea70-3885-4739-b139-4ac4960cb5fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: sidecolpanel_tab_port
+label: SideColPanel_tab-port
+effects:
+  bff12178-b9eb-4365-b80f-6095f29b335f:
+    uuid: bff12178-b9eb-4365-b80f-6095f29b335f
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  2d48b2cc-90c9-43a0-a470-26330b9aed79:
+    uuid: 2d48b2cc-90c9-43a0-a470-26330b9aed79
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 261
+      height: 150

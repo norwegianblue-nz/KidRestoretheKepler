@@ -1,0 +1,23 @@
+uuid: image_style_maincontent_narrow
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+_core:
+  default_config_hash: MzgcRIPLWY9Ww0pK2y6dYInRsO0IRcsyU-3j0Fl7NwY
+name: maincontent_normal
+label: maincontent_normal
+effects:
+  75ae95da-05ec-42ad-8b8f-1452e614f941:
+    uuid: 75ae95da-05ec-42ad-8b8f-1452e614f941
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 700
+      height: 350
+  7b8c3bcc-f46b-4e60-a6eb-787433a490f8:
+    uuid: 7b8c3bcc-f46b-4e60-a6eb-787433a490f8
+    id: image_effects_strip_metadata
+    weight: -10
+    data: {  }

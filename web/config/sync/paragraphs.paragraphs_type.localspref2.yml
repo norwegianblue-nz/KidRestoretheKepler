@@ -1,0 +1,6 @@
+uuid: cb4525cd-6c56-4a47-bf3e-ffa1eb729699
+langcode: en
+status: true
+dependencies: {  }
+id: localspref2
+label: 'Header Area Info'

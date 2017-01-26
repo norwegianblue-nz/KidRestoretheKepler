@@ -1,0 +1,24 @@
+uuid: f50b3224-573a-4136-850a-4c3802e96dd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.academy
+id: academy-member
+label: Member
+weight: -100
+internal: true
+audience: member
+group_type: academy
+permissions_ui: true
+permissions:
+  0: 'view group'
+  1: 'view group_membership content'
+  2: 'create blog node'
+  3: 'edit any blog node'
+  4: 'edit own blog node'
+  5: 'view blog node'
+  6: 'create group_node:blog content'
+  7: 'view group_node:blog content'
+  8: 'access group_node overview'
+  16: 'edit own group_node:blog content'

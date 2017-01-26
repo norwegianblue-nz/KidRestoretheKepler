@@ -1,0 +1,32 @@
+uuid: bd73c510-0614-4a35-9f49-c97d1644c4f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.front_page_team
+  module:
+    - node
+    - views
+  theme:
+    - krtk0
+id: views_block__front_page_team
+theme: krtk0
+region: teaser
+weight: -25
+provider: null
+plugin: 'views_block:front_page_team-block_1'
+settings:
+  id: 'views_block:front_page_team-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      front_page: front_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

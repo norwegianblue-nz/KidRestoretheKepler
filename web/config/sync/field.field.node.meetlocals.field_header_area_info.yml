@@ -1,0 +1,42 @@
+uuid: 591d28ae-e6b4-4d4d-9048-455ac3fc287b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_area_info
+    - node.type.meetlocals
+    - paragraphs.paragraphs_type.localspref2
+  module:
+    - entity_reference_revisions
+id: node.meetlocals.field_header_area_info
+field_name: field_header_area_info
+entity_type: node
+bundle: meetlocals
+label: 'Header Area Info'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      localspref2: localspref2
+    target_bundles_drag_drop:
+      conservation_status:
+        weight: 6
+        enabled: false
+      locals2panel:
+        weight: 7
+        enabled: false
+      locals3panel:
+        weight: 8
+        enabled: false
+      localspref2:
+        enabled: true
+        weight: 9
+      locals_more_info:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions
