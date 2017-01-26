@@ -1,0 +1,31 @@
+uuid: c4e5aa4c-b458-4295-a0a8-d9191d0fd554
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a5d1c165-7895-4ae6-8211-49898f3c25ab'
+  module:
+    - block_content
+    - system
+  theme:
+    - krtk0
+id: logostrapfrontpage
+theme: krtk0
+region: header
+weight: -30
+provider: null
+plugin: 'block_content:a5d1c165-7895-4ae6-8211-49898f3c25ab'
+settings:
+  id: 'block_content:a5d1c165-7895-4ae6-8211-49898f3c25ab'
+  label: 'Logo Strap - front page'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

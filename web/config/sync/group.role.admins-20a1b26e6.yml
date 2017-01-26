@@ -1,0 +1,19 @@
+uuid: 23ff9548-5740-49db-82e9-f75dd65f715d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.admins
+  enforced:
+    module:
+      - grolesync
+    config:
+      - user.role.websiteeditor
+id: admins-20a1b26e6
+label: WebsiteEditor
+weight: 3
+internal: true
+audience: outsider
+group_type: admins
+permissions_ui: false
+permissions: {  }

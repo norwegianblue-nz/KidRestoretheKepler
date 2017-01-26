@@ -1,0 +1,22 @@
+uuid: c7165739-1518-467a-889c-f4d50ac4c17d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meetlocals
+id: node.meetlocals.promote
+field_name: promote
+entity_type: node
+bundle: meetlocals
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

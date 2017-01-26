@@ -1,0 +1,21 @@
+uuid: bf6dacf0-a443-4084-969d-ebe4502463b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: mainlocals_wide
+label: mainlocals_wide
+effects:
+  8edd9b16-05b1-4882-984a-e94bb07cf7f2:
+    uuid: 8edd9b16-05b1-4882-984a-e94bb07cf7f2
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  7cd18393-9e21-44d5-8056-4c9e42cb2420:
+    uuid: 7cd18393-9e21-44d5-8056-4c9e42cb2420
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 875
+      height: 541
