@@ -11,10 +11,10 @@ dependencies:
     - node
     - user
 id: front_page_display_items
-label: 'Front Page Display Items'
+label: 'Project Partners'
 module: views
-description: 'Retrieve "things" to display on front page'
-tag: ''
+description: 'Display of Partner''s logo''s etc.'
+tag: norwegian.blue
 base_table: node_field_data
 base_field: nid
 core: 8.x
@@ -192,12 +192,138 @@ display:
             label: ''
           granularity: second
       title: 'Partner Logo''s'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Partners Link Label'
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2><a href="/project-partners">PARTNERS</a><h2>'
+            format: raw
+          plugin_id: text
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: 'Front Page quote'
+          empty: false
+          tokenize: false
+          content: '<p>It is tremendously exciting to be involved in such a great project.<p>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_front_page_logo'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Other Page Partner Logos'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      block_description: 'Other Page Partner Logos'
+      title: Partners
+      defaults:
+        title: false
+        fields: false
+        header: false
+      fields:
+        field_front_page_logo:
+          id: field_front_page_logo
+          table: node__field_front_page_logo
+          field: field_front_page_logo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Partners Link Label'
+          empty: false
+          tokenize: false
+          content:
+            value: '<h2><a href="/project-partners">PARTNERS</a></h2>'
+            format: raw
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
@@ -219,6 +345,72 @@ display:
       title: Partners
       defaults:
         title: false
+        fields: false
+      fields:
+        field_front_page_logo:
+          id: field_front_page_logo
+          table: node__field_front_page_logo
+          field: field_front_page_logo
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: image
+          settings:
+            image_style: thumbnail
+            image_link: content
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
     cache_metadata:
       max-age: -1
       contexts:

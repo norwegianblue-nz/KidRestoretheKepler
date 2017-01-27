@@ -35,10 +35,6 @@ third_party_settings:
     regions:
       left:
         - links
-        - field_trophic_level
-        - field_nz_classification
-        - field_habitat
-        - field_life_strategy
         - body
       right:
         - field_more_info
@@ -53,21 +49,6 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
-  field_header_area_info:
-    type: entity_reference_revisions_entity_view
-    weight: 9
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-  field_maori_name:
-    weight: 10
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
   field_more_info:
     type: entity_reference_revisions_entity_view
     weight: 8
@@ -82,3 +63,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_bg_image: true
+  field_header_area_info: true
+  field_maori_name: true

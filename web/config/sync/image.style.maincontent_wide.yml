@@ -14,8 +14,8 @@ effects:
     id: image_scale_and_crop
     weight: -9
     data:
-      width: 875
-      height: 438
+      width: 880
+      height: 440
   7b8c3bcc-f46b-4e60-a6eb-787433a490f8:
     uuid: 7b8c3bcc-f46b-4e60-a6eb-787433a490f8
     id: image_effects_strip_metadata

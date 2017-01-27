@@ -29,24 +29,17 @@ third_party_settings:
         link_custom: ''
         classes:
           layout_class: {  }
-    regions:
-      ds_content:
-        - field_partners_intro
+    regions: {  }
 _core:
   default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
 id: node.front_page.content_2
 targetEntityType: node
 bundle: front_page
 mode: content_2
-content:
-  field_partners_intro:
-    type: basic_string
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   body: true
   field_bg_image: true
   field_partners: true
+  field_partners_intro: true
   links: true

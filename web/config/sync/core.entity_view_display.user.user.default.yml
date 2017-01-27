@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_bg_image
     - field.field.user.user.field_bio
     - field.field.user.user.field_contact_phone
     - field.field.user.user.field_personal_data
@@ -21,6 +22,14 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_bg_image:
+    weight: 5
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_bio:
     weight: 1
     label: above

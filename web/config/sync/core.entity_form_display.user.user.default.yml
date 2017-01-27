@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_bg_image
     - field.field.user.user.field_bio
     - field.field.user.user.field_contact_phone
     - field.field.user.user.field_personal_data
@@ -30,6 +31,13 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+  field_bg_image:
+    weight: 7
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   field_bio:
     weight: 4
     settings:

@@ -11,7 +11,7 @@ dependencies:
 id: extrasplaceholder
 theme: krtk0
 region: '-1'
-weight: -24
+weight: -33
 provider: null
 plugin: 'block_content:c0cb7505-6e72-44ed-a06d-75ec74db8d41'
 settings:

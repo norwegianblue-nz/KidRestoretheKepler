@@ -12,7 +12,7 @@ dependencies:
 id: templateblock_9
 theme: krtk0
 region: content2
-weight: 0
+weight: -35
 provider: null
 plugin: 'block_content:505e1c3d-f61c-422d-9374-4128bd077fbb'
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: zonetitleabout
 theme: krtk0
 region: '-1'
-weight: 0
+weight: -26
 provider: null
 plugin: 'block_content:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
 settings:

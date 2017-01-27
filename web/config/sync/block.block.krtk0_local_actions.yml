@@ -9,7 +9,7 @@ _core:
 id: krtk0_local_actions
 theme: krtk0
 region: '-1'
-weight: -28
+weight: -30
 provider: null
 plugin: local_actions_block
 settings:

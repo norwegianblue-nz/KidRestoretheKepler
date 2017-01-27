@@ -9,7 +9,7 @@ dependencies:
 id: entityviewcontent_2
 theme: krtk0
 region: extras
-weight: 0
+weight: -33
 provider: null
 plugin: 'entity_view:node'
 settings:
@@ -24,7 +24,15 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
+      article: article
+      blog: blog
+      book: book
+      easychart: easychart
       front_page: front_page
-    negate: false
+      meetlocals: meetlocals
+      meet_the_locals: meet_the_locals
+      page: page
+      partners: partners
+    negate: true
     context_mapping:
       node: '@node.node_route_context:node'

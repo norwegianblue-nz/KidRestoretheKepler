@@ -48,14 +48,7 @@ content:
       size: '60'
       placeholder: ''
     third_party_settings: {  }
-    type: viewsreference_autocomplete
-  field_partners_intro:
-    weight: 33
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textarea
+    type: views_reference_autocomplete
   path:
     type: path
     weight: 30
@@ -88,4 +81,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_partners_intro: true
