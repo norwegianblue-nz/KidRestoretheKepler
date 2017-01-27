@@ -1,0 +1,31 @@
+uuid: 496a652c-9a0f-44ca-8a5f-25f9dd990ac2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5b88dad3-074c-4934-b5f3-ef2c094d75e7'
+  module:
+    - block_content
+    - system
+  theme:
+    - krtk0
+id: temppreface1homepage_2
+theme: krtk0
+region: '-1'
+weight: -29
+provider: null
+plugin: 'block_content:5b88dad3-074c-4934-b5f3-ef2c094d75e7'
+settings:
+  id: 'block_content:5b88dad3-074c-4934-b5f3-ef2c094d75e7'
+  label: 'TEMP - Preface 1 Home Page'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

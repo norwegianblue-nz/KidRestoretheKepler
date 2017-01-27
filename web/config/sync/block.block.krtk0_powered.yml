@@ -1,0 +1,22 @@
+uuid: 2637a9ed-cff4-4256-9ec9-025bdc37f8b9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - krtk0
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: krtk0_powered
+theme: krtk0
+region: '-1'
+weight: -31
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
