@@ -18,7 +18,7 @@ p a {border:none !important;color:$krtk0_Teal;}
 	@include krtk0Transition;
 	left: 50%;
 	margin-left: -90px;
-	top: 7vh;
+	top: 5vh;
 }
 #page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;}
 
@@ -35,8 +35,6 @@ p a {border:none !important;color:$krtk0_Teal;}
 
 #menu-outer-wrapper {background-color: $krtk0_TransTeal;position: fixed; z-index:20; width: 100%; padding-top:10px;}
 
-// ### NB statictopmenu NEEDS RE_TARGETING FOR LOGGED IN STATE - CONTEXTURAL BLOCKS
-
 div#block-statictopmenu {text-align:center;}
 #block-statictopmenu ul {display:inline-block;list-style:none;margin:0.5em;padding:0;}
 #block-statictopmenu li {
@@ -52,8 +50,7 @@ div#block-statictopmenu {text-align:center;}
 	padding:0px 20px;
 }
 #block-statictopmenu li a {color:#fff;padding: 2px 2px 20px;}
-
-// ### NB statictopmenu NEEDS RE_TARGETING FOR LOGGED IN STATE - CONTEXTURAL BLOCKS
+#block-statictopmenu div.contextual {display:none !important;} // hidden for LOGGED IN STATE - CONTEXTURAL BLOCKS
 
 // # Search Bar # //
 // icons
@@ -142,7 +139,7 @@ input.button,
 
 // Header Area /////////////////////////////////////////////////////////////////
 #krtk0-letterbox {
-	height: 20vh; min-height:19em;
+	height: 30vh; min-height:19em;
 	background: transparent;
 }
 
@@ -281,6 +278,11 @@ div.view-front-page-team nav.pager ul {margin:0;}
 	border-top: 200px solid;
 	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 100;
 }
+@media all and (max-width: 959px) { // minimise border squash on smaller screens
+.path-frontpage #content-outer-wrapper {
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 200;
+}
+}
 #main-layout {padding-bottom:5em;}
 .node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 1px	); }
 
@@ -339,22 +341,26 @@ body.node--type-article .field-item--taxonomy-term a {
 color:$krtk0_Buff;font-size:18px;font-family:$ktrk0_Exo2-RegularCondensed;display:inline-block;
 }
 
-//  Comments  //
-//  This css not as designed...parked for now: body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
-//	background-color:$krtk0_Buff;padding:0 20px 20px 20px;
-//  }
-
-body.node--type-article .field--label-above.comment-wrapper h2.title {
-	@include krtk0AreaTitle($krtk0_DarkOrange)
+//  Comments  // *#*#*#*#* MOVE TO COMMENTS.CSS *#*#*#*#*#*#*#*
+//  This css not as designed...parked for now: 
+body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
+	background-color:$krtk0_Buff;padding:0 20px 20px 20px;
 }
 
+body.node--type-article .field--label-above.comment-wrapper h2.title {
+	@include krtk0AreaTitle($krtk0_DarkOrange);
+}
 
+body.node--type-article .comment__content {
+	margin-left:2%; width:98%; background-color:#fff;
+}
+body.node--type-article .comment-meta {margin-left:23px;}
 
 //	Meet the locals ///////////////////
 
 
 div.node--type-meetlocals .field--name-node-title h2, // Main title
-div.node--type-meetlocals .field--name-field-mao // Maori title
+div.node--type-meetlocals .field--name-field-maori-name // Maori title
 {
 	font-size: 3em;
 	line-height: 1em;
@@ -364,19 +370,73 @@ div.node--type-meetlocals .field--name-field-mao // Maori title
 	font-weight:200;
 	margin:0;
 }
+div.node--type-meetlocals .field--name-field-maori-name div {display:inline;}
+
 div.node--type-meetlocals .field--name-field-latinname { // Latin name
     font-size: 20px;     font-style: italic;
     color: #555;     margin-bottom: 1em;
 }
 
-.paragraph--type-locals3panel > div.group-left,
-.paragraph--type-locals3panel > div.group-middle,
-.paragraph--type-locals3panel > div.group-right {
-	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');
-	background-color:$krtk0_locals-col;
-	padding:10px;
-	text-align:center;
+//  Definition panels //
+
+// 	Panels
+.paragraph--type-locals3panel > div, .paragraph--type-locals2panel > div {
+	margin-top:10px;
+	margin-bottom:10px;
 }
+.paragraph--type-locals3panel,
+.paragraph--type-locals2panel {display:flex;}
+
+.paragraph--type-locals3panel .field__label,
+.paragraph--type-locals2panel .field__label {
+	font-size:18px;
+	font-family:$ktrk0_Exo2-RegularItalic;
+	font-weight:normal;
+	color:$krtk0_DarkOrange;
+}
+.paragraph--type-locals3panel .field__item,
+.paragraph--type-locals3panel h2,
+.paragraph--type-locals2panel h2 {
+	font-size:26px;
+	font-family:$ktrk0_Exo2-Regular;
+	color:#fff;
+	margin:0 0 0.4em;
+}
+.paragraph--type-locals3panel .field__item a, .paragraph--type-locals2panel h2 a {color:#fff;}
+
+.paragraph--type-locals3panel > div {padding: 70px 10px 10px 10px; text-align:center;}
+.paragraph--type-locals2panel > div {padding: 10px 10px 10px 80px; text-align:left;}
+
+.paragraph--type-locals3panel div.group-left {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/nz-icon.png') no-repeat center 10px $krtk0_locals-col;}
+.paragraph--type-locals3panel div.group-middle {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/status-icon.png') no-repeat center 10px $krtk0_locals-col;}
+.paragraph--type-locals3panel div.group-right {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/strategy-icon.png') no-repeat center 10px $krtk0_locals-col;}
+
+.paragraph--type-locals2panel div.group-left {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/trophic-icon.png') no-repeat 15px 50% $krtk0_locals-col;}
+.paragraph--type-locals2panel div.group-right {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/habitat-icon.png') no-repeat 15px 50% $krtk0_locals-col;}
+
+
+@media all and (max-width: 959px) {
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '100');}
+	.paragraph--type-locals2panel > div {width:100%;}
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');}	
+	.paragraph--type-locals2panel > div {width:47.1%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+@media all and (min-width: 1280px) {
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
+	.paragraph--type-locals2panel > div {width:47.7%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+
+
+//  Main body //
 
 .node--type-meetlocals div.field--name-body h2 {
 	font-family:$ktrk0_Exo2-LightExpanded;
@@ -404,18 +464,21 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 #socialBlock-title {@include krtk0BlockTitle(#fff);} //TARGET MAY CHANGE
 
-// Front page Partners stripe (see below for pages' partner stripe) //////////////////////////////////////////////////////////////
-.field--name-field-partners-intro {
+//  Front page Partners stripe (see below for pages' partner stripe) //////////////////////////////////////////////////////////////
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p {
 	font-family:$krtk0_WorkSans-Hairline;
 	font-size:51px;
 	color:$krtk0_DarkGrey;
 	text-align:center;
+	text-transform:initial;
+	max-width: 800px;
+    margin: 0 auto;
 }
-.field--name-field-partners-intro::before {content:open-quote;}
-.field--name-field-partners-intro::after {content:close-quote;}
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::before {content:open-quote;}
+.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::after {content:close-quote;}
 
 
-// Extras (partners strip on pages) //////////////////////////////////////////////////////////////////////
+//  Extras (partners strip on pages) //////////////////////////////////////////////////////////////////////
 #extras-outer-wrapper {
 	background-color: $krtk0_Blue;
 	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border.svg");
@@ -430,10 +493,16 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
 }
 #extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;}
 
-.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos 
-	{background-color:#fff;padding:10px;}
-.view.view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos .views-row {display:inline-block;vertical-align:middle;}
-.view-display-id-partner_logos .views-row:last-of-type::after 
+
+.view-front-page-display-items .view-content { // check target
+  background-color: #fff;
+  padding: 10px;
+}
+.view-front-page-display-items .views-row { // check target
+  display: inline-block;
+  vertical-align: middle;
+}
+.view-display-id-partner_logos .views-row:last-of-type::after // used on pages? - Check
 	{content: ""; display: table; clear: both;}
 
 

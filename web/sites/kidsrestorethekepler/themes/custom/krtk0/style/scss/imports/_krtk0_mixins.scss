@@ -39,7 +39,7 @@
     $colw : ($gridw / $nocols) - $gutw;
     $thisw : (($colw + $gutw) * $thiscols) - $gutw;
     
-    width : $thisw;
+    width : $thisw !important;
     margin-right : $gutw / 2;
     margin-left : $gutw / 2;
     &:first-of-type {margin-left : 0;}
