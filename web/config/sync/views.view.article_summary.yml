@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.articlelinkpanel
     - node.type.article
   module:
     - node
@@ -71,7 +71,8 @@ display:
       row:
         type: 'entity:node'
         options:
-          view_mode: teaser
+          relationship: none
+          view_mode: articlelinkpanel
       fields:
         title:
           id: title

@@ -19,6 +19,7 @@ module:
   ctools_views: 0
   datetime: 0
   dblog: 0
+  devel: 0
   ds: 0
   ds_extras: 0
   ds_switch_view_mode: 0
@@ -44,6 +45,7 @@ module:
   imagemagick: 0
   inline_form_errors: 0
   inline_responsive_images: 0
+  kint: 0
   layout_plugin: 0
   libraries: 0
   link: 0
