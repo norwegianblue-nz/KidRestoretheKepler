@@ -278,17 +278,27 @@ function krtk0_preprocess_page(&$vars) {
 /*
   // Set the array holding the list of bg images
 */
-    $node = $vars['node'];
-    if (isset($node->field_bg_image)){
-        $slide = $vars['node']->field_bg_image;
-        $vars['bg_imageImageList'] = array();
-        foreach ($slide as $s) {
-            $image_id = $s->target_id;
-            $image_file  = file_load($image_id);
-            $image_public_uri = $image_file->getFileUri();
-            $vars['bg_imageImageList'][] = file_create_url($image_public_uri);
+                $vars['bg_imageImageList'] = array();
+    $Node = \Drupal::routeMatch()->getParameter('node');
+    if (isset($Node)){
+        $node = $vars['node'];
+        // kint ($node)  ;
+        // $typeName = $node->bundle();
+        // $typeLabel = $node->getTitle();
+        // kint($typeName);
+        // kint($typeLabel);
+        if ($node->hasField('field_bg_image')){
+            if (isset($node->field_bg_image)){
+                $slide = $vars['node']->field_bg_image;
+                foreach ($slide as $s) {
+                    $image_id = $s->target_id;
+                    $image_file  = file_load($image_id);
+                    $image_public_uri = $image_file->getFileUri();
+                    $vars['bg_imageImageList'][] = file_create_url($image_public_uri);
+                }
+            }
         }
-    }
+    } else {$vars['bg_imageImageList'][] = file_create_url('public://default-banner.jpg');}
 } /* END omega_preprocess_page */
 
 /**
