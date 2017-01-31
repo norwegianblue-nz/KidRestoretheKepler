@@ -1,8 +1,0 @@
-uuid: 938f2fc5-294a-4882-b5e8-bce2da6cdb43
-langcode: en
-status: true
-dependencies: {  }
-id: authoreddatedisplay
-label: AuthoredDateDisplay
-locked: false
-pattern: y/m/Y
