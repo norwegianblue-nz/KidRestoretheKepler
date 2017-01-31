@@ -1,0 +1,42 @@
+uuid: b4d7b8cc-5d1a-4052-b91c-7219b079ed07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_species_data_1
+    - paragraphs.paragraphs_type.locals3panel
+    - paragraphs.paragraphs_type.localspref2
+  module:
+    - entity_reference_revisions
+id: paragraph.localspref2.field_species_data_1
+field_name: field_species_data_1
+entity_type: paragraph
+bundle: localspref2
+label: 'Species Data 1'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      locals3panel: locals3panel
+    target_bundles_drag_drop:
+      conservation_status:
+        weight: 6
+        enabled: false
+      locals2panel:
+        weight: 7
+        enabled: false
+      locals3panel:
+        enabled: true
+        weight: 8
+      locals_more_info:
+        weight: 9
+        enabled: false
+      localspref2:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

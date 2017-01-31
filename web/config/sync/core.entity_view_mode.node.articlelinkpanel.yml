@@ -1,0 +1,10 @@
+uuid: 139f908f-debe-4062-8991-f470ef7a3b28
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.articlelinkpanel
+label: ArticleLinkPanel
+targetEntityType: node
+cache: true

@@ -1,0 +1,32 @@
+uuid: b25e256c-6abf-4e3c-8ac7-24bef8fe001b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.front_page_display_items
+  module:
+    - node
+    - views
+  theme:
+    - krtk0
+id: views_block__front_page_display_items_partner_logos
+theme: krtk0
+region: extras
+weight: -35
+provider: null
+plugin: 'views_block:front_page_display_items-partner_logos'
+settings:
+  id: 'views_block:front_page_display_items-partner_logos'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      front_page: front_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

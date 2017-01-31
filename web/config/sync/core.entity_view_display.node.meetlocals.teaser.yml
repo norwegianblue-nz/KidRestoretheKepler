@@ -1,0 +1,26 @@
+uuid: ebf5e006-51bf-4609-89fa-ea8cde6fcdd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meetlocals.body
+    - node.type.meetlocals
+  module:
+    - text
+    - user
+id: node.meetlocals.teaser
+targetEntityType: node
+bundle: meetlocals
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden: {  }

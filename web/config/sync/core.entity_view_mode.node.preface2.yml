@@ -1,0 +1,10 @@
+uuid: b4417ab0-c753-49e5-ba2d-c16700700bb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.preface2
+label: Preface2
+targetEntityType: node
+cache: true

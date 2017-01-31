@@ -1,0 +1,10 @@
+uuid: aaaf5d08-ac12-448c-ad05-dc5ef4662be3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.extras
+label: Extras
+targetEntityType: node
+cache: true
