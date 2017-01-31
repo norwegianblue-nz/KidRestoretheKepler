@@ -1,0 +1,25 @@
+uuid: 806b7d3f-eccd-4874-9bdf-bb082ccef8c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:71f4abf9-4f71-4550-9b52-3c33abc80602'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: toolbarinfo
+theme: krtk0
+region: menu
+weight: -25
+provider: null
+plugin: 'block_content:71f4abf9-4f71-4550-9b52-3c33abc80602'
+settings:
+  id: 'block_content:71f4abf9-4f71-4550-9b52-3c33abc80602'
+  label: 'Tool bar info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

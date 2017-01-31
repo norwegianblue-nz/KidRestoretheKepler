@@ -1,0 +1,18 @@
+uuid: d0fcdf56-c328-474b-abc4-10b86a004e3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.admins
+  module:
+    - user
+id: admins-group_membership
+label: 'Admins: Group membership'
+description: 'Adds users to groups as members.'
+group_type: admins
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1
+  info_text:
+    value: '<p>By submitting this form you will become a member of the group.<br />Please fill out any available fields to complete your membership information.</p>'

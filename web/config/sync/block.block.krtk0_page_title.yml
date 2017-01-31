@@ -1,0 +1,36 @@
+uuid: e78bf9e9-b553-4f18-9d9b-4d8ccbae8e23
+langcode: en
+status: false
+dependencies:
+  module:
+    - ctools
+    - system
+  theme:
+    - krtk0
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: krtk0_page_title
+theme: krtk0
+region: '-1'
+weight: -26
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      front_page: front_page
+      meetlocals: meetlocals
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

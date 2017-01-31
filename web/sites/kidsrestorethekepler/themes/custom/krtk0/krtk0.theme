@@ -278,8 +278,8 @@ function krtk0_preprocess_page(&$vars) {
 /*
   // Set the array holding the list of bg images
 */
-                $vars['bg_imageImageList'] = array();
-    $Node = \Drupal::routeMatch()->getParameter('node');
+    $vars['bg_imageImageList'] = array();
+    $Node = \Drupal::routeMatch()->getParameter('node'); //Determine if we have a node variable at all
     if (isset($Node)){
         $node = $vars['node'];
         // kint ($node)  ;

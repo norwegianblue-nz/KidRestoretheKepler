@@ -1,0 +1,66 @@
+uuid: 21c0a847-d600-4d9e-a416-6d35ca34898a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.front_page_team
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_contact_phone
+    - field.field.user.user.field_personal_data
+    - field.field.user.user.user_picture
+    - image.style.useravatar_tn
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - user_picture
+        - username
+    fields:
+      username:
+        plugin_id: username
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+_core:
+  default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
+id: user.user.front_page_team
+targetEntityType: user
+bundle: user
+mode: front_page_team
+content:
+  user_picture:
+    type: image
+    weight: 0
+    settings:
+      image_style: useravatar_tn
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  field_bio: true
+  field_contact_phone: true
+  field_personal_data: true
+  member_for: true

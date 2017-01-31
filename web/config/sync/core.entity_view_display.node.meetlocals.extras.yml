@@ -1,0 +1,45 @@
+uuid: d93857cb-836e-482b-8863-aa80b0b4c01d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.extras
+    - field.field.node.meetlocals.body
+    - field.field.node.meetlocals.field_bg_image
+    - field.field.node.meetlocals.field_header_area_info
+    - field.field.node.meetlocals.field_maori_name
+    - field.field.node.meetlocals.field_more_info
+    - node.type.meetlocals
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions: {  }
+id: node.meetlocals.extras
+targetEntityType: node
+bundle: meetlocals
+mode: extras
+content: {  }
+hidden:
+  body: true
+  field_bg_image: true
+  field_header_area_info: true
+  field_maori_name: true
+  field_more_info: true
+  links: true

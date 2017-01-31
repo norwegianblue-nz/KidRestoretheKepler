@@ -1,0 +1,24 @@
+uuid: a5528a5c-9ed0-431b-bd6e-a17e77853427
+langcode: en
+status: true
+dependencies:
+  module:
+    - group
+  theme:
+    - krtk0
+_core:
+  default_config_hash: MjMChFykEa-4UxdnGstVk1FcXqwUF3p_GBJLIFT3_XI
+id: krtk0_group_operations
+theme: krtk0
+region: content
+weight: -27
+provider: null
+plugin: group_operations
+settings:
+  id: group_operations
+  label: 'Group operations'
+  provider: group
+  label_display: visible
+  context_mapping:
+    group: '@group.group_route_context:group'
+visibility: {  }

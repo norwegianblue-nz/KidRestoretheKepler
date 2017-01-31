@@ -1,0 +1,21 @@
+uuid: 2cabd74f-582e-43ee-8736-e82966c6d710
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: maincontent_tab_port
+label: maincontent_tab-port
+effects:
+  3fe2fd0f-42c6-4c46-bd0d-7bc197610f6f:
+    uuid: 3fe2fd0f-42c6-4c46-bd0d-7bc197610f6f
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  394470d0-f63e-487d-af29-a037ea021541:
+    uuid: 394470d0-f63e-487d-af29-a037ea021541
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 543
+      height: 272
