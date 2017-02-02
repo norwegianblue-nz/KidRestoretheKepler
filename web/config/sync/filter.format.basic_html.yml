@@ -4,7 +4,6 @@ status: true
 dependencies:
   module:
     - editor
-    - inline_responsive_images
 _core:
   default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
 name: 'Basic HTML'
@@ -17,7 +16,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style width height>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <p> <br> <span> <img src alt data-entity-type data-entity-uuid data-align data-caption data-responsive-image-style height width>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -44,43 +43,6 @@ filters:
     status: true
     weight: -46
     settings: {  }
-  filter_imagestyle:
-    id: filter_imagestyle
-    provider: inline_responsive_images
-    status: false
-    weight: -41
-    settings:
-      image_style_inlinehalf: '0'
-      image_style_inlinehalf_mobile: '0'
-      image_style_inlinehalf_narrow: '0'
-      image_style_inlinehalf_normal: '0'
-      image_style_inlinehalf_wide: '0'
-      image_style_inlineinset_mo: '0'
-      image_style_inlineinset_narrow: '0'
-      image_style_inlineinset_normal: '0'
-      image_style_inlineinset_tablet: '0'
-      image_style_inlineinset_wide: '0'
-      image_style_large: '0'
-      image_style_maincontent_mobile: '0'
-      image_style_maincontent_narrow: '0'
-      image_style_maincontent_wide: '0'
-      image_style_max_1300x1300: '0'
-      image_style_max_2600x2600: '0'
-      image_style_max_325x325: '0'
-      image_style_max_650x650: '0'
-      image_style_medium: '0'
-      image_style_thumbnail: '0'
-  filter_responsive_image_style:
-    id: filter_responsive_image_style
-    provider: inline_responsive_images
-    status: true
-    weight: -45
-    settings:
-      responsive_style_inlinehalf: '1'
-      responsive_style_inset: '1'
-      responsive_style_main_content: '0'
-      responsive_style_narrow: '0'
-      responsive_style_wide: '0'
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter

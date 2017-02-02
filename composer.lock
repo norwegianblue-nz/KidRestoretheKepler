@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e0acd79dfe2302d948d9a7bce02b7d82",
-    "content-hash": "6273461db1b5f5d2da885e2127689a79",
+    "hash": "d0e1416cee95cc50c538b0b070d8cdaf",
+    "content-hash": "b583c57ba0f27210e7298cefb380938c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2070,7 +2070,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/diff-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "4945154c2c07444195a7ae07011a3b3db941c72a"
             },
             "require": {
@@ -2321,7 +2321,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_reference_revisions-8.x-1.1.zip",
-                "reference": null,
+                "reference": "8.x-1.1",
                 "shasum": "3767fd2245ab2731aaf0c992c586b5ddc6f7efe8"
             },
             "require": {
@@ -2691,7 +2691,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/image_effects-8.x-1.0-alpha4.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha4",
                 "shasum": "4b655fbad6f81abd24db06851d0f614534852b92"
             },
             "require": {
@@ -2745,7 +2745,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/imagemagick-8.x-1.0-alpha5.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha5",
                 "shasum": "e2018a716c2bf55d311b6b3b7a3fe26b3bca0ca2"
             },
             "require": {
@@ -2873,57 +2873,6 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "http://cgit.drupalcode.org/inline_entity_form"
-            }
-        },
-        {
-            "name": "drupal/inline_responsive_images",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/inline_responsive_images",
-                "reference": "8.x-2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/inline_responsive_images-8.x-2.0.zip",
-                "reference": "8.x-2.0",
-                "shasum": "a8d01d874a27ea707547ce41740764704bf4c496"
-            },
-            "require": {
-                "drupal/core": "*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-2.0",
-                    "datestamp": "1465196339"
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Betawerk",
-                    "homepage": "https://www.drupal.org/user/426816"
-                },
-                {
-                    "name": "jeroen_betawerk",
-                    "homepage": "https://www.drupal.org/user/2700643"
-                },
-                {
-                    "name": "mitchalbert",
-                    "homepage": "https://www.drupal.org/user/2255518"
-                }
-            ],
-            "description": "Allows you to use responsive images in the WYSIWYG editor.",
-            "homepage": "https://www.drupal.org/project/inline_responsive_images",
-            "support": {
-                "source": "http://cgit.drupalcode.org/inline_responsive_images"
             }
         },
         {
@@ -3203,7 +3152,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "2460339ac8739317b3c4e66e9ce7142cc02adac3"
             },
             "require": {
@@ -3460,7 +3409,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "204b2f18a3d770589d66656aa83121d2156d0a31"
             },
             "require": {
@@ -3567,7 +3516,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_slideshow-8.x-4.3.zip",
-                "reference": null,
+                "reference": "8.x-4.3",
                 "shasum": "a257ba2ff45897c8f8ffac5e2739cb5f7cdd68b4"
             },
             "require": {

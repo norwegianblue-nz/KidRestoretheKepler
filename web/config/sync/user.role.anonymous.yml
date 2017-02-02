@@ -20,3 +20,4 @@ permissions:
   - 'view paragraph content localspref2'
   - 'view paragraph content locals2panel'
   - 'view paragraph content locals3panel'
+  - 'access user profiles'

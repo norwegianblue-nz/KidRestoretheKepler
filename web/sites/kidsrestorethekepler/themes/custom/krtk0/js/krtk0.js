@@ -35,6 +35,12 @@ $jq('.tool-bar-icon-login').click(function(){
     $jq('#block-userlogin').toggleClass("expand");
     $jq('#block-useraccountmenu').toggleClass("expand");
     $jq(this).toggleClass("clicked");
+    if ($jq('.tool-bar-icon-search').hasClass("clicked")){
+        $jq('.tool-bar-icon-search').removeClass("clicked");
+    }
+    if ($jq('.tool-bar-icon-info').hasClass("clicked")){
+        $jq('.tool-bar-icon-info').removeClass("clicked");
+    }
 });
 $jq('.tool-bar-icon-search').click(function(){
     if($jq('#block-userlogin').hasClass("expand")){
@@ -51,6 +57,12 @@ $jq('.tool-bar-icon-search').click(function(){
     }
     $jq('#block-krtk0-search').toggleClass("expand");
     $jq(this).toggleClass("clicked");
+    if ($jq('.tool-bar-icon-login').hasClass("clicked")){
+        $jq('.tool-bar-icon-login').removeClass("clicked");
+    }
+    if ($jq('.tool-bar-icon-info').hasClass("clicked")){
+        $jq('.tool-bar-icon-info').removeClass("clicked");
+    }
 });
 $jq('.tool-bar-icon-info').click(function(){
     if($jq('#block-krtk0-search').hasClass("expand")){
@@ -67,7 +79,15 @@ $jq('.tool-bar-icon-info').click(function(){
     }
     $jq('#block-toolbarinfo').toggleClass("expand");
     $jq(this).toggleClass("clicked");
+    if ($jq('.tool-bar-icon-search').hasClass("clicked")){
+        $jq('.tool-bar-icon-search').removeClass("clicked");
+    }
+    if ($jq('.tool-bar-icon-login').hasClass("clicked")){
+        $jq('.tool-bar-icon-login').removeClass("clicked");
+    }
 });
+
+
 /*
  * Switch the background image for the div with class .background-slider
  * dependant on the image list passed in via HTML5 data attribute.
