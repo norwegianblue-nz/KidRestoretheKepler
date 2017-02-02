@@ -40,7 +40,6 @@
         "drupal/image_effects": "*",
         "drupal/imagemagick": "*",
         "drupal/inline_entity_form": "*",
-        "drupal/inline_responsive_images": "*",
         "drupal/libraries": "3.x-dev",
         "drupal/paragraphs": "*",
         "drupal/pathauto": "*",
