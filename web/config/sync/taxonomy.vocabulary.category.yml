@@ -1,9 +1,0 @@
-uuid: 701d93cd-a4a1-4e95-8fa8-36925e43ee62
-langcode: en
-status: true
-dependencies: {  }
-name: Category
-vid: category
-description: 'Local''s Category'
-hierarchy: 0
-weight: 0
