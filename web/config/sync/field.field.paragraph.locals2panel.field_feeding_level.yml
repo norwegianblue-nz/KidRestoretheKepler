@@ -1,0 +1,28 @@
+uuid: 6193f62d-f4ce-4ad3-9fdf-6985356f63a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feeding_level
+    - paragraphs.paragraphs_type.locals2panel
+    - taxonomy.vocabulary.trophic
+id: paragraph.locals2panel.field_feeding_level
+field_name: field_feeding_level
+entity_type: paragraph
+bundle: locals2panel
+label: 'Feeding Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      trophic: trophic
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

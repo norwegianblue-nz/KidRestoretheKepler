@@ -1,0 +1,31 @@
+uuid: 6a64aa7b-4e6e-4b55-a570-bf5a40745fb7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+  module:
+    - block_content
+    - system
+  theme:
+    - krtk0
+id: zonetitleabout_front
+theme: krtk0
+region: content
+weight: -33
+provider: null
+plugin: 'block_content:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+settings:
+  id: 'block_content:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+  label: 'Zone title - about'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

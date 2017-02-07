@@ -1,0 +1,21 @@
+uuid: ed2ceda8-6a52-4783-af93-8f6ea4efe714
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: inlinehalf_mob
+label: InlineHalf_mob
+effects:
+  b09c23a0-f735-4ed7-b92e-2dfe58cb1b79:
+    uuid: b09c23a0-f735-4ed7-b92e-2dfe58cb1b79
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  7b289ff5-b7ff-43c4-981e-53667565c851:
+    uuid: 7b289ff5-b7ff-43c4-981e-53667565c851
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 230
+      height: 153

@@ -1,0 +1,22 @@
+uuid: 1a7e6548-cac0-4b26-8809-4b402fed9282
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meet_the_locals
+id: node.meet_the_locals.promote
+field_name: promote
+entity_type: node
+bundle: meet_the_locals
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: 26c2d166-4ec3-4431-99fb-a05000af2b2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.meetlocals
+  module:
+    - text
+id: node.meetlocals.body
+field_name: body
+entity_type: node
+bundle: meetlocals
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

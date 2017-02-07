@@ -1,0 +1,95 @@
+uuid: 1cd8287c-3bb5-48b7-8690-bb773b36c151
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
+    - field.field.node.blog.body
+    - field.field.node.blog.comment
+    - field.field.node.blog.field_image
+    - field.field.node.blog.field_tags
+    - node.type.blog
+    - responsive_image.styles.basicpagemain
+  module:
+    - comment
+    - ds
+    - responsive_image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_image
+        - body
+        - field_tags
+        - comment
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: page-title
+          link: false
+_core:
+  default_config_hash: JtAg_-waIt1quMtdDtHIaXJMxvTuSmxW7bWyO6Zd68E
+id: node.blog.full
+targetEntityType: node
+bundle: blog
+mode: full
+content:
+  body:
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+  comment:
+    label: above
+    type: comment_default
+    weight: 4
+    settings:
+      pager_id: 0
+      view_mode: default
+    third_party_settings: {  }
+  field_image:
+    type: responsive_image
+    weight: 1
+    settings:
+      responsive_image_style: basicpagemain
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+  field_tags:
+    type: entity_reference_label
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  links:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
