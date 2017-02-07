@@ -4,8 +4,6 @@
 // SANDBOX 
 //
 ////////////////////////////////////////////////////////////////////////////////
-
-
       
 // RESET for _html-elements.scss - this is ours (I think!) and maybe just needs removing?
 p a {border:none !important;color:$krtk0_Teal;}
@@ -20,7 +18,7 @@ p a {border:none !important;color:$krtk0_Teal;}
 	margin-left: -90px;
 	top: 5vh;
 }
-#page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;}
+#page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;height:50px;}
 
 // Pages Logo //////////////////////////////////////////////////////////////////
 #block-logogeneralpages {
@@ -29,7 +27,7 @@ p a {border:none !important;color:$krtk0_Teal;}
 #page #block-logogeneralpages img {
     width: 100%;@include krtk0Transition;}
 #page.scrolled #block-logogeneralpages img {
-    width: 60%;@include krtk0Transition;}
+    width: 60%;@include krtk0Transition;margin-top:-10px;}
 
 // Menu bar ////////////////////////////////////////////////////////////////////
 
@@ -105,9 +103,10 @@ body.user-logged-in nav#block-useraccountmenu.expand {display:block;}
 	font-size:14px;
 }
 
-//  Login and submit btns
+//  Login and submit btns, and button class
 input.button,
-#block-useraccountmenu ul.menu li
+#block-useraccountmenu ul.menu li,
+.button
 {
 	padding: 16px;
 	background-color: $krtk0_Teal;
@@ -197,23 +196,8 @@ h2.zone-title, h2.zone-title a,
 }
 h2.zone-title img /*#block-placeholdertitle img, #block-zonetitlemeetthelocals img*/ {vertical-align:middle;margin-right:15px;}
 
-#block-zonetitleabout-front h2 a {
-	width: 100%;
-	display: block;
-	padding: 10px 10px 4px;
-}
 
-#block-zonetitleabout-front { // ADD EXTRA ZONE BLOCK TARGETS HERE !?!?!?!?!?
-	margin-top: -88px !important;
-	margin: 0 0 4em;
-	background-color: $krtk0_Teal;
-	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
-	background-position: right center;
-	background-repeat: no-repeat;
-}
-
-
-// Team pager //////////////////////////////////////////////////////////////////
+// Team pager on front page //////////////////////////////////////////////////////////////////
 body.path-frontpage #teaser-outer-wrapper {
 	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg");
 	background-repeat: repeat-x;
@@ -222,7 +206,7 @@ body.path-frontpage #teaser-outer-wrapper {
 	border-bottom:1.5em solid #fff;
 }
 // team pic temp DELETE WHEN PIC SIZE SET IN VIEW:
-.image-style-thumbnail {width:140px;margin-right:16px;}
+//.image-style-thumbnail {width:140px;margin-right:16px;}
 
 #block-meettheteamtitle h2 {@include krtk0BlockTitle($krtk0_Buff);}
 // .view-front-page-team {margin:4em 0;}
@@ -264,15 +248,36 @@ div.view-front-page-team h2 a {
 	color: #fff;
 }
 div.view-front-page-team .pager__items {text-align:left;}
-div.view-front-page-team nav.pager ul {margin:0;}
+div.view-front-page-team nav.pager ul {margin:0;padding:0;}
+div.view-front-page-team nav.pager li a {
+	display: inline-block;
+	border: 1px solid #fff;
+	padding: 5px 12px;
+	margin-right: 10px;
+	color: #fff;
+	background-color: $krtk0_Red;
+}
+div.view-front-page-team nav.pager li.pager__item.is_active a {color:$krtk0_DarkGrey;}
 
-// Content stripe ///////////////////////////////////////////////////////////////////////////////////////
+
+// Content stripes ///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+//	Home page stripes ///////////
 
-//  General content styles //////
-#content-outer-wrapper {background-color: #fff;}
-.path-frontpage #content-outer-wrapper { /* background and title background for home page only */
+.path-frontpage #preface-outer-wrapper { /* kid zone - background and title background for home page only */
+	background-color: #fff;
+	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-kidszone-bg-texture.jpg');
+	border-top: 200px solid;
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg') 100;
+}
+@media all and (max-width: 959px) { // minimise border squash on smaller screens
+.path-frontpage #preface-outer-wrapper {
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg') 200;
+}
+}
+
+.path-frontpage #content-outer-wrapper { /* about zone - background and title background for home page only */
 	background-color: #fff;
 	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-about-bg-texture.jpg');
 	border-top: 200px solid;
@@ -283,8 +288,42 @@ div.view-front-page-team nav.pager ul {margin:0;}
 	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 200;
 }
 }
+
+#block-zonetitleabout-front h2 a,
+#block-zonetitlehomeinterimmeetthelocals h2 a{
+	width: 100%;
+	display: block;
+	padding: 10px 10px 4px;
+}
+
+#block-zonetitleabout-front,
+#block-zonetitlehomeinterimmeetthelocals h2 { // ADD EXTRA ZONE BLOCK TARGETS HERE !?!?!?!?!?
+	margin-top: -88px !important;
+	margin: 0 0 4em;
+	background-color: $krtk0_Teal;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+#block-zonetitlehomeinterimmeetthelocals h2 {background-color: $krtk0_locals-col;}
+
+// Bottom title border for nodes
+body.node--type-article #title-bar-wrapper, //About articles
+body.path-articles #title-bar-wrapper, //About articles Summary page
+body.node--type-page #title-bar-wrapper,	//basic pages
+body.path-meet-locals #title-bar-wrapper, //INTERIM locals page
+{@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"),#fff);
+}
+body.node--type-meet-the-locals #title-bar-wrapper, // INTERIM Meet the locals pages
+body.node--type-meetlocals #title-bar-wrapper // Meet the locals pages
+{@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/bottom-locals-title-bar-bg.svg"),#fff);
+}
+
+
+//  General content styles ////////////////
+#content-outer-wrapper {background-color: #fff;}
 #main-layout {padding-bottom:5em;}
-.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 1px	); }
+.node--type-page div.node__content {@include krtk0Columns(2, 300px, 10px, 1px); }
 
 //  Display suite columns for 9/12 and 3/12 ////////
 @media all and (max-width: 959px) {
@@ -299,6 +338,26 @@ div.node.ds-2col > .group-right {@include parrotCols($thiscols:3, $nocols:12, $m
 @media all and (min-width: 1280px) {
 div.node.ds-2col > .group-left {@include parrotCols($thiscols:9, $nocols:12, $margin: 'normal', $grid: '1200');}
 div.node.ds-2col > .group-right {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
+}
+
+// Latst news - right col
+.field--name-dynamic-block-fieldnode-latest-news.field--type-ds.field--label-above .field__label 
+{@include krtk0BlockTitle($krtk0_Orange);font-size:2em;}
+
+// Responsive embebed iFrames
+.responsive-iframe{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.responsive-iframe iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+    border:none;
 }
 
 //	Articles /////////////////////
@@ -318,27 +377,34 @@ body.node--type-article .field--taxonomy-terms div.field__label::after {
 	font-family:$krtk0_WorkSans-Light;
 }
 
-body.node--type-article .field-item--taxonomy-term {
+body.node--type-article .field-item--taxonomy-term.field__item {
+	display: inline;
+	margin-right: 15.5px;
+}
+body.node--type-article .field-item--taxonomy-term a {
 	background-color: $krtk0_DarkOrange;
+	color:$krtk0_Buff;
+	font-size:18px;
+	font-family:$ktrk0_Exo2-RegularCondensed;
 	padding: 10px 10px;
-	margin: 10px;
+	margin: 10px 0;
 	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 	display:inline-block;
 }
-@media all and (max-width: 959px) {
-    body.node--type-article .field-item--taxonomy-term {@include parrotCols(12, 12, normal, '100');}
+@media all and (max-width: 599px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(12, 12, normal, '100');}
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(6, 12, normal, '100');}
+    body.node--type-article .field-item--taxonomy-term.field__item a:nth-of-type(even) {margin-right:0;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-    body.node--type-article .field-item--taxonomy-term {@include parrotCols(4, 12, normal, '960');}
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(4, 12, normal, '960');}
 }
 @media all and (min-width: 1280px) {
-    body.node--type-article .field-item--taxonomy-term {@include parrotCols(3, 12, normal, '1200');}
-}
-
-body.node--type-article .field-item--taxonomy-term a {
-color:$krtk0_Buff;font-size:18px;font-family:$ktrk0_Exo2-RegularCondensed;display:inline-block;
+    body.node--type-article .field-item--taxonomy-term a {@include parrotCols(3, 12, normal, '1200');}
 }
 
 //  Comments  // *#*#*#*#* MOVE TO COMMENTS.CSS *#*#*#*#*#*#*#*
@@ -346,20 +412,93 @@ color:$krtk0_Buff;font-size:18px;font-family:$ktrk0_Exo2-RegularCondensed;displa
 body.node--type-article .field.field--name-comment.field--type-comment.field--label-above.comment-wrapper {
 	background-color:$krtk0_Buff;padding:0 20px 20px 20px;
 }
-
 body.node--type-article .field--label-above.comment-wrapper h2.title {
 	@include krtk0AreaTitle($krtk0_DarkOrange);
 }
-
 body.node--type-article .comment__content {
 	margin-left:2%; width:98%; background-color:#fff;
 }
 body.node--type-article .comment-meta {margin-left:23px;}
 
-//	Meet the locals ///////////////////
+//  /comments
 
 
-div.node--type-meetlocals .field--name-node-title h2, // Main title
+//	Articles summary page panels
+.view-article-summary > div.view-content,
+.view-taxonomy-term > div.view-content,
+{font-size:0;} // Remove white space between inline-block elements
+.view-article-summary div.views-row, .view-taxonomy-term div.views-row {
+	display: inline-block;
+	vertical-align: bottom;
+	font-size: 14px; // Re-instates font-size after inline-block above
+}
+
+@media all and (max-width: 599px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {width:135px; margin-right:20px;}
+}
+@media all and (min-width:600px) and (max-width: 959px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:4, $nocols:12, $margin: 'normal', $grid: '100');
+	}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-left:0;}
+	.view-article-summary div.views-row img, .view-taxonomy-term div.views-row img {width:100% !important;}
+}
+@media all and (min-width:960px) and (max-width: 1279px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row  {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');
+	}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+}
+@media all and (min-width:1280px) {
+	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');
+	}
+	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+}
+
+
+.view-article-summary div.views-row .field--name-node-title,
+.view-taxonomy-term div.views-row .node--type-article h2 { // Title
+	font-size: 1.7em;
+	line-height: 1.2em;
+	font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;
+	margin:0;
+}
+.view-article-summary div.views-row .field--name-node-title h2 a,
+.view-taxonomy-term div.views-row .node--type-article h2 a {color:$krtk0_Teal;}
+
+.view-article-summary div.views-row .field--name-node-post-date, // Date
+// .view-taxonomy-term div.views-row .node--submitted // Use this one for tag summary later?
+{
+	font-size: 1.3em;
+	line-height: 1.25em;
+	color: $krtk0_Blue;
+	font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;
+	margin:0 0 0.1em;
+}
+
+.view-article-summary div.views-row a.readmore-btn,
+.view-taxonomy-term div.views-row li.node-readmore { // Buttons
+	background-color:$krtk0_Teal;
+	display:block;
+	color:$krtk0_Teal;
+	background-image:url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+	height: 3em;
+	margin: -6px 0 0 0;
+}
+.view-taxonomy-term div.views-row li.node-readmore a {color:#fff;padding:18px;font-family: $ktrk0_Exo2-LightCondensed;
+	font-weight:200;font-size: 1.3em;}
+
+
+
+//	Meet the locals page type /////////////////// NOTE - interim style below
+
+
+div.node--type-meetlocals .group-left .field--name-node-title h2, // Main title
 div.node--type-meetlocals .field--name-field-maori-name // Maori title
 {
 	font-size: 3em;
@@ -435,10 +574,9 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
 }
 
-
 //  Main body //
 
-.node--type-meetlocals div.field--name-body h2 {
+.node--type-meetlocals div#block-krtk0-content h2 {
 	font-family:$ktrk0_Exo2-LightExpanded;
 	font-size: 31px;
 	line-height: 1.5em;
@@ -447,11 +585,46 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 .node--type-meetlocals div.field--name-body h3 {
 	color:$krtk0_DarkTeal;
-	font-size:22px;
+	font-size:22px;          
 	line-height: 1.5em;
 	margin: 0;
 }
 
+// Right col //
+.field--name-field-more-info.field--type-entity-reference-revisions.field--label-above .field__label {
+	@include krtk0PanelTitle(#fff);
+	display:block;
+	padding:10px 5px 10px 80px;
+	background:url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/link-icon.png") no-repeat 8px 50% $krtk0_locals-col;
+}
+.field--name-field-url.field--type-link.field--label-hidden.field__item a {
+	display: block;
+	color:#fff;
+	margin: 10px 0 0;
+	padding: 15px 58px 15px 10px;
+	background: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png) no-repeat $krtk0_DarkOlive right 50%;
+	font-size:1.2em;
+}
+.field--name-field-link-descriptions.field--type-string.field--label-hidden.field__item {
+	padding:10px;
+	border:1px solid #ccc;
+	border-top: 0px;
+	font-size:1.15em;
+}
+
+//	**INTERIM** meet the locals /// REMOVE ONCE COMPLETE ///////////////////////
+
+.node--type-meet-the-locals.node--view-mode-teaser h2 {@include krtk0BlockTitle($krtk0_locals-col);}
+.node--type-meet-the-locals.node--view-mode-teaser h2 a {color:$krtk0_locals-col;}
+.node--type-meet-the-locals.node--view-mode-teaser .node__links {
+    display: block;
+    background-color: $krtk0_locals-col;
+    padding: 10px;
+    width: 150px;
+    font-size: 20px;
+    margin: 8px 0;
+}
+.node--type-meet-the-locals.node--view-mode-teaser .node__links a {color:#fff;}
 
 
 // Social stripe ////////////////////////////////////////////////////////////////////////////////////////
@@ -497,10 +670,12 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
 .view-front-page-display-items .view-content { // check target
   background-color: #fff;
   padding: 10px;
+  text-align:center;
 }
 .view-front-page-display-items .views-row { // check target
   display: inline-block;
   vertical-align: middle;
+  margin: 0 5px;
 }
 .view-display-id-partner_logos .views-row:last-of-type::after // used on pages? - Check
 	{content: ""; display: table; clear: both;}

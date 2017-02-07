@@ -55,6 +55,11 @@
     font-family: "exo_2light_condensed", sans-serif;
     color:$color;
 }
+@mixin krtk0PanelTitle($color) {
+    font-size: 1.5em;
+    font-family: "exo_2light_condensed", sans-serif;
+    color:$color;
+}
 @mixin krtk0AreaTitle($color) {
     font-size: 1.9em;
     font-family: "exo_2light_condensed", sans-serif;
@@ -63,7 +68,13 @@
     margin:1em 1em 0.1em 1em;
     padding-top:0.5em;
 }
-
+@mixin krtk0TitleBottomBorder ($backgroundPic, $backgroundColor){
+	min-height: 50px;
+	background-color:$backgroundColor;
+	background-image: $backgroundPic;
+	background-repeat: repeat-x;
+	background-position: top;
+}
 @mixin krtk0Columns($number, $min-width, $gap, $rule) {
     -webkit-column-count: $number; /* Chrome, Safari, Opera */
     -moz-column-count: $number; /* Firefox */
