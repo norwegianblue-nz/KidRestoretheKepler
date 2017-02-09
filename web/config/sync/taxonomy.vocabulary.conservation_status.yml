@@ -1,0 +1,9 @@
+uuid: 96d69b8d-56d5-44f4-9acb-4dddd55f877a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Conservation Status'
+vid: conservation_status
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,46 @@
+uuid: 66405ff9-876a-40a2-9601-769e721909ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.locals3panel.field_conservation_status
+    - field.field.paragraph.locals3panel.field_life_s
+    - field.field.paragraph.locals3panel.field_nz_classification
+    - paragraphs.paragraphs_type.locals3panel
+  module:
+    - paragraphs
+id: paragraph.locals3panel.default
+targetEntityType: paragraph
+bundle: locals3panel
+mode: default
+content:
+  field_conservation_status:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_life_s:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_nz_classification:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+hidden:
+  created: true
+  status: true
+  uid: true

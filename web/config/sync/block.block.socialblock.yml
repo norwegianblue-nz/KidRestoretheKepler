@@ -1,0 +1,31 @@
+uuid: 473457ad-a189-407a-9943-67f300f1aa71
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b794010c-5771-4c46-b76a-05f4532b0279'
+  module:
+    - block_content
+    - system
+  theme:
+    - krtk0
+id: socialblock
+theme: krtk0
+region: social
+weight: 0
+provider: null
+plugin: 'block_content:b794010c-5771-4c46-b76a-05f4532b0279'
+settings:
+  id: 'block_content:b794010c-5771-4c46-b76a-05f4532b0279'
+  label: 'Social block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,22 @@
+uuid: a38d11e3-8880-4370-9274-3259e48c42cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.meet_the_locals
+  module:
+    - text
+id: node.meet_the_locals.body
+field_name: body
+entity_type: node
+bundle: meet_the_locals
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
