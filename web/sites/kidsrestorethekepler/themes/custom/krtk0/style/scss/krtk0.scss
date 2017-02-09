@@ -214,6 +214,7 @@ body.path-frontpage #teaser-outer-wrapper {
 @media all and (max-width: 959px) {
 	#block-views-block-front-page-team  {@include parrotCols(4, 4, normal, '100');}
 	#block-meettheteamintro				{@include parrotCols(4, 4, normal, '100');}
+#block-views-block-front-page-team .view-front-page-team div.views-row {width:27.5%;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
 	#block-views-block-front-page-team  {@include parrotCols(6, 12, normal, '960');}
@@ -231,7 +232,7 @@ body.path-frontpage #teaser-outer-wrapper {
 #block-views-block-front-page-team .view-front-page-team div.views-row {
 	display: inline-block;
 	vertical-align: top;
-	max-width: 140px;
+	max-width: 137px;
 	margin-right:20px;
 }
 #block-views-block-front-page-team .view-front-page-team div.views-row:last-of-type {margin-right:0;}
@@ -248,16 +249,17 @@ div.view-front-page-team h2 a {
 	color: #fff;
 }
 div.view-front-page-team .pager__items {text-align:left;}
-div.view-front-page-team nav.pager ul {margin:0;padding:0;}
+div.view-front-page-team nav.pager ul {margin:50px 0;padding:0;}
 div.view-front-page-team nav.pager li a {
 	display: inline-block;
 	border: 1px solid #fff;
 	padding: 5px 12px;
-	margin-right: 10px;
+	margin: 7px 0px;
 	color: #fff;
 	background-color: $krtk0_Red;
 }
-div.view-front-page-team nav.pager li.pager__item.is_active a {color:$krtk0_DarkGrey;}
+div.view-front-page-team nav.pager li {padding-left:0;}
+div.view-front-page-team nav.pager li.pager__item.is-active a {color:$krtk0_DarkGrey;}
 
 
 // Content stripes ///////////////////////////////////////////////////////////////////////////////////////
@@ -340,7 +342,39 @@ div.node.ds-2col > .group-left {@include parrotCols($thiscols:9, $nocols:12, $ma
 div.node.ds-2col > .group-right {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
 }
 
-// Latst news - right col
+//	Typography - content stripe //////////
+#content-outer-wrapper h2 {@include krtk0HeadingH2($krtk0_Orange)}
+#content-outer-wrapper h3 {@include krtk0HeadingH3($krtk0_Teal)}
+
+#content-outer-wrapper li {font-size: 1.5em;   padding: 0 0 20px 60px; }
+#content-outer-wrapper ol,
+#content-outer-wrapper ul{
+	margin: 0 0 20px;
+	padding: 0;
+	list-style-type: none;
+	position: relative;
+
+}
+#content-outer-wrapper ol li { counter-increment: step-counter;}
+
+#content-outer-wrapper ol li::before,
+#content-outer-wrapper ul li::before{
+	margin-right: 5px;
+	font-size: 80%;
+	background-color: $krtk0_Blue;
+	color: $krtk0_DarkOlive;
+	font-weight: normal;
+	padding: 1px 3px 1px 5px; 
+	border-radius: 2px;
+	position: absolute;
+	left:0;
+	min-width: 35px;
+}
+#content-outer-wrapper ol li::before {content: counter(step-counter);}
+#content-outer-wrapper ul li::before{content:">"}
+
+
+//	Latst news - right col //////
 .field--name-dynamic-block-fieldnode-latest-news.field--type-ds.field--label-above .field__label 
 {@include krtk0BlockTitle($krtk0_Orange);font-size:2em;}
 
@@ -664,7 +698,16 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$krtk0_Buff;	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border-front.svg");
 }
-#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;}
+#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;	
+}
+#block-views-block-front-page-display-items-partner-logos h2 a, //Front
+#block-views-block-front-page-display-items-block-1 h2 a {	//Pages
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	width: 250px;
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+	display: block;
+}
 
 
 .view-front-page-display-items .view-content { // check target
