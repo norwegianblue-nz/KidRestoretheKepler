@@ -1,0 +1,14 @@
+uuid: fa1f9ad0-0563-4818-8688-9825736d7f6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.general_membership
+id: general_membership-anonymous
+label: Anonymous
+weight: -102
+internal: true
+audience: anonymous
+group_type: general_membership
+permissions_ui: true
+permissions: {  }

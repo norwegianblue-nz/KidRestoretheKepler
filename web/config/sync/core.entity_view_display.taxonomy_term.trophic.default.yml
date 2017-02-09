@@ -1,0 +1,20 @@
+uuid: 4fff35ad-a756-4fc2-b258-8ef669f77cd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.trophic
+  module:
+    - text
+id: taxonomy_term.trophic.default
+targetEntityType: taxonomy_term
+bundle: trophic
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

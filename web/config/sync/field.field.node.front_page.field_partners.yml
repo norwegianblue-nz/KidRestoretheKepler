@@ -1,0 +1,27 @@
+uuid: 5d1cb911-4221-4695-a390-fc1149b9e4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners
+    - node.type.front_page
+    - views.view.front_page_display_items
+  module:
+    - viewsreference
+id: node.front_page.field_partners
+field_name: field_partners
+entity_type: node
+bundle: front_page
+label: Partners
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    display_id: default
+    target_uuid: 6de91678-c10e-4d36-980d-9a7b07a0708b
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings: {  }
+field_type: viewsreference

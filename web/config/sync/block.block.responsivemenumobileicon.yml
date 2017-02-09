@@ -1,0 +1,20 @@
+uuid: 71406fa8-8cbd-4b3d-8442-4ebc0a80c983
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - krtk0
+id: responsivemenumobileicon
+theme: krtk0
+region: menu
+weight: -30
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

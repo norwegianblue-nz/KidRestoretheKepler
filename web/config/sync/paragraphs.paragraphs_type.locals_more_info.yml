@@ -1,0 +1,6 @@
+uuid: 889fb248-e3b1-4438-a2e3-8828b81485e6
+langcode: en
+status: true
+dependencies: {  }
+id: locals_more_info
+label: 'Locals More Info'
