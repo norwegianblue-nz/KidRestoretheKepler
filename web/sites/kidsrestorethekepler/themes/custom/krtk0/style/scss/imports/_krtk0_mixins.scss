@@ -75,6 +75,21 @@
 	background-repeat: repeat-x;
 	background-position: top;
 }
+@mixin krtk0HeadingH2($color) {
+    font-size: 1.9em;
+    font-family: "exoregular", sans-serif;
+    font-weight: normal;
+    color:$color;
+    padding-top:0.5em;
+}
+@mixin krtk0HeadingH3($color) {
+    font-size: 1.5em;
+    font-family: "exoregular", sans-serif;
+    font-weight: normal;
+    color:$color;
+    padding-top:0.5em;
+}
+
 @mixin krtk0Columns($number, $min-width, $gap, $rule) {
     -webkit-column-count: $number; /* Chrome, Safari, Opera */
     -moz-column-count: $number; /* Firefox */
