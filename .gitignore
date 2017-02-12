@@ -21,6 +21,7 @@ web/sites/*/settings.local.php
 web/sites/*/services.yml
 web/sites/*/php_errors.log
 
+web/sites/kidsrestorethekepler/modules/contrib
 web/sites/kidsrestorethekepler/themes/custom/krtk_interim/
 /web/sites/kidsrestorethekepler/themes/custom/krtk0/style/css/
 /web/sites/kidsrestorethekepler/themes/custom/krtk0/style/css_safe.tar.bz2
