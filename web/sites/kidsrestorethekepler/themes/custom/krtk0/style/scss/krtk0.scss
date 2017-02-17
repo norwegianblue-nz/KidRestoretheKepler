@@ -10,32 +10,30 @@ p a {border:none !important;color:$krtk0_Teal;}
 
 // Home Logo ///////////////////////////////////////////////////////////////////
 #block-logohomepage {z-index: -200;	position: relative;} /* To fix tool bar unclickable on logged in */
-#page div#logo-home {width: 250px;
+#page div#logo-home {width: 220px;
+	top: 4em;
 	position: absolute;
 	margin:0 auto;
 	@include krtk0Transition;
 	left: 50%;
 	margin-left: -90px;
-	top: 5vh;
 }
 #page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;height:50px;}
-
-// Pages Logo //////////////////////////////////////////////////////////////////
-#block-logogeneralpages {
-    float: left;
-    margin-top: 5px;}
-#page #block-logogeneralpages img {
-    width: 100%;@include krtk0Transition;}
-#page.scrolled #block-logogeneralpages img {
-    width: 60%;@include krtk0Transition;margin-top:-10px;}
 
 // Menu bar /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #menu-outer-wrapper {background-color: $krtk0_TransTeal;position: fixed; z-index:20; width: 100%; padding-top:10px;}
+.scrolled #menu-outer-wrapper {opacity: 0.4;@include krtk0Transition;}
+.scrolled #menu-outer-wrapper:hover {opacity: 1;@include krtk0Transition;}
 
-div#block-statictopmenu {text-align:center;}
-#block-statictopmenu ul {display:inline-block;list-style:none;margin:0.5em;padding:0;}
+div#block-statictopmenu {text-align:center;min-height:4.4em;}
+#block-statictopmenu ul {display:none;list-style:none;margin:0.5em;padding:0;}
+@media all and (min-width: 750px) {
+	#block-statictopmenu ul {display:inline-block;}
+	#page div#logo-home {top:7vh;}
+}
+
 #block-statictopmenu li {
 	display:inline-block;
 	list-style:none;
@@ -51,7 +49,7 @@ div#block-statictopmenu {text-align:center;}
 #block-statictopmenu li a {color:#fff;padding: 2px 2px 20px;}
 #block-statictopmenu div.contextual {display:none !important;} // hidden for LOGGED IN STATE - CONTEXTURAL BLOCKS
 
-// # Search Bar # //
+// # Search Toolbar # //
 // icons
 #block-krtktoolbar {
 	float: right;
@@ -134,6 +132,7 @@ input.button,
 @media all and (max-width: 559px) {
 	#block-krtk0-search, #block-userlogin, #block-toolbarinfo, #block-useraccountmenu {width:100% !important}
 	#block-userlogin input.form-text {width:65%;}
+	.path-frontpage #block-krtktoolbar {width: 190px; position: absolute; top: 23px;}
 }
 
 
@@ -150,6 +149,17 @@ input.button,
 #block-krtk0-branding {display: none;}
 #block-logostrapfrontpage h2 {text-align:center;color:#fff;font-family:$ktrk0_Exo2-LightCondensed;font-size:21px;margin:2em 0;}
 
+// Pages Logo ////////////////////////////////////////////////////////////////// (home page logo css above)
+#block-logogeneralpages {
+    float: left;
+    margin-top: 5px;
+    position:relative;}
+#page #block-logogeneralpages {
+    width: 5em;@include krtk0Transition;}
+#page.scrolled #block-logogeneralpages {
+    width: 3em;@include krtk0Transition;margin-top:-10px;}
+
+    
 // Zone buttons !! NOW GENERALLY USED FOR ZONE TITLES !! /////////////////////////////////////////////////////////////
 
 // !! NB #btns wrapper and content needs targeting for each zone !! ///
@@ -174,14 +184,31 @@ div#block-krtk0-mainbuttons {
     margin: 5px auto;
 }
 
-/// Buttons
-div.zone-button {width:100px;display:inline-block;vertical-align:top;text-align:center;}
+/// Zone buttons
+div.zone-button {width:75px;display:inline-block;vertical-align:top;text-align:center;clear: both;}
+.path-frontpage div.zone-button {width:100px;margin:2%;}
 div.zone-button p {line-height:1em;margin:0;}
 div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px;}
+#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;} // Hidden on < 700px
 
-div#block-mainbuttons-2 {margin: 7px auto;}
-#block-mainbuttons-2 {width: 60%; margin: 10px auto 0; text-align: center;}
+#block-mainbuttons-2 {width: 90%; margin: 7px auto; text-align: center;clear:both;}
 #block-mainbuttons-2 div.zone-button img {width:60px;@include krtk0Transition;} /* narrower icon for general pages */
+
+//	Zone button and page logo breakpoints //////////////////////////////////////
+//	0-499px (set by basic style) : 500-699px : 700-959px : > 960px /////////////
+
+@media all and (min-width: 500px) {
+	#page #block-logogeneralpages {position:absolute;}
+}
+@media all and (min-width: 700px) {
+	#block-mainbuttons-2 div.zone-button {width:100px;}
+	#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:block;}
+	#page #block-logogeneralpages {width: 8em;}
+    #page.scrolled #block-logogeneralpages {width: 5em;}
+}
+@media all and (min-width: 960px) {
+}
+
 #page.scrolled #block-mainbuttons-2 div.zone-button img {width:50px;@include krtk0Transition;} /* smaller icon on scroll */
 #page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
 
@@ -263,9 +290,10 @@ body.path-frontpage #teaser-outer-wrapper {
 #block-views-block-krtk-leadership-team-members nav.pager li {padding-left:0;}
 #block-views-block-krtk-leadership-team-members nav.pager li.pager__item.is-active a {background-color:$krtk0_Red;}
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Content stripes ///////////////////////////////////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //	Home page stripes ///////////
 
@@ -289,8 +317,7 @@ body.path-frontpage #teaser-outer-wrapper {
 }
 @media all and (max-width: 959px) { // minimise border squash on smaller screens
 .path-frontpage #content-outer-wrapper {
-	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 200;
-}
+	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/about-title-border.jpg') 200;}
 }
 
 #block-zonetitleabout-front h2 a,
@@ -469,7 +496,7 @@ body.node--type-article .field.field--name-comment.field--type-comment.field--la
 	background-color:$krtk0_Buff;padding:0 20px 20px 20px;
 }
 body.node--type-article .comment__content {
-	background-color:#fff; display:block;
+	background-color:#fff; display:block; @include krtk0Corners(27px);	
 }
 body.node--type-article .comment__content h3 {margin:0;padding:0;}
 body.node--type-article .comment__content h3 a {
@@ -479,6 +506,33 @@ body.node--type-article .comment__meta p {display:inline-block;}
 body.node--type-article .comment__meta p.comment__author,
 body.node--type-article .comment__meta p.comment__time {font-size:1.1em;}
 
+body.node--type-article .comment-wrapper h2.comment-form__title {border-top: dotted 4px;}
+
+body.node--type-article .comment-wrapper label {
+	display: block;
+	width: 7em;
+	font-size: 15px;
+	font-family: $ktrk0_Exo2-RegularCondensed;
+	text-transform:uppercase;
+	color: #fff;
+	background-color: $krtk0_Olive;
+	padding: 2px 0 2px 6px;
+}
+body.node--type-article .comment-wrapper input.form-text {width: 95%;padding:4px 3px} 
+body.node--type-article .comment-wrapper div#edit-subject-wrapper, .comment-wrapper div.form-item-name {
+	width: 45%;
+	float: left;
+	clear: left;
+	margin-bottom:0;
+}
+body.node--type-article .comment-wrapper  div.text-format-wrapper.form-item {
+	display: inline-block;
+	width: 55%;
+}
+body.node--type-article .comment-wrapper  div.text-format-wrapper > div.form-item {margin-top:0;}
+
+// --> TEMP HIDE!! use Drupal for text format hide for non logged-in !/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!/!
+body.node--type-article .comment-wrapper  div.text-format-wrapper  #edit-comment-body-0-format {display:none;} // TEMPORARY HIDE!!!
 
 //  /comments
 
@@ -517,7 +571,7 @@ body.node--type-article .comment__meta p.comment__time {font-size:1.1em;}
 }
 
 
-.view-article-summary div.views-row .field--name-node-title,
+.view-article-summary div.views-row .field--name-node-title h2,
 .view-taxonomy-term div.views-row .node--type-article h2 { // Title
 	font-size: 1.7em;
 	line-height: 1.2em;
@@ -555,7 +609,7 @@ body.node--type-article .comment__meta p.comment__time {font-size:1.1em;}
 
 
 
-//	Meet the locals page type /////////////////// NOTE - interim style below
+//	Meet the locals page type /////////////////// NOTE - interim styles below these styles to be deleted
 
 
 div.node--type-meetlocals .group-left .field--name-node-title h2, // Main title
@@ -643,12 +697,6 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 	margin: 0;
 	color:$krtk0_Orange;
 }
-/*.node--type-meetlocals div.field--name-body h3 {
-	color:$krtk0_DarkTeal;
-	font-size:22px;          		Removed - not required.
-	line-height: 1.5em;
-	margin: 0;
-}*/
 
 // Right col //
 .field--name-field-more-info.field--type-entity-reference-revisions.field--label-above .field__label {
@@ -686,6 +734,7 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 .node--type-meet-the-locals.node--view-mode-teaser .node__links a {color:#fff;}
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Social stripe ////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -710,6 +759,7 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 .view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::before {content:open-quote;}
 .view-front-page-display-items.view-id-front_page_display_items.view-display-id-partner_logos p:nth-of-type(1)::after {content:close-quote;}
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //  Extras (partners strip on pages) //////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -750,6 +800,7 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
 .view-display-id-partner_logos .views-row:last-of-type::after // used on pages? - Check
 	{content: ""; display: table; clear: both;}
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Footer //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -760,18 +811,19 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
     background-repeat: repeat-x;
     background-color:#fff;
     border-top :5em solid #fff;
+    padding-bottom:2em;
 }
 @media all and (max-width: 959px) {
-    #block-charityfooternumber {@include parrotCols(8, 12, normal, '100');float:left;padding-top: 40px;}
-    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '100');float:right;padding-top:20px;}
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '100');float:left;padding-top: 50px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '100');float:right;padding-top:40px;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-    #block-charityfooternumber {@include parrotCols(8, 12, normal, '960');float:left;padding-top: 40px;}
-    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '960');float:right;padding-top:20px;}
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '960');float:left;padding-top: 50px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '960');float:right;padding-top:40px;}
 }
 @media all and (min-width: 1280px) {
-    #block-charityfooternumber {@include parrotCols(8, 12, normal, '1200');float:left;padding-top: 40px;}
-    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '1200');float:right;padding-top:20px;}
+    #block-charityfooternumber {@include parrotCols(8, 12, normal, '1200');float:left;padding-top: 50px;}
+    #block-footertitlekrtklogo {@include parrotCols(4, 12, normal, '1200');float:right;padding-top:40px;}
 }
 #block-charityfooternumber h2 {
     font-size: 20px;
@@ -832,8 +884,11 @@ div.region-footer > div#block-footersocialicons {margin:1.5em 0 1em 0;}
 .region-footer #block-contactblock #edit-subject-wrapper label,
 .region-footer #block-contactblock #edit-message-wrapper label {display: none;}
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Copyright ///////////////////////////////////////////////////////////////////
+// Copyright ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 #copyright-outer-wrapper {background-color:#003530;padding:1em 0;}
 #block-copyright p, #block-copyright li a {font-family:$krtk0_WorkSans-Hairline;font-size:14.5px;color:#fff;letter-spacing:1px;}
@@ -860,9 +915,9 @@ div.region-footer > div#block-footersocialicons {margin:1.5em 0 1em 0;}
     z-index: -1;
 }
 #nb_slideshow_bg {min-height: 85vh;
-background-position: 50% 50%;
-background-repeat: no-repeat;
-background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 @media all and (min-width: 0px) {.nb_fixed-bg{}}
 @media all and (min-width: 480px) and (max-width: 767px) {.nb_fixed-bg{}}       
@@ -884,7 +939,7 @@ background-size: cover;
     top: -85vh;
 }
 
-// ## hamburger
+//	## hamburger
 .responsive-menu-toggle {
 	display: inline-block;
 	position: absolute;
@@ -906,12 +961,13 @@ background-size: cover;
 	background: #fff;
 }
 .responsive-menu-toggle-icon span.label {display:none;} // Hide "menu" on hamburger from all pages other than home
-.path-fronpage .responsive-menu-toggle-icon span.label {
+.path-frontpage .responsive-menu-toggle-icon span.label {
 	display: block;
 	position: absolute;
 	font-size: 17px;
 	text-transform: uppercase;
-	top: 50px;
+	top: 40px;
 	left: 0;
 	color: #fff;
 }
+.path-frontpage .responsive-menu-toggle-icon { margin-top:-18px;}
