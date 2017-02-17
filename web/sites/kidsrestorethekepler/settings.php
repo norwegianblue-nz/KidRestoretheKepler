@@ -16,7 +16,7 @@ $settings['update_free_access'] = FALSE;
 /**
  * Public file path:
  */
-# $settings['file_public_path'] = 'sites/default/files';
+$settings['file_public_path'] = 'sites/kidsrestorethekepler.co.nz/files';
 
 /**
  * Private file path:
