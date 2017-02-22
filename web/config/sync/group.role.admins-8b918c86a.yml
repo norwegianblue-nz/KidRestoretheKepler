@@ -1,0 +1,19 @@
+uuid: 99134d92-d17e-47c2-b2df-f81db0d3e27d
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.admins
+  enforced:
+    module:
+      - grolesync
+    config:
+      - user.role.public_liaison
+id: admins-8b918c86a
+label: Public_Liaison
+weight: 5
+internal: true
+audience: outsider
+group_type: admins
+permissions_ui: false
+permissions: {  }

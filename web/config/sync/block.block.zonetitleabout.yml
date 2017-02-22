@@ -1,0 +1,25 @@
+uuid: e3d42d8d-33a0-4bf6-8686-3c7d984fa024
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: zonetitleabout
+theme: krtk0
+region: '-1'
+weight: -27
+provider: null
+plugin: 'block_content:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+settings:
+  id: 'block_content:2a0c3d9d-d568-4307-aace-6f644e6e41dc'
+  label: 'Zone title - about'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

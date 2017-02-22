@@ -1,0 +1,25 @@
+uuid: 1b9001fe-f374-46e3-8f63-25ba8ea57c24
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:b9fb23c6-5d0d-42f6-881e-25e6bdc511da'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: footertitlekrtklogo
+theme: krtk0
+region: footer_header
+weight: -23
+provider: null
+plugin: 'block_content:b9fb23c6-5d0d-42f6-881e-25e6bdc511da'
+settings:
+  id: 'block_content:b9fb23c6-5d0d-42f6-881e-25e6bdc511da'
+  label: 'Footer title - KRTK logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

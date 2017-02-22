@@ -1,0 +1,36 @@
+uuid: eb9081c1-6a5b-4f09-9a81-1536a61289ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.private.field_address
+    - field.field.profile.private.field_cell_phone
+    - field.field.profile.private.field_home_phone
+    - profile.type.private
+  module:
+    - address
+    - telephone
+id: profile.private.default
+targetEntityType: profile
+bundle: private
+mode: default
+content:
+  field_address:
+    weight: 3
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+  field_cell_phone:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+  field_home_phone:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+hidden: {  }

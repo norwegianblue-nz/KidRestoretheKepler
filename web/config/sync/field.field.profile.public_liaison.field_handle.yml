@@ -1,0 +1,19 @@
+uuid: 2d6f0c39-fa02-4b7e-8e4d-bee9f8c6a64e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_handle
+    - profile.type.public_liaison
+id: profile.public_liaison.field_handle
+field_name: field_handle
+entity_type: profile
+bundle: public_liaison
+label: Handle
+description: 'Social Network ''handle'' - eg @krtkliason for a Twitter account'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

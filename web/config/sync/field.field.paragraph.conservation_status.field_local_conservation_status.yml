@@ -1,0 +1,28 @@
+uuid: 535fa01a-8990-4145-a852-174d55db8b8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_local_conservation_status
+    - paragraphs.paragraphs_type.conservation_status
+    - taxonomy.vocabulary.conservation_status
+id: paragraph.conservation_status.field_local_conservation_status
+field_name: field_local_conservation_status
+entity_type: paragraph
+bundle: conservation_status
+label: 'Local Conservation Status'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conservation_status: conservation_status
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

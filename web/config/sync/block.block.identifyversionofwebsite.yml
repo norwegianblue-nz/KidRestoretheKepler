@@ -1,0 +1,25 @@
+uuid: 771033bb-3c0d-4e19-a37a-09728d3cf133
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ad9b620b-3e5a-4bc3-8da6-609ff3478cf4'
+  module:
+    - block_content
+  theme:
+    - krtk_interim
+id: identifyversionofwebsite
+theme: krtk_interim
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:ad9b620b-3e5a-4bc3-8da6-609ff3478cf4'
+settings:
+  id: 'block_content:ad9b620b-3e5a-4bc3-8da6-609ff3478cf4'
+  label: 'Identify version of Website'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

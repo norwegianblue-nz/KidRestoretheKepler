@@ -1,0 +1,20 @@
+uuid: 54607b7b-aed4-4a3a-94f2-2c8dfd2630cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: zhtPXoRcC6REiepM0k16zw__FDW5YOXDR6U2WlldTrs
+name: 'Front Page'
+type: front_page
+description: "Custom content type for the Front Page. \r\nThere should only be one of these"
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,77 @@
+uuid: 00c197dc-fc34-4309-99eb-b1c83f134013
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.public_liaison.field_contact_phone_number
+    - field.field.profile.public_liaison.field_email
+    - field.field.profile.public_liaison.field_handle
+    - field.field.profile.public_liaison.field_position
+    - field.field.profile.public_liaison.field_skype
+    - profile.type.public_liaison
+  module:
+    - ds
+    - telephone
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - field_position
+        - field_email
+        - field_contact_phone_number
+        - field_skype
+        - field_handle
+id: profile.public_liaison.default
+targetEntityType: profile
+bundle: public_liaison
+mode: default
+content:
+  field_contact_phone_number:
+    weight: 2
+    label: inline
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+  field_email:
+    weight: 1
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+  field_handle:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_position:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_skype:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden: {  }
