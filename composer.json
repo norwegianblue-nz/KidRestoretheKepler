@@ -30,17 +30,17 @@
         "drupal/diff": "*",
         "drupal/ds": "*",
         "drupal/easychart": "*",
-        "drupal/entity_clone": "~1.0",
+        "drupal/entity_clone": "1.*@dev",
         "drupal/field_collection": "*",
         "drupal/field_group": "*",
         "drupal/flickity": "*",
-        "drupal/git_deploy": "2.x-dev",
+        "drupal/git_deploy": "2.*@dev",
         "drupal/group": "*",
         "drupal/honeypot": "*",
         "drupal/image_effects": "*",
         "drupal/imagemagick": "*",
         "drupal/inline_entity_form": "*",
-        "drupal/libraries": "3.x-dev",
+        "drupal/libraries": "3.*@dev",
         "drupal/paragraphs": "*",
         "drupal/pathauto": "*",
         "drupal/photoswipe": "*",
@@ -52,7 +52,8 @@
         "drupal/viewsreference": "*",
         "drupal/views_slideshow": "*",
         "drupal/omega": "5.x",
-        "drupal/linkit": "^4.2"
+        "drupal/linkit": "^4.2",
+        "drupal/profile": "1.*@dev"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -62,7 +63,7 @@
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
         "symfony/css-selector": "~2.8",
-        "drupal/devel": "1.x-dev"
+        "drupal/devel": "1.*@dev"
     },
     "conflict": {
         "drupal/drupal": "*"
