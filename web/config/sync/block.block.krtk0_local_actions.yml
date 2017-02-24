@@ -1,0 +1,20 @@
+uuid: 8d71b140-3508-41fd-a63d-796901a2dad7
+langcode: en
+status: false
+dependencies:
+  theme:
+    - krtk0
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: krtk0_local_actions
+theme: krtk0
+region: '-1'
+weight: -31
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

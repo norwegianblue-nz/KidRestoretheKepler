@@ -1,0 +1,10 @@
+uuid: 34e4d7c3-0e69-4228-a0aa-2f2a3642db02
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.postscript2
+label: Postscript2
+targetEntityType: node
+cache: true

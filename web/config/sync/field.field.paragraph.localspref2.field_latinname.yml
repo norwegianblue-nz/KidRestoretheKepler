@@ -1,0 +1,19 @@
+uuid: 91aea16b-c0f3-478b-86e8-970e835dd43d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_latinname
+    - paragraphs.paragraphs_type.localspref2
+id: paragraph.localspref2.field_latinname
+field_name: field_latinname
+entity_type: paragraph
+bundle: localspref2
+label: 'Latin Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

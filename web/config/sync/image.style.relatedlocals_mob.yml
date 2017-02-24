@@ -1,0 +1,21 @@
+uuid: a46091a8-0725-493a-9bdb-f8ccc292585e
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: relatedlocals_mob
+label: relatedlocals_mob
+effects:
+  7ba95038-805a-48b2-8f5a-d47022bad635:
+    uuid: 7ba95038-805a-48b2-8f5a-d47022bad635
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  eb56f5ce-3188-415b-8320-05032640fcdf:
+    uuid: eb56f5ce-3188-415b-8320-05032640fcdf
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 68
+      height: 68

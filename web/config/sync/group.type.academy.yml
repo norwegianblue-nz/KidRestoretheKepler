@@ -1,0 +1,8 @@
+uuid: bf315c0b-3383-4734-b1b7-fe44d8a982da
+langcode: en
+status: true
+dependencies: {  }
+id: academy
+label: Academy
+description: 'The Educational Establishment'
+creator_roles: {  }

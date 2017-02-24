@@ -1,0 +1,31 @@
+uuid: 9b015873-8a33-45db-ba95-317ee8b863ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+  theme:
+    - krtk0
+id: entityviewcontent_3
+theme: krtk0
+region: preface_third
+weight: 0
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: LandingPageBody
+  provider: ctools
+  label_display: '0'
+  view_mode: preface3
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

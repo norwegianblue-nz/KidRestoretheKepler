@@ -1,0 +1,14 @@
+uuid: 98db63d4-f405-429d-9f82-c982e16cb4f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.public_liaison
+  module:
+    - user
+id: user_add_role_action.public_liaison
+label: 'Add the Public_Liaison role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: public_liaison

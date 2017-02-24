@@ -1,0 +1,14 @@
+uuid: 6346d5e1-d369-41a7-a03a-60cea8696ae5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - info@kidsrestorethekepler.co.nz
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
