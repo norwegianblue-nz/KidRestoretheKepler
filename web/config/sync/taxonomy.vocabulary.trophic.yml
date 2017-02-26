@@ -1,9 +1,0 @@
-uuid: 95e89f49-42bc-4e99-a046-7b07a27d4660
-langcode: en
-status: true
-dependencies: {  }
-name: Trophic
-vid: trophic
-description: 'Whether consumer producer, decomposer'
-hierarchy: 0
-weight: 0
