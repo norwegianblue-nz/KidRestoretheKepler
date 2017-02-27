@@ -1,0 +1,21 @@
+uuid: 7b381bbd-05ed-40ce-b5a5-658bb532663a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_contact_phone_number
+    - profile.type.public_liaison
+  module:
+    - telephone
+id: profile.public_liaison.field_contact_phone_number
+field_name: field_contact_phone_number
+entity_type: profile
+bundle: public_liaison
+label: 'Contact Phone Number'
+description: 'Phone number(s) that will be made publically visible on the website'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

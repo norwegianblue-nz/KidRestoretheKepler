@@ -1,0 +1,40 @@
+uuid: 762e41e9-85ec-417b-b62d-857822bb18a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:7745f10d-7a5f-41b9-9413-5fd91ed8ba29'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - krtk0
+id: zonetitlemeetthelocals
+theme: krtk0
+region: btns
+weight: 0
+provider: null
+plugin: 'block_content:7745f10d-7a5f-41b9-9413-5fd91ed8ba29'
+settings:
+  id: 'block_content:7745f10d-7a5f-41b9-9413-5fd91ed8ba29'
+  label: 'Zone Title - meet the locals'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      meetlocals: meetlocals
+      meet_the_locals: meet_the_locals
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

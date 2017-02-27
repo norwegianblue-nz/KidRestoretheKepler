@@ -1,0 +1,25 @@
+uuid: 0774ca4a-e8c5-405d-8297-f3e1c8324a25
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:c4d79a00-ef41-4886-9ebd-904e7b4c1c8d'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: placeholderminicontactform
+theme: krtk0
+region: '-1'
+weight: -26
+provider: null
+plugin: 'block_content:c4d79a00-ef41-4886-9ebd-904e7b4c1c8d'
+settings:
+  id: 'block_content:c4d79a00-ef41-4886-9ebd-904e7b4c1c8d'
+  label: 'PLACEHOLDER - Mini contact form'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

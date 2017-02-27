@@ -1,0 +1,17 @@
+id: all_locals_view
+label: 'All Locals View'
+ui_limit: ''
+properties:
+  block: 'views_block:meetlocals-block_1'
+  use_block_title: false
+  config:
+    id: 'views_block:meetlocals-block_1'
+    label: ''
+    provider: views
+    label_display: visible
+    views_label: ''
+    items_per_page: none
+type: block
+type_label: 'Block field'
+entities:
+  node: node

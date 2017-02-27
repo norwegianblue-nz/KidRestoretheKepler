@@ -1,0 +1,15 @@
+uuid: 38172387-e650-4b30-ad27-facf4470c828
+langcode: en
+status: true
+dependencies: {  }
+id: public_liaison
+label: Public_Liaison
+weight: 5
+is_admin: null
+permissions:
+  - 'add own public profile'
+  - 'edit own public profile'
+  - 'add own public_liaison profile'
+  - 'delete own public_liaison profile'
+  - 'edit own public_liaison profile'
+  - 'view own public_liaison profile'

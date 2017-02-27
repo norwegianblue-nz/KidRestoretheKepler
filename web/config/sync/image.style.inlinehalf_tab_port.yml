@@ -1,0 +1,21 @@
+uuid: 397ea0a4-8dd7-4a42-9043-4c19be74cf67
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: inlinehalf_tab_port
+label: InlineHalf_tab-port
+effects:
+  7b0feac7-658f-4d8b-822a-9c8277bdb997:
+    uuid: 7b0feac7-658f-4d8b-822a-9c8277bdb997
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  3bfbe775-cbea-4552-9657-e4ebc24e10e2:
+    uuid: 3bfbe775-cbea-4552-9657-e4ebc24e10e2
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 261
+      height: 174

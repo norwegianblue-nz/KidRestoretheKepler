@@ -1,0 +1,16 @@
+uuid: 005e9d20-cdd4-4987-8671-5b42f3906549
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.general_membership
+  module:
+    - user
+id: group_content_type_95a7b9860fdac
+label: 'General Membership: Group membership'
+description: 'Adds users to groups as members.'
+group_type: general_membership
+content_plugin: group_membership
+plugin_config:
+  group_cardinality: 0
+  entity_cardinality: 1

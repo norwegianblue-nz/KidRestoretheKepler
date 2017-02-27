@@ -1,0 +1,30 @@
+uuid: 4caf22a0-098c-45e3-b746-000252d74418
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  0: 'access content'
+  1: 'use text format basic_html'
+  2: 'access comments'
+  3: 'post comments'
+  4: 'skip comment approval'
+  5: 'access site-wide contact form'
+  7: 'search content'
+  8: 'add own groupprofile profile'
+  9: 'edit own groupprofile profile'
+  10: 'view own groupprofile profile'
+  11: 'add own private profile'
+  12: 'edit own private profile'
+  13: 'view own private profile'
+  14: 'add own public profile'
+  15: 'edit own public profile'
+  16: 'view any public profile'
+  17: 'view own public profile'
+  18: 'view any public_liaison profile'
+  19: 'view own public_liaison profile'

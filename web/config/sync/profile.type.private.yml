@@ -1,0 +1,16 @@
+uuid: 9dba34b4-6de1-40b4-aab8-c1c1609c9ea6
+langcode: en
+status: true
+dependencies: {  }
+id: private
+label: Private
+registration: true
+multiple: false
+roles:
+  authenticated: '0'
+  administrator: '0'
+  websiteeditor: '0'
+  blogger: '0'
+  public_liaison: '0'
+  websiteadministrator: '0'
+weight: 0

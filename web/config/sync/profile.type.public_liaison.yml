@@ -1,0 +1,16 @@
+uuid: 84faa271-664a-4bab-ad1c-fbc40fdb5e4a
+langcode: en
+status: true
+dependencies: {  }
+id: public_liaison
+label: Public_Liaison
+registration: true
+multiple: false
+roles:
+  public_liaison: public_liaison
+  authenticated: '0'
+  administrator: '0'
+  websiteeditor: '0'
+  blogger: '0'
+  websiteadministrator: '0'
+weight: 0

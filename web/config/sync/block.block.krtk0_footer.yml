@@ -1,0 +1,26 @@
+uuid: 3409a804-7520-41c4-abe7-009034fa2263
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - krtk0
+_core:
+  default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
+id: krtk0_footer
+theme: krtk0
+region: footer
+weight: -35
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: 'Other Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

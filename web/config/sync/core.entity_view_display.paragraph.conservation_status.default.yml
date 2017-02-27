@@ -1,0 +1,30 @@
+uuid: 7a58f6f8-c0f6-4fd5-9c14-173152a27bcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.conservation_status.field_local_conservation_status
+    - field.field.paragraph.conservation_status.field_nz_conservation_status
+    - paragraphs.paragraphs_type.conservation_status
+id: paragraph.conservation_status.default
+targetEntityType: paragraph
+bundle: conservation_status
+mode: default
+content:
+  field_local_conservation_status:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_nz_conservation_status:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  created: true
+  uid: true

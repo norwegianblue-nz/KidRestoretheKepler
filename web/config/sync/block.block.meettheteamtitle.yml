@@ -1,0 +1,31 @@
+uuid: 956ecc4c-fb0e-409b-9d47-8c1f26b483fe
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3e1038c9-21ea-408c-a698-4b44c56255d2'
+  module:
+    - block_content
+    - system
+  theme:
+    - krtk0
+id: meettheteamtitle
+theme: krtk0
+region: teaser
+weight: -38
+provider: null
+plugin: 'block_content:3e1038c9-21ea-408c-a698-4b44c56255d2'
+settings:
+  id: 'block_content:3e1038c9-21ea-408c-a698-4b44c56255d2'
+  label: 'Meet the team - title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

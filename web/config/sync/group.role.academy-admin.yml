@@ -1,0 +1,32 @@
+uuid: 9fea64a0-6dde-496f-9288-6ded549e8b8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.academy
+id: academy-admin
+label: Academy-Admin
+weight: 5
+internal: false
+audience: member
+group_type: academy
+permissions_ui: true
+permissions:
+  - 'administer group'
+  - 'administer members'
+  - 'edit group'
+  - 'view group'
+  - 'view group_membership content'
+  - 'create group_node:blog entity'
+  - 'delete any group_node:blog entity'
+  - 'delete own group_node:blog entity'
+  - 'update any group_node:blog entity'
+  - 'update own group_node:blog entity'
+  - 'view group_node:blog entity'
+  - 'create group_node:blog content'
+  - 'delete any group_node:blog content'
+  - 'delete own group_node:blog content'
+  - 'update any group_node:blog content'
+  - 'update own group_node:blog content'
+  - 'view group_node:blog content'
+  - 'access group_node overview'

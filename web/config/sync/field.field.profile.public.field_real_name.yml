@@ -1,0 +1,19 @@
+uuid: 4d96dbf4-a3c6-49e9-9599-48d00a175f0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_real_name
+    - profile.type.public
+id: profile.public.field_real_name
+field_name: field_real_name
+entity_type: profile
+bundle: public
+label: 'Real Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

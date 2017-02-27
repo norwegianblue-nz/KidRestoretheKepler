@@ -1,0 +1,10 @@
+uuid: c580b097-5528-4327-becd-8ff3526f76df
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.landingpage_locals
+label: LandingPage-Locals
+targetEntityType: node
+cache: true

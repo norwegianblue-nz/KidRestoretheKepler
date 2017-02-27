@@ -1,0 +1,14 @@
+uuid: 03721f7f-9070-4e9c-af0c-5f97132e6e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.public_liaison
+  module:
+    - user
+id: user_remove_role_action.public_liaison
+label: 'Remove the Public_Liaison role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: public_liaison

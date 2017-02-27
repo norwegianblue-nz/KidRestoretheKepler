@@ -1,0 +1,21 @@
+uuid: 0f832668-bf7c-43eb-9380-67ce71e763c2
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: relatedlocals_tab_port
+label: relatedlocals_tab-port
+effects:
+  70331ab9-ae0c-4377-ae51-1ea750931507:
+    uuid: 70331ab9-ae0c-4377-ae51-1ea750931507
+    id: image_effects_strip_metadata
+    weight: 1
+    data: {  }
+  fd506223-eae3-4861-a1e3-0ed02f3b67b8:
+    uuid: fd506223-eae3-4861-a1e3-0ed02f3b67b8
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 61
+      height: 61

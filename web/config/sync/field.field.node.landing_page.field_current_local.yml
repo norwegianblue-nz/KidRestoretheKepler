@@ -1,0 +1,29 @@
+uuid: ac540e67-e7f4-481a-97aa-c2bedeed6be3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_current_local
+    - node.type.landing_page
+    - node.type.meetlocals
+id: node.landing_page.field_current_local
+field_name: field_current_local
+entity_type: node
+bundle: landing_page
+label: 'Current Local'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      meetlocals: meetlocals
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
