@@ -1,0 +1,6 @@
+uuid: 5ab69f1e-d312-44a7-a700-df8fa816b955
+langcode: en
+status: true
+dependencies: {  }
+id: locals3panel
+label: Locals3Panel

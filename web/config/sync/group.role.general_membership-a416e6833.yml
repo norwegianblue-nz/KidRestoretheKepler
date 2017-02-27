@@ -1,0 +1,19 @@
+uuid: 7359ac24-9a81-4f68-b68b-d000f519f6b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - group.type.general_membership
+  enforced:
+    module:
+      - grolesync
+    config:
+      - user.role.administrator
+id: general_membership-a416e6833
+label: Administrator
+weight: 2
+internal: true
+audience: outsider
+group_type: general_membership
+permissions_ui: false
+permissions: {  }

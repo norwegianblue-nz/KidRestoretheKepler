@@ -1,0 +1,78 @@
+uuid: 7d0939f9-5d1f-4244-b1b8-aabdc0cf22ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.preface4
+    - field.field.node.meetlocals.body
+    - field.field.node.meetlocals.field_bg_image
+    - field.field.node.meetlocals.field_more_info
+    - node.type.meetlocals
+  module:
+    - ds
+    - entity_reference_revisions
+    - responsive_image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: layout_plugin/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - links
+        - field_trophic_level
+        - field_nz_classification
+        - field_habitat
+        - field_life_strategy
+        - body
+      right:
+        - field_more_info
+id: node.meetlocals.preface4
+targetEntityType: node
+bundle: meetlocals
+mode: preface4
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  field_bg_image:
+    type: responsive_image
+    weight: 0
+    label: above
+    settings:
+      responsive_image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_more_info:
+    type: entity_reference_revisions_entity_view
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_header_area_info: true
+  field_maori_name: true

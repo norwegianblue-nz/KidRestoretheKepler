@@ -1,0 +1,9 @@
+uuid: d5177d9f-71df-4f86-8921-69a946fe2c40
+langcode: en
+status: true
+dependencies: {  }
+name: 'Life Strategy'
+vid: life_strategy
+description: ''
+hierarchy: 0
+weight: 0

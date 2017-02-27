@@ -1,0 +1,25 @@
+uuid: 71ffa269-f059-429f-89e6-175a48c2a753
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cb05c155-f355-43f7-8ec5-04660cb49d26'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: managerandfundingcontact
+theme: krtk0
+region: footer
+weight: -33
+provider: null
+plugin: 'block_content:cb05c155-f355-43f7-8ec5-04660cb49d26'
+settings:
+  id: 'block_content:cb05c155-f355-43f7-8ec5-04660cb49d26'
+  label: 'Manager and funding contact'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 48c96b0c-29da-44c3-8329-6ffe29c50e77
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73f8cb9a-92d2-49f0-8e90-ccd1a51aca0d'
+  module:
+    - block_content
+  theme:
+    - krtk0
+id: importantlinks
+theme: krtk0
+region: footer
+weight: -36
+provider: null
+plugin: 'block_content:73f8cb9a-92d2-49f0-8e90-ccd1a51aca0d'
+settings:
+  id: 'block_content:73f8cb9a-92d2-49f0-8e90-ccd1a51aca0d'
+  label: 'Important Links'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
