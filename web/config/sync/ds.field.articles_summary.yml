@@ -1,0 +1,12 @@
+id: articles_summary
+label: 'Articles Summary'
+ui_limit: ''
+properties:
+  block: 'views_block:article_summary-articles_block_2'
+  use_block_title: true
+type: block
+type_label: 'Block field'
+entities:
+  block_content: block_content
+  node: node
+  paragraph: paragraph

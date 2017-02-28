@@ -1,0 +1,47 @@
+uuid: 17aefd03-9f4d-4368-a285-49670b684802
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.postscript2
+    - field.field.node.general_landing_page.body
+    - field.field.node.general_landing_page.field_detailed_information
+    - node.type.general_landing_page
+  module:
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - 'dynamic_block_field:node-articles_summary'
+    fields:
+      'dynamic_block_field:node-articles_summary':
+        plugin_id: 'dynamic_block_field:node-articles_summary'
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.general_landing_page.postscript2
+targetEntityType: node
+bundle: general_landing_page
+mode: postscript2
+content: {  }
+hidden:
+  body: true
+  field_detailed_information: true
+  links: true

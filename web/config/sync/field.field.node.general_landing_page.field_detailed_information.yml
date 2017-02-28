@@ -1,0 +1,21 @@
+uuid: 6f586197-6a83-4523-9b14-8eac7b135fe6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_detailed_information
+    - node.type.general_landing_page
+  module:
+    - text
+id: node.general_landing_page.field_detailed_information
+field_name: field_detailed_information
+entity_type: node
+bundle: general_landing_page
+label: 'Detailed Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

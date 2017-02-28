@@ -10,7 +10,7 @@ properties:
     provider: views
     label_display: visible
     views_label: ''
-    items_per_page: '1'
+    items_per_page: '3'
 type: block
 type_label: 'Block field'
 entities:

@@ -1,0 +1,28 @@
+uuid: bc0807f7-1836-488f-9a07-ec4293d296d2
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.general_landing_page.body
+    - field.field.node.general_landing_page.field_detailed_information
+    - node.type.general_landing_page
+  module:
+    - text
+    - user
+id: node.general_landing_page.teaser
+targetEntityType: node
+bundle: general_landing_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  field_detailed_information: true

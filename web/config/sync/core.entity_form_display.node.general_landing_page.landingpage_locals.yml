@@ -1,0 +1,54 @@
+uuid: 8b3461a0-a7b9-4b38-9410-fedc00fcde01
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.landingpage_locals
+    - field.field.node.general_landing_page.body
+    - field.field.node.general_landing_page.field_detailed_information
+    - node.type.general_landing_page
+  module:
+    - path
+    - text
+id: node.general_landing_page.landingpage_locals
+targetEntityType: node
+bundle: general_landing_page
+mode: landingpage_locals
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_detailed_information: true
+  promote: true
+  sticky: true

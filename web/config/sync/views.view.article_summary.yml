@@ -8,6 +8,7 @@ dependencies:
   module:
     - node
     - user
+    - views_infinite_scroll
 id: article_summary
 label: 'Article Summary'
 module: views
@@ -174,6 +175,56 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
+  articles_block_2:
+    display_plugin: block
+    id: articles_block_2
+    display_title: SummaryBlock
+    position: 1
+    display_options:
+      display_extenders: {  }
+      pager:
+        type: infinite_scroll
+        options:
+          items_per_page: 6
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: false
+      defaults:
+        pager: false
+      block_description: ArticlesSummary
+      block_category: 'norwegian.blue View'
+      allow:
+        items_per_page: false
+        offset: '0'
+        pager: '0'
+        hide_fields: '0'
+        sort_fields: '0'
+        disable_filters: '0'
+        configure_sorts: '0'
+      display_description: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
   block_1:
     display_plugin: block
     id: block_1
@@ -182,18 +233,42 @@ display:
     display_options:
       display_extenders: {  }
       pager:
-        type: some
+        type: mini
         options:
-          items_per_page: 5
+          items_per_page: 3
           offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
       defaults:
         pager: false
+        use_ajax: false
       block_description: 'Latest News'
+      allow:
+        items_per_page: false
+        offset: '0'
+        pager: '0'
+        hide_fields: '0'
+        sort_fields: '0'
+        disable_filters: '0'
+        configure_sorts: '0'
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -205,6 +280,29 @@ display:
     display_options:
       display_extenders: {  }
       path: articles
+      pager:
+        type: infinite_scroll
+        options:
+          items_per_page: 6
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: false
+      defaults:
+        pager: false
     cache_metadata:
       max-age: -1
       contexts:

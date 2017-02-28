@@ -1,0 +1,22 @@
+uuid: 282f56c3-3b66-4222-ad2d-c572f485820a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: localspages
+label: LocalsPages
+type: 'canonical_entities:node'
+pattern: '/locals/[node:title]'
+selection_criteria:
+  1694b457-0515-4b3e-96f9-c459dc92b7ff:
+    id: node_type
+    bundles:
+      meetlocals: meetlocals
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1694b457-0515-4b3e-96f9-c459dc92b7ff
+selection_logic: and
+weight: -5
+relationships: {  }
