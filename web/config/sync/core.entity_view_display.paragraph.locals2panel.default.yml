@@ -3,11 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.locals2panel.field_fe
+    - field.field.paragraph.locals2panel.field_extrafeedinginfo
     - field.field.paragraph.locals2panel.field_feeding_level
     - field.field.paragraph.locals2panel.field_h
     - paragraphs.paragraphs_type.locals2panel
   module:
+    - cshs
     - ds
 third_party_settings:
   ds:
@@ -30,6 +31,7 @@ third_party_settings:
     regions:
       left:
         - field_feeding_level
+        - field_extrafeedinginfo
       right:
         - field_h
 id: paragraph.locals2panel.default
@@ -37,23 +39,23 @@ targetEntityType: paragraph
 bundle: locals2panel
 mode: default
 content:
-  field_fe:
-    weight: 2
-    label: above
+  field_extrafeedinginfo:
+    weight: 1
+    label: hidden
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: string
   field_feeding_level:
     weight: 0
     label: above
     settings:
-      link: true
-      view_mode: default
+      linked: '1'
+      separator: ' | '
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: cshs_full_hierarchy
   field_h:
-    weight: 1
+    weight: 2
     label: above
     settings:
       link: true

@@ -3,39 +3,37 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.locals2panel.field_fe
+    - field.field.paragraph.locals2panel.field_extrafeedinginfo
     - field.field.paragraph.locals2panel.field_feeding_level
     - field.field.paragraph.locals2panel.field_h
     - paragraphs.paragraphs_type.locals2panel
+  module:
+    - cshs
 id: paragraph.locals2panel.default
 targetEntityType: paragraph
 bundle: locals2panel
 mode: default
 content:
-  field_fe:
-    weight: 2
+  field_extrafeedinginfo:
+    weight: 1
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      size: 30
+      placeholder: 'Extra Info about Feeding'
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: string_textfield
   field_feeding_level:
     weight: 0
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      force_deepest: '1'
+      parent: '0'
+      level_labels: 'Feeding Category,Sub-Category'
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: cshs
   field_h:
-    weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    weight: 2
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
 hidden:
   created: true
   status: true

@@ -7,9 +7,11 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_content_2
     - field.field.node.landing_page.field_current_local
+    - field.field.node.landing_page.field_detailed_information
     - node.type.landing_page
   module:
     - ds
+    - text
     - user
 third_party_settings:
   ds:
@@ -30,19 +32,13 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - field_content_2
+        - field_detailed_information
         - field_current_local
 id: node.landing_page.landingpage_locals
 targetEntityType: node
 bundle: landing_page
 mode: landingpage_locals
 content:
-  field_content_2:
-    type: basic_string
-    weight: 0
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
   field_current_local:
     weight: 1
     label: inline
@@ -50,6 +46,13 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+  field_detailed_information:
+    type: text_default
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   body: true
+  field_content_2: true
   links: true

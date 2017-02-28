@@ -28,8 +28,9 @@ visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
     bundles:
-      meetlocals: meetlocals
+      landing_page: landing_page
       meet_the_locals: meet_the_locals
+      meetlocals: meetlocals
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_mainimage
-    - image.style.thumbnail
+    - image.style.useravatar_tn
     - node.type.meetlocals
   module:
     - image
@@ -202,7 +202,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: thumbnail
+            image_style: useravatar_tn
             image_link: ''
           group_column: ''
           group_columns: {  }
@@ -335,7 +335,7 @@ display:
       pager:
         type: infinite_scroll
         options:
-          items_per_page: 2
+          items_per_page: 6
           offset: 0
           id: 0
           total_pages: null
@@ -355,6 +355,17 @@ display:
             automatically_load_content: false
       defaults:
         pager: false
+        style: false
+        row: false
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: locals_list
+          default_row_class: false
+      row:
+        type: fields
+        options: {  }
     cache_metadata:
       max-age: -1
       contexts:

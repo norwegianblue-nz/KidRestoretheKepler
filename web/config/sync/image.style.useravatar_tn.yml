@@ -12,19 +12,10 @@ effects:
     id: image_effects_strip_metadata
     weight: 1
     data: {  }
-  1795d368-8488-4694-9c26-dcb6d85668d2:
-    uuid: 1795d368-8488-4694-9c26-dcb6d85668d2
-    id: image_scale
-    weight: 3
-    data:
-      width: 140
-      height: null
-      upscale: true
-  35c6002f-4c97-4c9d-84f1-4daf0b4c8d4a:
-    uuid: 35c6002f-4c97-4c9d-84f1-4daf0b4c8d4a
-    id: image_crop
-    weight: 3
+  26818f9d-d00c-4a07-8d7c-64c82b14f1c6:
+    uuid: 26818f9d-d00c-4a07-8d7c-64c82b14f1c6
+    id: image_scale_and_crop
+    weight: 2
     data:
       width: 140
       height: 140
-      anchor: center-center

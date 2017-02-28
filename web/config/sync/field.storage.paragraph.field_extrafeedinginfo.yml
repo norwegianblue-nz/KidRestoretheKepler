@@ -1,16 +1,17 @@
-uuid: 03c686a5-3c34-4639-9554-08e1c3b3de3e
+uuid: 1e8287dd-4d59-414e-80f6-c6cc04b24274
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-    - taxonomy
-id: paragraph.field_fe
-field_name: field_fe
+id: paragraph.field_extrafeedinginfo
+field_name: field_extrafeedinginfo
 entity_type: paragraph
-type: entity_reference
+type: string
 settings:
-  target_type: taxonomy_term
+  max_length: 64
+  is_ascii: false
+  case_sensitive: false
 module: core
 locked: false
 cardinality: 1

@@ -1,11 +1,13 @@
 uuid: 68a0b268-8b84-4204-b1a0-552ae2bfd316
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.landingpage_general
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_content_2
     - field.field.node.landing_page.field_current_local
+    - field.field.node.landing_page.field_detailed_information
     - node.type.landing_page
   module:
     - ds
@@ -57,3 +59,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_content_2: true
+  field_detailed_information: true

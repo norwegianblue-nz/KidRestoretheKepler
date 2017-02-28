@@ -1,0 +1,19 @@
+uuid: e0636010-4ca9-468d-baee-389748451245
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_extrafeedinginfo
+    - paragraphs.paragraphs_type.locals2panel
+id: paragraph.locals2panel.field_extrafeedinginfo
+field_name: field_extrafeedinginfo
+entity_type: paragraph
+bundle: locals2panel
+label: ExtraFeedingInfo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

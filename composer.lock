@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "90f0e341f80d4e9a34c18e18230bd962",
-    "content-hash": "4fcd09b848ff35449841bdf360df9de0",
+    "hash": "a3ddf2006c2971472c894238cf7a1d89",
+    "content-hash": "865a600a196b46a67fc16a4f43ef4c53",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -534,16 +534,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.4.1",
+            "version": "2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "81512473b0ac36747b87db2513f4771d9483a78d"
+                "reference": "ccff73e46582a885ce4bb2c57bbd8ba4415dbd24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/81512473b0ac36747b87db2513f4771d9483a78d",
-                "reference": "81512473b0ac36747b87db2513f4771d9483a78d",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/ccff73e46582a885ce4bb2c57bbd8ba4415dbd24",
+                "reference": "ccff73e46582a885ce4bb2c57bbd8ba4415dbd24",
                 "shasum": ""
             },
             "require": {
@@ -582,7 +582,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2017-02-13 21:12:55"
+            "time": "2017-02-27 18:29:21"
         },
         {
             "name": "consolidation/output-formatters",
@@ -1976,6 +1976,52 @@
             "time": "2017-02-01 17:03:36"
         },
         {
+            "name": "drupal/cshs",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/cshs",
+                "reference": "45555ba6261b1b297befdc820dd43bd4e2cce48e"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2+1-dev",
+                    "datestamp": "1481785086"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "BR0kEN",
+                    "homepage": "https://www.drupal.org/user/2802285"
+                },
+                {
+                    "name": "jkempff",
+                    "homepage": "https://www.drupal.org/user/1394922"
+                },
+                {
+                    "name": "valderama",
+                    "homepage": "https://www.drupal.org/user/103634"
+                }
+            ],
+            "description": "A simple client-side hierarchical select widget for taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/cshs",
+            "support": {
+                "source": "http://cgit.drupalcode.org/cshs"
+            },
+            "time": "2017-02-20 13:26:24"
+        },
+        {
             "name": "drupal/csv_serialization",
             "version": "1.0.0",
             "source": {
@@ -2690,7 +2736,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/group-8.x-1.0-beta5.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta5",
                 "shasum": "8584143f1e95d4eb29a89216906d68c11c6598c2"
             },
             "require": {
@@ -3031,7 +3077,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/libraries",
-                "reference": "769adedd36c2ae8a76d4ebae4ffcb8ada99b75ab"
+                "reference": "73f8b99ec74d3ebbb196540a6115584e72f9a640"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3043,7 +3089,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.x-dev",
-                    "datestamp": "1485538983"
+                    "datestamp": "1485834185"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3075,7 +3121,7 @@
                 "issues": "http://drupal.org/project/issues/libraries",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             },
-            "time": "2017-01-31 03:39:13"
+            "time": "2017-02-24 23:18:09"
         },
         {
             "name": "drupal/linkit",
@@ -3676,7 +3722,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.3.zip",
-                "reference": null,
+                "reference": "8.x-1.3",
                 "shasum": "98a85593fbd6fe3ae6c03583bb693a38864f3ff7"
             },
             "require": {
@@ -4235,16 +4281,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569"
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
-                "reference": "04a6d1a00ea5da0727ee94309a9f0d3dbaecb569",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
                 "shasum": ""
             },
             "require": {
@@ -4296,7 +4342,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-21 01:20:32"
+            "time": "2017-02-27 10:51:17"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -4639,16 +4685,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.4",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e"
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
-                "reference": "a9b97968bcde1c4de2a5ec6cbd06a0f6c919b46e",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
+                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
                 "shasum": ""
             },
             "require": {
@@ -4683,7 +4729,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07 23:38:38"
+            "time": "2017-02-27 17:11:23"
         },
         {
             "name": "pear/console_table",
@@ -6681,29 +6727,30 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.31.0",
+            "version": "v1.32.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7"
+                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
-                "reference": "ddc9e3e20ee9c0b6908f401ac8353635b750eca7",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9935b662e24d6e634da88901ab534cc12e8c728f",
+                "reference": "9935b662e24d6e634da88901ab534cc12e8c728f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2.7"
             },
             "require-dev": {
+                "psr/container": "^1.0",
                 "symfony/debug": "~2.7",
                 "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.31-dev"
+                    "dev-master": "1.32-dev"
                 }
             },
             "autoload": {
@@ -6738,7 +6785,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-01-11 19:36:15"
+            "time": "2017-02-27 00:07:03"
         },
         {
             "name": "webflo/drupal-finder",
@@ -7813,25 +7860,30 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260"
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/38e9124049cf1a164f1e4537caf19c99bf1eb260",
-                "reference": "38e9124049cf1a164f1e4537caf19c99bf1eb260",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
+                "reference": "3dcf38ca72b158baf0bc245e9184d3fdffa9c46f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4|~5"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/"
@@ -7853,20 +7905,20 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2016-05-12 18:03:57"
+            "time": "2017-02-26 11:10:40"
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.10",
+            "version": "1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "284fb0679dd25fb5ffb56dad92c72860c0a22f1b"
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/284fb0679dd25fb5ffb56dad92c72860c0a22f1b",
-                "reference": "284fb0679dd25fb5ffb56dad92c72860c0a22f1b",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/e03f8f67534427a787e21a385a67ec3ca6978ea7",
+                "reference": "e03f8f67534427a787e21a385a67ec3ca6978ea7",
                 "shasum": ""
             },
             "require": {
@@ -7902,7 +7954,7 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2017-02-23 06:14:45"
+            "time": "2017-02-27 10:12:30"
         },
         {
             "name": "phpunit/phpunit",
@@ -8469,6 +8521,7 @@
         "drupal/git_deploy": 20,
         "drupal/libraries": 20,
         "drupal/profile": 20,
+        "drupal/cshs": 20,
         "drupal/devel": 20
     },
     "prefer-stable": true,

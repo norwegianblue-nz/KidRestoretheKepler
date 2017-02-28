@@ -5,5 +5,5 @@ dependencies: {  }
 name: Trophic
 vid: trophic
 description: 'Whether consumer producer, decomposer'
-hierarchy: 0
+hierarchy: 1
 weight: 0
