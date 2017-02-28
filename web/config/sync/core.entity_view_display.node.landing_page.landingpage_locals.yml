@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.landingpage_locals
     - field.field.node.landing_page.body
-    - field.field.node.landing_page.field_content_2
     - field.field.node.landing_page.field_current_local
     - field.field.node.landing_page.field_detailed_information
     - node.type.landing_page
@@ -54,5 +53,4 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
-  field_content_2: true
   links: true

@@ -107,3 +107,13 @@
     -moz-column-rule: $rule; /* Firefox */
     column-rule: $rule;
 }
+@mixin krtk0Button ($backgroundColor:$krtk0_Teal){
+	padding: 16px;
+	background-color:$backgroundColor;
+	border: none;
+	color: #fff;
+	margin: 0 !important;
+	text-transform: uppercase;
+	font-family:$ktrk0_Exo2-RegularCondensed;
+	font-size:14px;
+}
