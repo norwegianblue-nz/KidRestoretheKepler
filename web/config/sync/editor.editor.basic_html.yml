@@ -38,6 +38,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
@@ -46,7 +47,7 @@ settings:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: a.button|Button
 image_upload:
   status: true
   scheme: public

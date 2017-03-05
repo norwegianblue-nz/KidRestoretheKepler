@@ -1,0 +1,68 @@
+uuid: 68f4df85-2517-48e7-a111-4264eefd9982
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.basic_page_2_col
+    - field.field.node.page.body
+    - field.field.node.page.field_bg_image
+    - node.type.page
+  module:
+    - ds
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      path: modules/contrib/ds
+      library: layout_plugin/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - node_title
+        - body
+        - links
+      right:
+        - 'dynamic_block_field:node-latest_news'
+    fields:
+      'dynamic_block_field:node-latest_news':
+        plugin_id: 'dynamic_block_field:node-latest_news'
+        weight: 3
+        label: above
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+_core:
+  default_config_hash: oZ-7vpIJxjxL2up9B5KrJGD0lazQ9aN0P-fIPo6OrSU
+id: node.page.basic_page_2_col
+targetEntityType: node
+bundle: page
+mode: basic_page_2_col
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_bg_image: true

@@ -37,6 +37,7 @@ visibility:
       blog: blog
       book: book
       easychart: easychart
+      general_landing_page: general_landing_page
       page: page
       partners: partners
     negate: false
