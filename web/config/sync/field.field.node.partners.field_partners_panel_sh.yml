@@ -1,0 +1,23 @@
+uuid: e53f97b4-f96a-4ebb-aa68-ebd41c4fd13b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_partners_panel_sh
+    - node.type.partners
+id: node.partners.field_partners_panel_sh
+field_name: field_partners_panel_sh
+entity_type: node
+bundle: partners
+label: 'Shown in Partners'' panel'
+description: 'Tick to show this sponsor in the "Partner''s Panel"'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Show
+  off_label: Hide
+field_type: boolean
