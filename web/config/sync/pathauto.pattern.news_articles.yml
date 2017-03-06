@@ -1,22 +1,22 @@
-uuid: 7dc5ffba-523b-4392-a435-23892cd70133
+uuid: 05db3409-e972-40a4-b2d4-d855164e48a3
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: meetlocals
-label: MeetLocals
+id: news_articles
+label: 'News Articles'
 type: 'canonical_entities:node'
-pattern: '[node:content-type]/[node:title]'
+pattern: '/general/news/[node:title]'
 selection_criteria:
-  12c1753a-b0c7-4ac9-b33a-020c029d84b7:
+  3e0fe21b-0595-4a1a-a641-e6029fab474c:
     id: node_type
     bundles:
-      meet_the_locals: meet_the_locals
+      article: article
     negate: false
     context_mapping:
       node: node
-    uuid: 12c1753a-b0c7-4ac9-b33a-020c029d84b7
+    uuid: 3e0fe21b-0595-4a1a-a641-e6029fab474c
 selection_logic: and
 weight: -5
 relationships: {  }
