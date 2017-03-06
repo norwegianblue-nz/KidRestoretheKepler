@@ -1,0 +1,38 @@
+uuid: 97c3bf08-8635-4071-9b91-d3881966e645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bg_image
+    - node.type.general_landing_page
+  module:
+    - image
+id: node.general_landing_page.field_bg_image
+field_name: field_bg_image
+entity_type: node
+bundle: general_landing_page
+label: 'Header Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 58843c1a-795f-4a32-abc2-6d1b781edbc3
+    alt: 'Alt Text'
+    title: ''
+    width: 1500
+    height: 1044
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

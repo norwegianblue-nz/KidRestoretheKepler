@@ -1,0 +1,38 @@
+uuid: 83404489-3335-4b8a-aea4-cbdecba8ca8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bg_image
+    - node.type.landing_page
+  module:
+    - image
+id: node.landing_page.field_bg_image
+field_name: field_bg_image
+entity_type: node
+bundle: landing_page
+label: 'Header Background Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: a4189102-532b-47a2-a62d-e5e6fbe007e7
+    alt: 'Kids Restore the Kepler'
+    title: ''
+    width: 1413
+    height: 881
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

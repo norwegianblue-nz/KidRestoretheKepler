@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.meet_the_locals
-    - system.menu.main
   module:
     - node
     - user
@@ -183,8 +182,13 @@ display:
       display_extenders: {  }
       path: meet-locals
       menu:
-        type: normal
+        type: none
         title: Meet-the-Locals
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
         menu_name: main
     cache_metadata:
       max-age: -1

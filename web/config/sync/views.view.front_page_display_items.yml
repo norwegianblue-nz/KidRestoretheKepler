@@ -212,10 +212,10 @@ display:
             group_items: {  }
           plugin_id: boolean
       sorts:
-        field_partners_panel_sh_value:
-          id: field_partners_panel_sh_value
-          table: node__field_partners_panel_sh
-          field: field_partners_panel_sh_value
+        field_display_order_value:
+          id: field_display_order_value
+          table: node__field_display_order
+          field: field_display_order_value
           relationship: none
           group_type: group
           admin_label: ''

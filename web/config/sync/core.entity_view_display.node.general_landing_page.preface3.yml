@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.preface3
     - field.field.node.general_landing_page.body
+    - field.field.node.general_landing_page.field_bg_image
     - field.field.node.general_landing_page.field_detailed_information
     - node.type.general_landing_page
   module:
@@ -48,4 +49,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_bg_image: true
   field_detailed_information: true
