@@ -24,8 +24,8 @@ p a {border:none !important;color:$krtk0_Teal;}
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #menu-outer-wrapper {background-color: $krtk0_TransTeal;position: fixed; z-index:20; width: 100%; padding-top:10px;}
-.scrolled #menu-outer-wrapper {opacity: 0.4;@include krtk0Transition;}
-.scrolled #menu-outer-wrapper:hover {opacity: 1;@include krtk0Transition;}
+.scrolled #menu-outer-wrapper {opacity: 0.4;@include krtk0Transition($type: all, $speed: 1s, $transition: ease-in-out);}
+.scrolled #menu-outer-wrapper:hover {opacity: 1;@include krtk0Transition($type: all, $speed: 0.5s, $transition: ease-in-out);}
 
 div#block-statictopmenu {text-align:center;min-height:4.4em;}
 #block-statictopmenu ul {display:none;list-style:none;margin:0.5em;padding:0;}
@@ -57,7 +57,11 @@ div#block-statictopmenu {text-align:center;min-height:4.4em;}
 	width: 220px;
 	padding:2px 5px 2px 115px;
 	clear: right;
+	height:38px;
+	@include krtk0Transition($type: all, $speed: 1s, $transition: ease-in-out);
 }
+.scrolled #block-krtktoolbar {height:5px;@include krtk0Transition($type: all, $speed: 1s, $transition: ease-in-out);}
+
 #block-krtktoolbar a {line-height:0;} //Reduce default height of a tag to zero
 .tool-bar-icon {
 	display: inline-block;
@@ -112,8 +116,7 @@ form.search-form {padding: 5px 10px; border: 1px solid #ccc;background-color: $k
 input.button,
 #block-useraccountmenu ul.menu li,
 .button
-{
-	padding: 16px;
+{	padding: 16px;
 	background-color: $krtk0_Teal;
 	border: none;
 	color: #fff;
@@ -126,7 +129,7 @@ input.button,
 #block-useraccountmenu ul.menu li a {color: #fff;}
 
 #block-userlogin div.item-list ul {margin:0;}
-#block-userlogin div.item-list li {margin: 0 0 0 76px;
+#block-userlogin div.item-list li {
 	margin: 0 0 0 76px;
 	width: 160px;
 	border: 1px $krtk0_Teal solid;
@@ -189,15 +192,16 @@ div#block-krtk0-mainbuttons {
     margin: 5px auto;
 }
 
-/// Zone buttons
+//	Zone buttons
+
 div.zone-button {width:75px;display:inline-block;vertical-align:top;text-align:center;clear: both;}
 .path-frontpage div.zone-button {width:100px;margin:2%;}
 div.zone-button p {line-height:1em;margin:0;}
 div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px;}
-#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;} // Hidden on < 700px
+#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none; @include krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out);} // Hidden on < 700px
 
 #block-mainbuttons-2 {width: 90%; margin: 7px auto; text-align: center;clear:both;}
-#block-mainbuttons-2 div.zone-button img {width:60px;@include krtk0Transition;} /* narrower icon for general pages */
+#block-mainbuttons-2 div.zone-button img {width:60px;@include krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out);} /* narrower icon for general pages */
 
 //	Zone button and page logo breakpoints //////////////////////////////////////
 //	0-499px (set by basic style) : 500-699px : 700-959px : > 960px /////////////
@@ -207,15 +211,15 @@ div.zone-button p a {color:#fff;font-family:$krtk0_WorkSans-Light;font-size:18px
 }
 @media all and (min-width: 700px) {
 	#block-mainbuttons-2 div.zone-button {width:100px;}
-	#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:block;}
+	#block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:block; @include krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out);}
 	#page #block-logogeneralpages {width: 8em;}
     #page.scrolled #block-logogeneralpages {width: 5em;}
 }
 @media all and (min-width: 960px) {
 }
 
-#page.scrolled #block-mainbuttons-2 div.zone-button img {width:50px;@include krtk0Transition;} /* smaller icon on scroll */
-#page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none;@include krtk0Transition;}/* hide text on scroll */
+#page.scrolled #block-mainbuttons-2 div.zone-button img {width:50px; @include krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out);} /* smaller icon on scroll */
+#page.scrolled #block-mainbuttons-2 div.zone-button p .hide-on-scroll {display:none; @include krtk0Transition($type: all, $speed: 0.25s, $transition: ease-in-out);}/* hide text on scroll */
 
 //
 // Page titles - may change once zone targeting defined /!/!/!/!/!/!
@@ -246,36 +250,36 @@ body.path-frontpage #teaser-outer-wrapper {
 // .view-front-page-team {margin:4em 0;}
 
 @media all and (max-width: 959px) {
-	#block-views-block-krtk-leadership-team-members  {@include parrotCols(4, 4, normal, '100');}
+	#block-views-block-leadership-team-group-members-block-1  {@include parrotCols(4, 4, normal, '100');}
 	#block-meettheteamintro				{@include parrotCols(4, 4, normal, '100');}
-#block-views-block-front-page-team .view-front-page-team div.views-row {width:27.5%;}
+	#block-views-block-front-page-team .view-front-page-team div.views-row {width:27.5%;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-	#block-views-block-krtk-leadership-team-members  {@include parrotCols(6, 12, normal, '960');}
+	#block-views-block-leadership-team-group-members-block-1  {@include parrotCols(6, 12, normal, '960');}
 	#block-meettheteamintro				{@include parrotCols(6, 12, normal, '960');}
-	#block-views-block-krtk-leadership-team-members  {margin-left:0 !important;}
+	#block-views-block-leadership-team-group-members-block-1  {margin-left:0 !important;}
 }
 @media all and (min-width: 1280px) {
-	#block-views-block-krtk-leadership-team-members  {@include parrotCols(6, 12, normal, '1200');}
+	#block-views-block-leadership-team-group-members-block-1  {@include parrotCols(6, 12, normal, '1200');}
 	#block-meettheteamintro 			{@include parrotCols(6, 12, normal, '1200');}
-	#block-views-block-krtk-leadership-team-members  {margin-left:0 !important;}
+	#block-views-block-leadership-team-group-members-block-1  {margin-left:0 !important;}
 }
-#block-views-block-krtk-leadership-team-members {float:left;}
+#block-views-block-leadership-team-group-members-block-1 {float:left;}
 #block-meettheteamintro {float:right;}
 
-.view-id-krtk_group_membership div.view-content > h3 {display:none;} // Hide user number title (can't be done in view)
-#block-views-block-krtk-leadership-team-members div.views-row {
+// NO LONGER NEEDED? .view-id-krtk_group_membership div.view-content > h3 {display:none;} // Hide user number title (can't be done in view)
+#block-views-block-leadership-team-group-members-block-1 div.views-row {
 	display: inline-block;
 	vertical-align: top;
 	max-width: 137px;
 	margin-right:20px;
 }
-#block-views-block-krtk-leadership-team-members div.views-row:last-of-type {margin-right:0;}
+#block-views-block-leadership-team-group-members-block-1 div.views-row:last-of-type {margin-right:0;}
 
 #block-meettheteamintro p {font-family:$krtk0_WorkSans-Hairline;font-size:30px;color:#fff;margin-top:-0.2em;}
 
-#block-views-block-krtk-leadership-team-members h2 a,
-#block-views-block-krtk-leadership-team-members .views-field-field-battle-name a,
+#block-views-block-leadership-team-group-members-block-1 h2 a,
+#block-views-block-leadership-team-group-members-block-1 .views-field-field-battle-name a,
 {
 	font-size: 20px !important;
 	font-family: "exo_2medium_condensed", sans-serif;
@@ -283,9 +287,9 @@ body.path-frontpage #teaser-outer-wrapper {
 	line-height: 1.2em;
 	color:#fff;
 }
-#block-views-block-krtk-leadership-team-members .pager__items {text-align:left;}
-#block-views-block-krtk-leadership-team-members nav.pager ul {margin:50px 0;padding:0;}
-#block-views-block-krtk-leadership-team-members nav.pager li a {
+#block-views-block-leadership-team-group-members-block-1 .pager__items {text-align:left;}
+#block-views-block-leadership-team-group-members-block-1 nav.pager ul {margin:50px 0;padding:0;}
+#block-views-block-leadership-team-group-members-block-1 nav.pager li a {
 	display: inline-block;
 	border: 1px solid #fff;
 	padding: 5px 12px;
@@ -293,8 +297,8 @@ body.path-frontpage #teaser-outer-wrapper {
 	color: #fff;
 	background-color: $krtk0_Teal;
 }
-#block-views-block-krtk-leadership-team-members nav.pager li {padding-left:0;}
-#block-views-block-krtk-leadership-team-members nav.pager li.pager__item.is-active a {background-color:$krtk0_Red;}
+#block-views-block-leadership-team-group-members-block-1 nav.pager li {padding-left:0;}
+#block-views-block-leadership-team-group-members-block-1 nav.pager li.pager__item.is-active a {background-color:$krtk0_Red;}
 
 // > meet team user page
 
@@ -319,7 +323,9 @@ article.profile {
 	background-color: $krtk0_DarkTeal;
 	background-size: cover;
 	padding:20px;
+	background-position:-200px 50%;
 }
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -334,6 +340,7 @@ article.profile {
 	background-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/home-kidszone-bg-texture.jpg');
 	border-top: 200px solid;
 	border-image: url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/title-borders/kidszone-title-border.jpg') 100;
+	padding:3em 0 5em 0;
 }
 @media all and (max-width: 959px) { // minimise border squash on smaller screens
 .path-frontpage #preface-outer-wrapper {
@@ -361,32 +368,34 @@ article.profile {
 
 #block-zonetitleabout-front,
 #block-zonetitlehomeinterimmeetthelocals h2 { // ADD EXTRA ZONE BLOCK TARGETS HERE !?!?!?!?!?
-	margin-top: -88px !important;
-	margin: 0 0 4em;
+	margin-top: -131px !important;
+	margin: 0 0 3em;
 	background-color: $krtk0_Teal;
 	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-lrg.png);
 	background-position: right center;
 	background-repeat: no-repeat;
+	min-height:80px;
 }
 #block-zonetitlehomeinterimmeetthelocals h2 {background-color: $krtk0_locals-col;}
 
-// Bottom title border for nodes
-body.node--type-article #title-bar-wrapper, //About articles
-body.path-articles #title-bar-wrapper, //About articles Summary page
-body.node--type-page #title-bar-wrapper,	//basic pages
-body.path-meet-locals #title-bar-wrapper, //INTERIM locals page
+// Bottom title border for nodes ////////////
+body.node--type-article #title-bar-wrapper, // About articles
+body.path-articles #title-bar-wrapper, // About articles Summary page
+body.node--type-page #title-bar-wrapper,	// basic pages
+body.path-user #title-bar-wrapper,	// User pages
+body.path-meet-locals #title-bar-wrapper, // INTERIM locals page
 {@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"),#fff);
 }
 body.node--type-meet-the-locals #title-bar-wrapper, // INTERIM Meet the locals pages
-body.node--type-meetlocals #title-bar-wrapper // Meet the locals pages
+body.node--type-meetlocals #title-bar-wrapper, // Meet the locals pages
 {@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/bottom-locals-title-bar-bg.svg"),#fff);
 }
 
 
 //  General content styles ////////////////
-#content-outer-wrapper {background-color: #fff;padding-top:3em;}
+#content-outer-wrapper {padding-top:3em;}
 #main-layout {padding-bottom:5em;}
-body.node--type-page div.node--type-page.node--view-mode-full.ds-1col .field--name-body {@include krtk0Columns(2, 300px, 10px, 1px); }
+body.node--type-page div.node--type-page.node--view-mode-full.ds-1col .field--name-body {@include krtk0Columns(2, 300px, 30px, 1px); }
 
 //  Display suite columns for 9/12 and 3/12 ////////
 @media all and (max-width: 959px) {
@@ -414,20 +423,21 @@ color: $krtk0_DarkOrange;}
 
 
 //	Typography - content stripe //////////
-#block-krtk0-content h2 {@include krtk0HeadingH2($krtk0_Orange)}
-#block-krtk0-content h3 {@include krtk0HeadingH3($krtk0_Teal)}
+// ds-1col targets one column pages.
+.ds-1col #block-krtk0-content h2 {@include krtk0HeadingH2($krtk0_Orange);}
+.ds-1col #block-krtk0-content h3 {@include krtk0HeadingH3($krtk0_Teal);}
 
-#block-krtk0-content li {font-size: 1.5em;   padding: 0 0 20px 45px; }
-#block-krtk0-content ol,
-#block-krtk0-content ul{
+ds-1col #block-krtk0-content li {font-size: 1.5em;   padding: 0 0 20px 45px; }
+ds-1col #block-krtk0-content ol,
+ds-1col #block-krtk0-content ul{
 	margin: 0 0 20px;
 	padding: 0;
 	list-style-type: none;
 	position: relative;
 }
-#block-krtk0-content ol li {counter-increment: step-counter;}
-#block-krtk0-content ol li::before,
-#block-krtk0-content ul li::before {
+ds-1col #block-krtk0-content ol li {counter-increment: step-counter;}
+ds-1col #block-krtk0-content ol li::before,
+ds-1col #block-krtk0-content ul li::before {
 	margin-right: 5px;
 	font-size: 80%;
 	background-color: $krtk0_Blue;
@@ -440,15 +450,15 @@ color: $krtk0_DarkOrange;}
 	min-width: 34px;
 	text-align:center;
 }
-#block-krtk0-content ol li::before {content: counter(step-counter);}
-#block-krtk0-content ul li::before{content:">"}
+ds-1col #block-krtk0-content ol li::before {content: counter(step-counter);}
+ds-1col #block-krtk0-content ul li::before{content:">"}
 
 
 //	Latest news - right col //////
 .field--name-dynamic-block-fieldnode-latest-news.field--type-ds.field--label-above .field__label 
 {@include krtk0BlockTitle($krtk0_Orange);font-size:2em;}
 
-// Responsive embebed iFrames
+// Responsive embebed iFrames /////////////////////////////////////////
 .responsive-iframe{
     overflow:hidden;
     padding-bottom:56.25%;
@@ -463,6 +473,31 @@ color: $krtk0_DarkOrange;}
     position:absolute;
     border:none;
 }
+
+//	About pages ////////////////////////////////////////////////////////////////
+//	About landing page
+.node--type-general-landing-page #preface-outer-wrapper {background-color:$krtk0_Olive;}
+.node--type-general-landing-page .region-preface-third h2 {@include krtk0HeadingH2($krtk0_DarkOlive);}
+.node--type-general-landing-page .region-preface-third h3 {}
+.node--type-general-landing-page .region-preface-third p {color:#fff;}
+
+.node--type-general-landing-page #content-outer-wrapper {background-color:$krtk0_Red;}
+.node--type-general-landing-page #block-krtk0-content h2 {@include krtk0HeadingH2($krtk0_DarkTeal);}
+.node--type-general-landing-page #block-krtk0-content h3 {}
+.node--type-general-landing-page #block-krtk0-content p {color:#fff;}
+
+.node--type-general-landing-page #postscript-outer-wrapper {padding:1.5em 0;}
+
+.node--type-general-landing-page .view-article-summary ul {padding:0;margin:60px auto;width:50%;}
+.node--type-general-landing-page .view-article-summary li.pager__item {padding:0;}
+.node--type-general-landing-page .view-article-summary li.pager__item a.button {
+	display:block;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+}
+
+
 
 //	Articles ///////////////////////////////////////////////////////////////////
 
@@ -570,43 +605,78 @@ body.node--type-article .comment-wrapper  div.text-format-wrapper  #edit-comment
 
 
 //	Articles summary page panels
-.view-article-summary > div.view-content,
-.view-taxonomy-term > div.view-content,
-{font-size:0;} // Remove white space between inline-block elements
-.view-article-summary div.views-row, .view-taxonomy-term div.views-row {
-	display: inline-block;
-	vertical-align: bottom;
-	font-size: 14px; // Re-instates font-size after inline-block above
+.view-taxonomy-term > div.view-content, 										////<-- !@!@!@ RETARGET???? /////////
+.view-article-summary .views-infinite-scroll-content-wrapper {
+	font-size:0; // Remove white space between inline-block elements
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
+div.group-right .view-article-summary > .view-content { // r-col only latest news to allow for full-width layout.
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+@media all and (min-width:600px) {
+	div.group-right .view-article-summary > .view-content {justify-content: space-between;}
+}
+
+.view-article-summary div.views-row, .view-taxonomy-term div.views-row { // landing page layout
+	font-size: 14px; // Re-instates font-size after inline-block above
+	padding-top: 4px;
+	border-top: 3px solid #eee;
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+}
+.node--type-article.node--view-mode-articlelinkpanel.ds-1col { // panel content distribution
+	display: flex;
+	flex-direction: column;
+}
+	
+.views-row > div.node > div {flex: 1;}
+.field--name-node-post-date.field--type-ds.field--label-hidden.field__item {
+	max-height: 21px;
+}
+.field--name-node-link.field--type-ds.field--label-hidden.field__item {
+	max-height: 38px;
+}
+
+div.group-right .view-article-summary div.views-row {margin:0 0 20px 0;} //Remove margins for right col
 
 @media all and (max-width: 599px) {
 	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {width:135px; margin-right:20px;}
 }
+@media all and (min-width:600px) {
+	.node--type-article.node--view-mode-articlelinkpanel.ds-1col {min-height: 282px;}
+}
 @media all and (min-width:600px) and (max-width: 959px) {
 	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:4, $nocols:12, $margin: 'normal', $grid: '100');
 	}
-	.view-article-summary div.views-row:nth-of-type(5) {margin-right:0;}
-	.view-article-summary div.views-row:nth-of-type(4) {margin-left:0;}
+	.view-article-summary div.views-row:nth-of-type(3n+3) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(3n+1) {margin-left:0;}
 	.view-article-summary div.views-row img, .view-taxonomy-term div.views-row img {width:100% !important;}
+}
+@media all and (min-width:960px) {
+	.group-right .node--type-article.node--view-mode-articlelinkpanel.ds-1col {min-height: unset;} // turn off height for single r-col display @>960px
 }
 @media all and (min-width:960px) and (max-width: 1279px) {
 	.view-article-summary div.views-row, .view-taxonomy-term div.views-row  {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');
 	}
-	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
-	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+	.view-article-summary div.views-row:nth-of-type(4n) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(4n+1) {margin-left:0;}
 }
 @media all and (min-width:1280px) {
 	.view-article-summary div.views-row, .view-taxonomy-term div.views-row {@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');
 	}
-	.view-article-summary div.views-row:nth-of-type(4) {margin-right:0;}
-	.view-article-summary div.views-row:nth-of-type(5) {margin-left:0;}
+	.view-article-summary div.views-row:nth-of-type(4n) {margin-right:0;}
+	.view-article-summary div.views-row:nth-of-type(4n+1) {margin-left:0;}
 }
-
 
 .view-article-summary div.views-row .field--name-node-title h2,
 .view-taxonomy-term div.views-row .node--type-article h2 { // Title
-	font-size: 1.7em;
-	line-height: 1.2em;
+	font-size: 1.5em;
+	line-height: 1.1em;
 	font-family: $ktrk0_Exo2-LightCondensed;
 	font-weight:200;
 	margin:0;
@@ -629,17 +699,29 @@ body.node--type-article .comment-wrapper  div.text-format-wrapper  #edit-comment
 .view-taxonomy-term div.views-row li.node-readmore { // Buttons
 	background-color:$krtk0_Teal;
 	display:block;
-	color:$krtk0_Teal;
+	color:#fff;
 	background-image:url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
 	background-position: right center;
 	background-repeat: no-repeat;
-	height: 3em;
-	margin: -6px 0 0 0;
+//	height: 3.2em; Replaced with padding?
+	margin: -7px 0 0 0;
+	padding:13px;
+	font-family:$ktrk0_Exo2-Regular;
+	font-size:1.2em;
 }
 .view-taxonomy-term div.views-row li.node-readmore a {color:#fff;padding:18px;font-family: $ktrk0_Exo2-LightCondensed;
 	font-weight:200;font-size: 1.3em;}
 
-
+//	Pager r-col
+div.group-right nav.pager ul.pager__items {padding:0;margin:0;display:block;background-color:$krtk0_DarkTeal;}
+div.group-right nav.pager li.pager__item {color:#fff;font-weight:normal;}
+div.group-right nav.pager li.pager__item a {color:#fff;display:inline-block;padding:12px;}
+div.group-right nav.pager .pager__item.pager__item--next a,
+div.group-right nav.pager .pager__item.pager__item--previous a {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	width: 50px;
+}
 	
 //	Search results page ////////////////////////////////////////////////////////
 ol.search-results.node_search-results {margin: 0; padding: 0;}
@@ -662,36 +744,42 @@ h3.search-result__title a {
 //	Meet the locals landing page type - LANDING PAGE /////////////////////////////////////////////
 
 body.node--type-landing-page #btns-outer-wrapper {background-image:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/locals-zone-bar-bg-top.svg');}
-body.node--type-landing-page #preface-outer-wrapper {background-color:$krtk0_Buff;padding-bottom:1em;}
+
+body.node--type-landing-page #preface-outer-wrapper {
+	background-color:$krtk0_Buff;
+	padding:2em 0;
+	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/bottom-locals-title-bar-bg.svg");
+	background-repeat: repeat-x;
+	background-position: top;
+}
 body.node--type-landing-page #preface-outer-wrapper h2 {@include krtk0HeadingH2(krtk0_Orange);}
 
 body.node--type-landing-page #content-outer-wrapper {background-color:$krtk0_Orange;}
 
-body.node--type-landing-page #block-krtk0-content .field.field--name-field-content-2.field--type-string-long.field--label-hidden.field__item {
+body.node--type-landing-page #block-krtk0-content .field--name-field-detailed-information {
 	display: inline-block;
 	color:#fff;font-size:1.6em;
 }
 	
 @media all and (max-width: 959px) {
-	body.node--type-landing-page #block-krtk0-content .field.field--name-field-content-2.field--type-string-long.field--label-hidden.field__item 
+	body.node--type-landing-page #block-krtk0-content .field--name-field-detailed-information 
 		{width:100%;}
 	body.node--type-landing-page #block-krtk0-content .field--name-field-current-local 
 		{max-width:400px;width:100%;}
 }
 @media all and (min-width: 960px) and (max-width: 1279px) {
-	body.node--type-landing-page #block-krtk0-content .field.field--name-field-content-2.field--type-string-long.field--label-hidden.field__item 
+	body.node--type-landing-page #block-krtk0-content .field--name-field-detailed-information 
 		{@include parrotCols($thiscols:9, $nocols:12, $margin: 'normal', $grid: '960');}
 	body.node--type-landing-page #block-krtk0-content .field--name-field-current-local 
 		{width:22%;float:right;}
 }
 @media all and (min-width: 1280px) {
-	body.node--type-landing-page #block-krtk0-content .field.field--name-field-content-2.field--type-string-long.field--label-hidden.field__item 
+	body.node--type-landing-page #block-krtk0-content .field--name-field-detailed-information 
 		{@include parrotCols($thiscols:9, $nocols:12, $margin: 'normal', $grid: '960');}
 	body.node--type-landing-page #block-krtk0-content .field--name-field-current-local 
 		{width:22%;float:right;}
 }
 
-	
 body.node--type-landing-page #block-krtk0-content .field--name-field-current-local.field--type-entity-reference.field--label-inline .field__label
 	{width:100%; @include krtk0HeadingH2($krtk0_DarkOrange);}
 body.node--type-landing-page #block-krtk0-content .field--name-field-current-local.field--type-entity-reference.field--label-inline .field__item a
@@ -699,31 +787,66 @@ body.node--type-landing-page #block-krtk0-content .field--name-field-current-loc
 
 body.node--type-landing-page .views-infinite-scroll-content-wrapper.clearfix {
 	text-align: center;
+	margin:20px 0;
 }
 
 body.node--type-landing-page .locals-list {
-	margin-left:1%;
-	margin-right:1%;
-	display: inline-block;
-	vertical-align:top;
-	margin-top:20px;
-	text-align:center;
-	fint-size:1.4em;
+  margin-left: 1%;
+  margin-right: 1%;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.4em;
+  width: 40%;
 }
-@media all and (min-width: 0px) 							{body.node--type-landing-page .locals-list{}}
-@media all and (min-width: 480px) and (max-width: 767px) 	{body.node--type-landing-page .locals-list{}}       
-@media all and (min-width: 768px)							{
-	body.node--type-landing-page .locals-list:nth-of-type(6n+6) {margin-right:0;}
-	body.node--type-landing-page .locals-list:first-of-type, body.node--type-landing-page .locals-list:nth-of-type(6n+7) {margin-left:0;}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  body.node--type-landing-page .locals-list {
+    width: 30%;
+  }
 }
-@media all and (min-width: 768px) and (max-width: 959px) 	{body.node--type-landing-page .locals-list{width:14.5%;}}
-@media all and (min-width: 960px) and (max-width: 1219px) 	{body.node--type-landing-page .locals-list{width:14.6%;}}
-@media all and (min-width: 1220px) 							{body.node--type-landing-page .locals-list{width:14.67%;}}
+@media all and (min-width: 768px) and (max-width: 959px) {
+  body.node--type-landing-page .locals-list {
+    width: 14.5%;
+  }
+}
+@media all and (min-width: 960px) {
+  body.node--type-landing-page .locals-list {
+    width: 14.6%;
+  }
 
-body.node--type-landing-page .locals-list .views-field.views-field-field-mainimage img {border-radius: 50%;}
+  body.node--type-landing-page .locals-list:nth-of-type(6n) {
+    margin-right: 0;
+  }
 
-//	Meet the locals page type /////////////////// NOTE - interim styles below these styles to be deleted
+  body.node--type-landing-page .locals-list:nth-of-type(6n+1) {
+    margin-left: 0;
+  }
+}
+body.node--type-landing-page .locals-list .views-field.views-field-field-mainimage img {
+  border-radius: 50%;
+}
 
+//	Extra styling.
+body.node--type-landing-page #block-krtk0-content h2 {color:$krtk0_DarkTeal;margin-top:0;}
+body.node--type-landing-page #block-krtk0-content p {color:#fff;}
+
+//	Load button
+body.node--type-landing-page .view-meetlocals ul {padding:0;margin:60px auto;width:50%;}
+body.node--type-landing-page .view-meetlocals li.pager__item {padding:0;}
+body.node--type-landing-page .view-meetlocals li.pager__item a.button {
+	display:block;
+	background-image: url(/sites/kidsrestorethekepler/themes/custom/krtk0/images/more-button-med.png);
+	background-position: 100% 50%;
+	background-repeat: no-repeat;
+}
+
+
+//	Meet the locals page type /////////////////////////////////////////////////////////////////////////// 
+//	NOTE - interim styles below these styles to be deleted
+
+body.node--type-meetlocals #preface-outer-wrapper {background-color: #fff;}
 
 div.node--type-meetlocals .group-left .field--name-node-title h2, // Main title
 div.node--type-meetlocals .field--name-field-maori-name // Maori title
@@ -896,7 +1019,10 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$krtk0_Buff;	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border-front.svg");
 }
-#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:1em;	
+#extras-layout h2 {@include krtk0BlockTitle(#fff);margin-top:2em;	
+}
+@media all and (min-width: 600px) {
+	#extras-layout h2 {margin-top:1em;}
 }
 #block-views-block-front-page-display-items-partner-logos h2 a, //Front
 #block-views-block-front-page-display-items-block-1 h2 a {	//Pages
@@ -1053,9 +1179,9 @@ body.path-frontpage #nb_slideshow_bg {
 @media all and (min-width: 1024px) and (max-width: 1219px) {.nb_fixed-bg{}}
 @media all and (min-width: 1220px) {.nb_fixed-bg{}}
 
-.path-fronpage #nb_fixed-bg1 { /// DELETE??? miss-spelt but why is it here? ///
-    display: none;
-}
+// .path-fronpage #nb_fixed-bg1 { /// DELETE??? miss-spelt but why is it here? ///
+//    display: none;
+//}
 
 .nb_fixed-inner { /* HOME PAGE LOGO repositioned for slider */
     position: relative;
