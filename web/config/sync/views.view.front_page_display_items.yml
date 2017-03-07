@@ -248,7 +248,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<h2><a href="/project-partners">PARTNERS</a><h2>'
+            value: '<h2><a href="/general/project-partners">PARTNERS</a><h2>'
             format: raw
           plugin_id: text
         area_text_custom:
