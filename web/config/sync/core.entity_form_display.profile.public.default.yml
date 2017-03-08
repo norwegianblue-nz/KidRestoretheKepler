@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.public.field_based_at
     - field.field.profile.public.field_battle_name
     - field.field.profile.public.field_bio
     - field.field.profile.public.field_photo
@@ -16,6 +17,13 @@ targetEntityType: profile
 bundle: public
 mode: default
 content:
+  field_based_at:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_battle_name:
     weight: 4
     settings:

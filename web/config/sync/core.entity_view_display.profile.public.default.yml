@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.profile.public.field_based_at
     - field.field.profile.public.field_battle_name
     - field.field.profile.public.field_bio
     - field.field.profile.public.field_photo
@@ -34,12 +35,20 @@ third_party_settings:
         - field_photo
         - field_battle_name
         - field_real_name
+        - field_based_at
         - field_bio
 id: profile.public.default
 targetEntityType: profile
 bundle: public
 mode: default
 content:
+  field_based_at:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_battle_name:
     weight: 1
     label: inline
@@ -48,7 +57,7 @@ content:
     third_party_settings: {  }
     type: string
   field_bio:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }

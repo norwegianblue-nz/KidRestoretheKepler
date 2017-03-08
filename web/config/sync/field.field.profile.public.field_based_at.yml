@@ -1,0 +1,19 @@
+uuid: 0fa50809-6338-4346-9c54-0169ded9e775
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_based_at
+    - profile.type.public
+id: profile.public.field_based_at
+field_name: field_based_at
+entity_type: profile
+bundle: public
+label: 'Based At'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
