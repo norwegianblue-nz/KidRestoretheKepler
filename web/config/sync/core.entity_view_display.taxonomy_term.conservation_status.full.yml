@@ -1,10 +1,10 @@
-uuid: ad1591b1-dcff-4603-9927-ee4a4880daab
+uuid: 9a028985-3097-4dc5-921f-3a23ef9b5493
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
-    - taxonomy.vocabulary.nzclassification
+    - taxonomy.vocabulary.conservation_status
   module:
     - ds
     - text
@@ -39,9 +39,9 @@ third_party_settings:
           wrapper: h1
           class: page-title
           link: false
-id: taxonomy_term.nzclassification.full
+id: taxonomy_term.conservation_status.full
 targetEntityType: taxonomy_term
-bundle: nzclassification
+bundle: conservation_status
 mode: full
 content:
   description:

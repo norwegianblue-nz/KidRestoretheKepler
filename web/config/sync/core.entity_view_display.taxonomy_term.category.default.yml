@@ -1,13 +1,11 @@
-uuid: ad1591b1-dcff-4603-9927-ee4a4880daab
+uuid: 6546ccb8-2110-4b91-a849-4cd1a473105d
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.taxonomy_term.full
-    - taxonomy.vocabulary.nzclassification
+    - taxonomy.vocabulary.category
   module:
     - ds
-    - text
 third_party_settings:
   ds:
     layout:
@@ -28,7 +26,6 @@ third_party_settings:
     regions:
       ds_content:
         - taxonomy_term_title
-        - description
     fields:
       taxonomy_term_title:
         plugin_id: taxonomy_term_title
@@ -36,18 +33,13 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          wrapper: h1
-          class: page-title
-          link: false
-id: taxonomy_term.nzclassification.full
+          link: true
+          wrapper: h2
+          class: ''
+id: taxonomy_term.category.default
 targetEntityType: taxonomy_term
-bundle: nzclassification
-mode: full
-content:
-  description:
-    label: hidden
-    type: text_default
-    weight: 1
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+bundle: category
+mode: default
+content: {  }
+hidden:
+  description: true

@@ -1,10 +1,10 @@
-uuid: ad1591b1-dcff-4603-9927-ee4a4880daab
+uuid: 06d447dc-00e1-4acc-a435-f0ad84cf6052
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.full
-    - taxonomy.vocabulary.nzclassification
+    - taxonomy.vocabulary.habitat
   module:
     - ds
     - text
@@ -39,15 +39,15 @@ third_party_settings:
           wrapper: h1
           class: page-title
           link: false
-id: taxonomy_term.nzclassification.full
+id: taxonomy_term.habitat.full
 targetEntityType: taxonomy_term
-bundle: nzclassification
+bundle: habitat
 mode: full
 content:
   description:
-    label: hidden
     type: text_default
     weight: 1
+    label: above
     settings: {  }
     third_party_settings: {  }
 hidden: {  }
