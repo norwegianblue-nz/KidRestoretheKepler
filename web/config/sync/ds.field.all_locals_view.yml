@@ -15,3 +15,4 @@ type: block
 type_label: 'Block field'
 entities:
   node: node
+  taxonomy_term: taxonomy_term

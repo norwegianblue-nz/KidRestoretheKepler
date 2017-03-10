@@ -1,0 +1,10 @@
+id: localsbynzclassification
+label: LocalsByNZClassification
+ui_limit: ''
+properties:
+  block: 'views_block:locals_by_taxonomy-block_3'
+  use_block_title: true
+type: block
+type_label: 'Block field'
+entities:
+  taxonomy_term: taxonomy_term
