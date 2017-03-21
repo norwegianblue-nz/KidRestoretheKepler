@@ -112,19 +112,29 @@ form.search-page-form input.form-search {border:1px solid #ddd; margin-bottom:10
 form.search-form {padding: 5px 10px; border: 1px solid #ccc;background-color: $krtk0_TransTeal;}
 
 
-//  Login and submit btns, and button class
+//  Login and submit btns, and button class. **NB** some elemements use just the mixin
 input.button,
-#block-useraccountmenu ul.menu li,
-.button
-{	padding: 16px;
-	background-color: $krtk0_Teal;
-	border: none;
-	color: #fff;
-	margin: 0 !important;
-	text-transform: uppercase;
-	font-family:$ktrk0_Exo2-RegularCondensed;
-	font-size:14px;
+#block-useraccountmenu ul.menu li, .button, .inline-button { @include krtk0Button; }
+.inline-button {display: inline-block; margin:5px 3px 5px 0 !important;}
+
+@media all and (max-width: 499px) { 
+	.inline-button {width:100%;}
 }
+@media all and (min-width: 500px) and (max-width:699px) { 
+	.inline-button {width:48%;}
+	.inline-button:nth-of-type(2n) {float:right;}
+}
+@media all and (min-width: 700px) and (max-width:959px) { 
+	.inline-button {width:31.8%;}
+}
+@media all and (min-width: 960px) and (max-width:1279px) { 
+	.inline-button {width:224px;}
+}
+@media all and (min-width: 1280px) { 
+	.inline-button {max-width:186px;}
+}
+
+
 #block-krtk0-search input.button, #block-userlogin input.button {float: right;}
 #block-useraccountmenu ul.menu li a {color: #fff;}
 
@@ -301,12 +311,11 @@ body.path-frontpage #teaser-outer-wrapper {
 #block-views-block-leadership-team-group-members-block-1 nav.pager li.pager__item.is-active a {background-color:$krtk0_Red;}
 
 // > meet team user page
-
-.view-display-id-user_view .field.field__item {
-    width: 50%;
-    float: left;
+.path-user #content-outer-wrapper {@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"), #fff);
 }
+
 .view-display-id-user_view {@include krtk0HeadingH3(#fff);}
+.view-display-id-user_view .field--name-field-photo {width: 250px; float: left;}
 .view-display-id-user_view img {
 	border-style: solid; border-width: 10px; 
 	-moz-border-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/hud-border.png") 20 20 20 20 round repeat; 
@@ -316,8 +325,27 @@ body.path-frontpage #teaser-outer-wrapper {
 
 	width:200px; // !!!! NB... THIS WIL WANT TO BE A PIC SIZE NOT CSS
 }
-.view-display-id-user_view .field--name-field-photo::after {content:url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/hud-pic.png");
-position:relative;left:-50px;top:50px;}
+.view-display-id-user_view .field--name-field-photo::before { // Avatar Watermark
+	content:url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/hud-pic.png");
+	position:absolute;
+	left:50px;
+	top:70px;
+	opacity:0.5;
+}
+.view-display-id-user_view .field.field--name-field-battle-name.field--type-string.field--label-inline {display:inline-block;}
+
+.view-display-id-user_view .field__label {
+	color: $krtk0_Orange;
+	display: inline-block;
+	min-width: 150px;
+	border: solid 1px $krtk0_Teal;
+	line-height: 1.3em;
+	margin-right: 10px;
+	padding:0 5px;
+}
+.field--name-field-battle-name, .field--name-field-real-name, .field--name-field-based-at {margin:10px 0 0 0;}
+.field--name-field-bio {margin-top:20px;}
+.view-display-id-user_view .field__item {display: inline-block;}
 article.profile {
 	background: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/hud-bg.png") no-repeat;
 	background-color: $krtk0_DarkTeal;
@@ -382,8 +410,9 @@ article.profile {
 body.node--type-article #title-bar-wrapper, // About articles
 body.path-articles #title-bar-wrapper, // About articles Summary page
 body.node--type-page #title-bar-wrapper,	// basic pages
-body.path-user #title-bar-wrapper,	// User pages
-body.path-meet-locals #title-bar-wrapper, // INTERIM locals page
+body.node--type-partners #title-bar-wrapper,	// partners pages
+body.path-taxonomy #title-bar-wrapper, // Taxonomy term pages
+body.path-meet-locals #title-bar-wrapper // INTERIM locals page
 {@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"),#fff);
 }
 body.node--type-meet-the-locals #title-bar-wrapper, // INTERIM Meet the locals pages
@@ -474,9 +503,10 @@ ds-1col #block-krtk0-content ul li::before{content:">"}
     border:none;
 }
 
-//	About pages ////////////////////////////////////////////////////////////////
-//	About landing page
-.node--type-general-landing-page #preface-outer-wrapper {background-color:$krtk0_Olive;}
+//	General landing pages //////////////////////////////////////////////////////
+
+.node--type-general-landing-page #title-bar-wrapper {@include krtk0TitleBottomBorder (url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/top-team-bar-bg.svg"),$krtk0_Olive);}
+.node--type-general-landing-page #preface-outer-wrapper {background-color:$krtk0_Olive;padding-bottom:4em;}
 .node--type-general-landing-page .region-preface-third h2 {@include krtk0HeadingH2($krtk0_DarkOlive);}
 .node--type-general-landing-page .region-preface-third h3 {}
 .node--type-general-landing-page .region-preface-third p {color:#fff;}
@@ -486,7 +516,7 @@ ds-1col #block-krtk0-content ul li::before{content:">"}
 .node--type-general-landing-page #block-krtk0-content h3 {}
 .node--type-general-landing-page #block-krtk0-content p {color:#fff;}
 
-.node--type-general-landing-page #postscript-outer-wrapper {padding:1.5em 0;}
+.node--type-general-landing-page #postscript-outer-wrapper {padding:4em 0;}
 
 .node--type-general-landing-page .view-article-summary ul {padding:0;margin:60px auto;width:50%;}
 .node--type-general-landing-page .view-article-summary li.pager__item {padding:0;}
@@ -496,6 +526,8 @@ ds-1col #block-krtk0-content ul li::before{content:">"}
 	background-position: 100% 50%;
 	background-repeat: no-repeat;
 }
+
+//	About pages ////////////////////////////////////////////////////////////////
 
 
 
@@ -752,7 +784,7 @@ body.node--type-landing-page #preface-outer-wrapper {
 	background-repeat: repeat-x;
 	background-position: top;
 }
-body.node--type-landing-page #preface-outer-wrapper h2 {@include krtk0HeadingH2(krtk0_Orange);}
+body.node--type-landing-page #preface-outer-wrapper h2 {@include krtk0HeadingH2($krtk0_DarkOlive);}
 
 body.node--type-landing-page #content-outer-wrapper {background-color:$krtk0_Orange;}
 
@@ -779,53 +811,57 @@ body.node--type-landing-page #block-krtk0-content .field--name-field-detailed-in
 	body.node--type-landing-page #block-krtk0-content .field--name-field-current-local 
 		{width:22%;float:right;}
 }
-
+body.node--type-landing-page #block-krtk0-content .field--name-field-current-local.field--type-entity-reference.field--label-inline .field__label::before {
+	content: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/this-week-local.png");
+	display: block;
+	position: relative;
+	top: 19px;
+	left:131px;
+}
 body.node--type-landing-page #block-krtk0-content .field--name-field-current-local.field--type-entity-reference.field--label-inline .field__label
 	{width:100%; @include krtk0HeadingH2($krtk0_DarkOrange);}
 body.node--type-landing-page #block-krtk0-content .field--name-field-current-local.field--type-entity-reference.field--label-inline .field__item a
 	{display:block;@include krtk0Button;clear:left;}
-
 body.node--type-landing-page .views-infinite-scroll-content-wrapper.clearfix {
 	text-align: center;
 	margin:20px 0;
 }
 
-body.node--type-landing-page .locals-list {
-  margin-left: 1%;
-  margin-right: 1%;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 20px;
-  text-align: center;
-  font-size: 1.4em;
-  width: 40%;
+//	View list pictures
+.locals-list {
+	margin-left: 1%;
+	margin-right: 1%;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1.4em;
+	width: 40%;
 }
 
 @media all and (min-width: 480px) and (max-width: 767px) {
-  body.node--type-landing-page .locals-list {
-    width: 30%;
-  }
+	.locals-list {
+	width: 30%;
+	}
 }
 @media all and (min-width: 768px) and (max-width: 959px) {
-  body.node--type-landing-page .locals-list {
-    width: 14.5%;
-  }
+	.locals-list {
+	width: 14.5%;
+	}
 }
 @media all and (min-width: 960px) {
-  body.node--type-landing-page .locals-list {
-    width: 14.6%;
-  }
-
-  body.node--type-landing-page .locals-list:nth-of-type(6n) {
-    margin-right: 0;
-  }
-
-  body.node--type-landing-page .locals-list:nth-of-type(6n+1) {
-    margin-left: 0;
-  }
+	.locals-list {
+	width: 14.6%;
+	}
+	.locals-list:nth-of-type(6n) {
+	margin-right: 0;
+    }
+	.locals-list:nth-of-type(6n+1) {
+	margin-left: 0;
+	}
 }
-body.node--type-landing-page .locals-list .views-field.views-field-field-mainimage img {
-  border-radius: 50%;
+.locals-list .views-field.views-field-field-mainimage img {
+	border-radius: 50%;
 }
 
 //	Extra styling.
@@ -842,8 +878,8 @@ body.node--type-landing-page .view-meetlocals li.pager__item a.button {
 	background-repeat: no-repeat;
 }
 
-
 //	Meet the locals page type /////////////////////////////////////////////////////////////////////////// 
+
 //	NOTE - interim styles below these styles to be deleted
 
 body.node--type-meetlocals #preface-outer-wrapper {background-color: #fff;}
@@ -868,14 +904,41 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 
 //  Definition panels //
 
-// 	Panels
+// 	Panel layout
 .paragraph--type-locals3panel > div, .paragraph--type-locals2panel > div {
 	margin-top:10px;
 	margin-bottom:10px;
 }
 .paragraph--type-locals3panel,
-.paragraph--type-locals2panel {display:flex;}
+.paragraph--type-locals2panel {display:block;}
 
+@media all and (min-width: 0px) and (max-width: 959px) {
+	.paragraph--type-locals3panel > div,
+	.paragraph--type-locals2panel > div {width:100% !important;}
+}
+@media all and (min-width: 600px) and (max-width: 839px) {
+	.paragraph--type-locals3panel, .paragraph--type-locals2panel {display:flex;}
+	.paragraph--type-locals3panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals3panel > div.group-right {margin-left:10px;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:20px;}
+}
+@media all and (min-width: 840px) and (max-width: 1279px) {
+	.paragraph--type-locals3panel, .paragraph--type-locals2panel {display:flex;}
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');}	
+	.paragraph--type-locals2panel > div {width:47.1%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+@media all and (min-width: 1280px) {
+	.paragraph--type-locals3panel, .paragraph--type-locals2panel {display:flex;}
+	.paragraph--type-locals3panel > div {
+	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
+	.paragraph--type-locals2panel > div {width:47.7%;}
+	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
+	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
+}
+//	Panel content
 .paragraph--type-locals3panel .field__label,
 .paragraph--type-locals2panel .field__label {
 	font-size:18px;
@@ -885,13 +948,19 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 }
 .paragraph--type-locals3panel .field__item,
 .paragraph--type-locals3panel h2,
-.paragraph--type-locals2panel h2 {
-	font-size:26px;
+.paragraph--type-locals2panel .field__item,
+.paragraph--type-locals2panel h2
+{	font-size:26px;
 	font-family:$ktrk0_Exo2-Regular;
-	color:#fff;
-	margin:0 0 0.4em;
+	color:$krtk0_DarkOrange;
+	margin:0;
+	line-height:1.2em;
 }
-.paragraph--type-locals3panel .field__item a, .paragraph--type-locals2panel h2 a {color:#fff;}
+.paragraph--type-locals3panel .field__item a, 
+.paragraph--type-locals2panel .field__item a, 
+.paragraph--type-locals2panel h2 a,
+.field--name-field-extrafeedinginfo 
+{color:#fff;}
 
 .paragraph--type-locals3panel > div {padding: 70px 10px 10px 10px; text-align:center;}
 .paragraph--type-locals2panel > div {padding: 10px 10px 10px 80px; text-align:left;}
@@ -904,33 +973,18 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 .paragraph--type-locals2panel div.group-right {background:url('/sites/kidsrestorethekepler/themes/custom/krtk0/images/habitat-icon.png') no-repeat 15px 50% $krtk0_locals-col;}
 
 .paragraph--type-locals3panel .field--name-field-nz-conservation-status::before {
-	content: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/mini-nz-icon.png");
-	padding: 0 2px 0 0;
+	content: "NZ:";
+	padding: 0 5px 0 0;
+	font-size:18px;
+	color:$krtk0_DarkOrange;
 }
 .paragraph--type-locals3panel .field--name-field-local-conservation-status::before {
-	content: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/mini-krtk-icon.png");
-	padding: 0 2px 0 0;
+	content: "KRTK:";
+	padding: 0 5px 0 0;
+	font-size:18px;
+	color:$krtk0_DarkOrange;
 }
 
-@media all and (max-width: 959px) {
-	.paragraph--type-locals3panel > div {
-	@include parrotCols($thiscols:12, $nocols:12, $margin: 'normal', $grid: '100');}
-	.paragraph--type-locals2panel > div {width:100%;}
-}
-@media all and (min-width: 960px) and (max-width: 1279px) {
-.paragraph--type-locals3panel > div {
-	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '960');}	
-	.paragraph--type-locals2panel > div {width:47.1%;}
-	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
-	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
-}
-@media all and (min-width: 1280px) {
-	.paragraph--type-locals3panel > div {
-	@include parrotCols($thiscols:3, $nocols:12, $margin: 'normal', $grid: '1200');}
-	.paragraph--type-locals2panel > div {width:47.7%;}
-	.paragraph--type-locals2panel > div.group-left {margin-right:10px;}
-	.paragraph--type-locals2panel > div.group-right {margin-left:10px;}
-}
 
 //  Main body //
 
@@ -982,7 +1036,7 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 
 // Social stripe ////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-#social-outer-wrapper {background-color: $krtk0_Blue; padding-bottom:4em;}
+#social-outer-wrapper {background-color: $krtk0_Blue; padding:3em 0 5em;}
 #socialBlock-icons, #socialBlock-facebook {
     width: 49.7%;
     display: inline-block;
@@ -1012,8 +1066,8 @@ div.node--type-meetlocals .field--name-field-latinname { // Latin name
 	background-image: url("/sites/kidsrestorethekepler/themes/custom/krtk0/images/backgrounds/puzzle-piece-border.svg");
 	background-repeat: no-repeat;
 	background-position-x: 50%;
-	padding-bottom:2em;
-	border-bottom:solid 10px #fff;
+	padding-bottom:5em;
+	border-bottom:solid 0px #fff;
 	/* background-size: 350%; - Change for breakpoints */
 	
 }
@@ -1057,8 +1111,8 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
     background-position: top;
     background-repeat: repeat-x;
     background-color:#fff;
-    border-top :5em solid #fff;
-    padding-bottom:2em;
+    border-top :0em solid #fff;
+    padding-bottom:3em;
 }
 @media all and (max-width: 959px) {
     #block-charityfooternumber {@include parrotCols(8, 12, normal, '100');float:left;padding-top: 50px;}
@@ -1082,7 +1136,7 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
     color: #575757;
 }
 
-#footer-outer-wrapper {background-color:$krtk0_DarkTeal;padding-bottom:3em;}
+#footer-outer-wrapper {background-color:$krtk0_DarkTeal;padding:3em;}
 
 div.region-footer > div, div.region-footer > nav {
 	display:inline-block;
