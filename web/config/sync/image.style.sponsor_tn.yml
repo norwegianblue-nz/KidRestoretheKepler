@@ -1,0 +1,35 @@
+uuid: bfa3e3c9-b94a-4ab3-811e-faf5bc454cd7
+langcode: en
+status: true
+dependencies:
+  module:
+    - image_effects
+name: sponsor_tn
+label: Sponsor_tn
+effects:
+  83f2cf39-030a-4561-b983-b8274cb495f1:
+    uuid: 83f2cf39-030a-4561-b983-b8274cb495f1
+    id: image_scale
+    weight: 1
+    data:
+      width: 140
+      height: 140
+      upscale: false
+  2ffe27a6-77e2-4503-a1b2-ccdaada263f0:
+    uuid: 2ffe27a6-77e2-4503-a1b2-ccdaada263f0
+    id: image_effects_set_canvas
+    weight: 2
+    data:
+      canvas_size: exact
+      exact:
+        width: '140'
+        height: '140'
+        placement: center-center
+        x_offset: 0
+        y_offset: 0
+      relative:
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+      canvas_color: ''

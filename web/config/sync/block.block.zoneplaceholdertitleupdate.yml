@@ -1,0 +1,39 @@
+uuid: 377bf6f7-4f01-4d68-a870-cc6a69465bd9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:fd00f433-3818-48b8-be02-37877a9ee61c'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - krtk0
+id: zoneplaceholdertitleupdate
+theme: krtk0
+region: btns
+weight: 0
+provider: null
+plugin: 'block_content:fd00f433-3818-48b8-be02-37877a9ee61c'
+settings:
+  id: 'block_content:fd00f433-3818-48b8-be02-37877a9ee61c'
+  label: 'Zone PLACEHOLDER - Title, Update'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      general_landing_page: general_landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /update_zone
+    negate: false
+    context_mapping: {  }

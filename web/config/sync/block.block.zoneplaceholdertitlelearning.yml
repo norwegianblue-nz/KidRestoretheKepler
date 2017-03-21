@@ -1,0 +1,39 @@
+uuid: a2f35b84-0fb8-4f48-80a4-5c8771f79aee
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1e4cbebe-2432-41b7-8186-b5b43aeca20d'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - krtk0
+id: zoneplaceholdertitlelearning
+theme: krtk0
+region: btns
+weight: 0
+provider: null
+plugin: 'block_content:1e4cbebe-2432-41b7-8186-b5b43aeca20d'
+settings:
+  id: 'block_content:1e4cbebe-2432-41b7-8186-b5b43aeca20d'
+  label: 'Zone PLACEHOLDER - Title, Learning'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      general_landing_page: general_landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /learning_zone
+    negate: false
+    context_mapping: {  }

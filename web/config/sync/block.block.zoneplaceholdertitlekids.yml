@@ -1,0 +1,39 @@
+uuid: f93e291f-7958-46bf-be08-67e3aa6e0236
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:8de304d9-971c-46f6-b439-fc8d583d3bdc'
+  module:
+    - block_content
+    - ctools
+    - system
+  theme:
+    - krtk0
+id: zoneplaceholdertitlekids
+theme: krtk0
+region: btns
+weight: 0
+provider: null
+plugin: 'block_content:8de304d9-971c-46f6-b439-fc8d583d3bdc'
+settings:
+  id: 'block_content:8de304d9-971c-46f6-b439-fc8d583d3bdc'
+  label: 'Zone PLACEHOLDER - Title, Kids'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      general_landing_page: general_landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: /kids_zone
+    negate: false
+    context_mapping: {  }
