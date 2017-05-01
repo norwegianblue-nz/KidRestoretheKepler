@@ -1,0 +1,25 @@
+uuid: 242a2cec-25b0-49e0-9c95-e8f5dbffd9c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: fiordlandcollege
+label: LocalsZone
+group: null
+description: 'Meet the Locals Pages'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '/locals/*'
+    negate: 0
+    uuid: c198a687-d5f6-4cfa-aaec-6d3bd70f34e4
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: locals-zone
+    saved: false
+weight: 0

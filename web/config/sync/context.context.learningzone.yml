@@ -1,0 +1,25 @@
+uuid: be43c87b-0c81-4a07-bcb6-b6c9a3d2ed15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: learningzone
+label: LearningZone
+group: null
+description: 'Learning Zone Pages'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '/learning_zone/*'
+    negate: 0
+    uuid: 5284ae91-2eff-461a-9a9d-f310a50fcd81
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: learning-zone
+    saved: false
+weight: 0

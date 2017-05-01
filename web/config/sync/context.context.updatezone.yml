@@ -1,0 +1,25 @@
+uuid: 837f0e5f-573a-40cb-820d-8a9969525771
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: updatezone
+label: UpdateZone
+group: null
+description: 'Update Zone Pages'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '/update_zone/*'
+    negate: 0
+    uuid: a57497a4-0020-4cc1-a92d-8547bfe5b294
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: update-zone
+    saved: false
+weight: 0

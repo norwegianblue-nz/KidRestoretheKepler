@@ -1,0 +1,25 @@
+uuid: 1581a980-6dfd-4f93-af93-8be92ac31051
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: kidszone
+label: KidsZone
+group: null
+description: 'Kids Zone Pages'
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: '/kids_zone/*'
+    negate: 0
+    uuid: d7f60520-c167-42d3-b2b3-006664e5ff66
+    context_mapping: {  }
+reactions:
+  body_class:
+    id: body_class
+    body_class: kids-zone
+    saved: false
+weight: 0
