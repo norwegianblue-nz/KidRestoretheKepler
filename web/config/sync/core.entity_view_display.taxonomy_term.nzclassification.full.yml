@@ -1,0 +1,59 @@
+uuid: ad1591b1-dcff-4603-9927-ee4a4880daab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.nzclassification
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - taxonomy_term_title
+        - description
+        - 'dynamic_block_field:taxonomy_term-localsbynzclassification'
+    fields:
+      'dynamic_block_field:taxonomy_term-localsbynzclassification':
+        plugin_id: 'dynamic_block_field:taxonomy_term-localsbynzclassification'
+        weight: 2
+        label: hidden
+        formatter: default
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: page-title
+          link: false
+id: taxonomy_term.nzclassification.full
+targetEntityType: taxonomy_term
+bundle: nzclassification
+mode: full
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

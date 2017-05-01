@@ -4,10 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_bg_image
     - field.field.node.landing_page.field_current_local
     - field.field.node.landing_page.field_detailed_information
+    - image.style.thumbnail
     - node.type.landing_page
   module:
+    - image
     - path
     - text
 id: node.landing_page.default
@@ -28,6 +31,13 @@ content:
     weight: 3
     settings: {  }
     third_party_settings: {  }
+  field_bg_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   field_current_local:
     weight: 0
     settings:

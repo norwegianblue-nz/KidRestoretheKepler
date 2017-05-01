@@ -59,7 +59,7 @@ third_party_settings:
         label: hidden
         formatter: default
         settings:
-          'link text': '>'
+          'link text': Read...
           'link class': readmore-btn
           wrapper: ''
           class: ''

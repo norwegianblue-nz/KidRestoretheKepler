@@ -28,6 +28,16 @@ body.toolbar-tray-open.toolbar-vertical.toolbar-fixed {
   margin-left: 0;
   padding-left: 15rem;
 }
+// set default bg-color for wrappers after top slide
+#title-bar-wrapper,
+#teaser-outer-wrapper,
+#core-outer-wrapper,
+#preface-outer-wrapper,
+#content-outer-wrapper,                     
+#postscript-outer-wrapper,
+#postscript-fourth-outer-wrapper,
+#extras-outer-wrapper
+{background-color: #fff;}
 
 a {
   text-decoration: none;
@@ -138,6 +148,9 @@ h6,
   padding: 10px 0 0;
   text-transform:uppercase;
   font-family:"exo_2light_condensed", sans-serif;
+}
+.group-left h1.page-title { // remove top margin for ds-2 col main title only
+  margin: 0 0 0.5em;
 }
 p a, p a.link {  border-bottom: dotted 0.1em !important;
 }

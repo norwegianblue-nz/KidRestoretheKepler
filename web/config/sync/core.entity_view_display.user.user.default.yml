@@ -15,23 +15,28 @@ bundle: user
 mode: default
 content:
   field_bg_image:
-    weight: 5
+    weight: 0
     label: above
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
     type: image
-  member_for:
+  profile_groupprofile:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+  profile_private:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  profile_public:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  profile_public_liaison:
     weight: 4
     settings: {  }
     third_party_settings: {  }
-  profile_groupprofile:
-    weight: 10
-  profile_private:
-    weight: 10
-  profile_public:
-    weight: 10
-  profile_public_liaison:
-    weight: 10
-hidden: {  }
+hidden:
+  member_for: true

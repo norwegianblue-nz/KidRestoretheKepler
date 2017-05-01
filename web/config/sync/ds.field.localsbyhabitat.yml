@@ -1,0 +1,10 @@
+id: localsbyhabitat
+label: LocalsByHabitat
+ui_limit: ''
+properties:
+  block: 'views_block:locals_by_taxonomy-block_1'
+  use_block_title: true
+type: block
+type_label: 'Block field'
+entities:
+  taxonomy_term: taxonomy_term

@@ -1,0 +1,10 @@
+uuid: c831b050-da85-4784-8187-3b4156a2f2c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.basic_page_2_col
+label: 'Basic Page 2 Col'
+targetEntityType: node
+cache: true

@@ -1,0 +1,45 @@
+uuid: 609e926d-6e0c-4c8e-91fb-25f68deab423
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habitat
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      path: modules/contrib/ds
+      library: ''
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - taxonomy_term_title
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: taxonomy_term.habitat.default
+targetEntityType: taxonomy_term
+bundle: habitat
+mode: default
+content: {  }
+hidden:
+  description: true

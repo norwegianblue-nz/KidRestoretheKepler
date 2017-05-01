@@ -1,0 +1,18 @@
+uuid: a7a062f7-58c1-4209-9c57-0a0aba524285
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_partners_panel_sh
+field_name: field_partners_panel_sh
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

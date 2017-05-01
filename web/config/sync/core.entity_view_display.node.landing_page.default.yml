@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_bg_image
     - field.field.node.landing_page.field_current_local
     - field.field.node.landing_page.field_detailed_information
     - node.type.landing_page
   module:
     - ds
+    - image
     - text
     - user
 third_party_settings:
@@ -43,6 +45,14 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+  field_bg_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   links:
     weight: 0
     settings: {  }

@@ -3,7 +3,7 @@ label: 'Articles Summary'
 ui_limit: ''
 properties:
   block: 'views_block:article_summary-articles_block_2'
-  use_block_title: true
+  use_block_title: false
 type: block
 type_label: 'Block field'
 entities:

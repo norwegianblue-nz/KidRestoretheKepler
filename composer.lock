@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f46acdc16c089ccd26b61937f48cf2e4",
+    "content-hash": "8a151a2f5bfdf25e7116e511169a6872",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1820,7 +1820,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/context",
-                "reference": "29f185f3ebdb046243484e40e33e7e7e3d3eb27d"
+                "reference": "776655056b532cb4c5d4f84ae2bfef406cb024d8"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1831,8 +1831,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha1+11-dev",
-                    "datestamp": "1490378582"
+                    "version": "8.x-1.0-alpha1+12-dev",
+                    "datestamp": "1490976183"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -1913,7 +1913,7 @@
                 "issues": "https://github.com/oddhill/context/issues",
                 "docs": "https://github.com/oddhill/context"
             },
-            "time": "2017-03-31 15:57:41"
+            "time": "2017-04-28 14:51:03"
         },
         {
             "name": "drupal/core",
@@ -2184,17 +2184,17 @@
         },
         {
             "name": "drupal/ctools",
-            "version": "3.0.0-beta2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/ctools",
-                "reference": "8.x-3.0-beta2"
+                "reference": "8.x-3.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0-beta2.zip",
-                "reference": "8.x-3.0-beta2",
-                "shasum": "6deece503cca328dde9b573a5d8a8fc74798d284"
+                "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0.zip",
+                "reference": null,
+                "shasum": "302e869ecd1e59fe55663673999fee2ccac5daa8"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -2205,8 +2205,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.0-beta2",
-                    "datestamp": "1492545842"
+                    "version": "8.x-3.0",
+                    "datestamp": "1493401742"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3409,17 +3409,17 @@
         },
         {
             "name": "drupal/pathauto",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/pathauto",
-                "reference": "8.x-1.0-rc1"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "2460339ac8739317b3c4e66e9ce7142cc02adac3"
+                "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "4c82a5689a18421c8c73fcc8be7b333bb21ae02a"
             },
             "require": {
                 "drupal/core": "*",
@@ -3432,8 +3432,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1485702484"
+                    "version": "8.x-1.0",
+                    "datestamp": "1493468044"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3726,17 +3726,17 @@
         },
         {
             "name": "drupal/token",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/token",
-                "reference": "8.x-1.0-rc1"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "204b2f18a3d770589d66656aa83121d2156d0a31"
+                "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "d24c7f1ffddbd0fc56bc92bacae1c4ff769a4442"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -3747,8 +3747,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1483290542"
+                    "version": "8.x-1.0",
+                    "datestamp": "1493466843"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3784,8 +3784,7 @@
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
             "support": {
-                "source": "http://cgit.drupalcode.org/token",
-                "issues": "https://www.drupal.org/project/issues/token"
+                "source": "http://cgit.drupalcode.org/token"
             }
         },
         {
@@ -4250,16 +4249,16 @@
         },
         {
             "name": "gabordemooij/redbean",
-            "version": "v4.3.3",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gabordemooij/redbean.git",
-                "reference": "1c7ec69850e9f7966ff7feb87b01d8f43a9753d3"
+                "reference": "d0944d7f966d7f45a0d973981fe3f64aff0050f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/1c7ec69850e9f7966ff7feb87b01d8f43a9753d3",
-                "reference": "1c7ec69850e9f7966ff7feb87b01d8f43a9753d3",
+                "url": "https://api.github.com/repos/gabordemooij/redbean/zipball/d0944d7f966d7f45a0d973981fe3f64aff0050f0",
+                "reference": "d0944d7f966d7f45a0d973981fe3f64aff0050f0",
                 "shasum": ""
             },
             "require": {
@@ -4287,7 +4286,7 @@
             "keywords": [
                 "orm"
             ],
-            "time": "2016-10-03T21:25:17+00:00"
+            "time": "2017-03-07T22:26:54+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

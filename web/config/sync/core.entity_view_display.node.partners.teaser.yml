@@ -5,7 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.partners.body
+    - field.field.node.partners.field_display_order
     - field.field.node.partners.field_front_page_logo
+    - field.field.node.partners.field_partners_panel_sh
     - node.type.partners
   module:
     - text
@@ -24,5 +26,9 @@ content:
     third_party_settings: {  }
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_display_order: true
   field_front_page_logo: true
+  field_partners_panel_sh: true

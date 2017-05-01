@@ -12,6 +12,12 @@ libraries:
   - krtk0/OpenSans
   - krtk0/WorkSans
   - krtk0/Exo
+ckeditor_stylesheets:
+  - style/css/krtk0.css
+  - style/css/base.css
+  - fonts/opensans.css
+  - fonts/worksans.css
+  - fonts/exo.css
 regions:
   menu: Menu
   header: Header

@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.preface3
     - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_bg_image
     - field.field.node.landing_page.field_current_local
     - field.field.node.landing_page.field_detailed_information
     - node.type.landing_page
@@ -49,5 +50,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_bg_image: true
   field_current_local: true
   field_detailed_information: true
