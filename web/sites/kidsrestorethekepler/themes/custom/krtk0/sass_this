@@ -8,7 +8,7 @@
 ##
 
 
-sassexe=/usr/local/bin/sass
+sassexe=/usr/bin/sass
 DIR=$(pwd)
 
 scriptdir=$( dirname "$0" )
