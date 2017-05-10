@@ -20,8 +20,6 @@ p a {border:none !important;color:$krtk0_Teal;}
 }
 #page.scrolled div#logo-home {width:75px;position:absolute;top:-65px;left:0;margin-left:0;@include krtk0Transition;float:left;height:50px;}
 
-/* TEST GIT PUSH. */
-
 // Menu bar /////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1139,7 +1137,7 @@ body.path-frontpage #extras-outer-wrapper {	min-height: 2em; background-color:$k
     color: #575757;
 }
 
-#footer-outer-wrapper {background-color:$krtk0_DarkTeal;padding:3em;}
+#footer-outer-wrapper {background-color:$krtk0_DarkTeal;}
 
 div.region-footer > div, div.region-footer > nav {
 	display:inline-block;
