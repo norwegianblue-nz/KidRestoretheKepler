@@ -13,7 +13,7 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: '/learning_zone/*'
+    pages: "/learning_zone\r\n/learning_zone/*"
     negate: 0
     uuid: 5284ae91-2eff-461a-9a9d-f310a50fcd81
     context_mapping: {  }

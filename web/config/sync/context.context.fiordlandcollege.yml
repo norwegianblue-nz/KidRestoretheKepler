@@ -13,7 +13,7 @@ disabled: false
 conditions:
   request_path:
     id: request_path
-    pages: '/locals/*'
+    pages: "/locals\r\n/locals/*"
     negate: 0
     uuid: c198a687-d5f6-4cfa-aaec-6d3bd70f34e4
     context_mapping: {  }
